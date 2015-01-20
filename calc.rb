@@ -9,3 +9,10 @@ puts 1+2
 puts 2*3
 puts 5-8
 puts 9/2
+
+puts 5**2 #Exponent
+puts 7%3 #Modulus
+puts (2-5).abs #Absolute value
+
+puts rand
+puts(rand(100))
