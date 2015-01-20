@@ -1,4 +1,4 @@
-#strings.rb  - Based on Learn To Program, 2nd Ed, Chapter 4
+#strings.rb  - Based on Learn To Program, 2nd Ed.
 
 my_string = '...you can say that again...'
 puts my_string

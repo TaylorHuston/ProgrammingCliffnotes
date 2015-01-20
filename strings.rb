@@ -1,4 +1,4 @@
-#strings.rb  - Based on Learn To Program, 2nd Ed, Chapter 3
+#strings.rb  - Based on Learn To Program, 2nd Ed.
 
 puts 'Hello, world!'
 puts ''
@@ -18,7 +18,6 @@ puts '2 * 5'
 
 puts 'You\'re swell!'
 
-#Based on chapter 6
 letters = 'aAbBcCdDeE'
 puts letters.upcase
 puts letters.downcase
