@@ -1,4 +1,4 @@
-# calc.rb - Based on Learn To Program, 2nd Ed, Chapter 2
+#calc.rb - Based on Learn To Program, 2nd Ed, Chapter 2
 
 puts 1.0 + 2.0
 puts 2.0 * 3.0
