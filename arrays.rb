@@ -1,7 +1,10 @@
+#arrays.rb - Demonstration of basic array syntax
+
 names = ['Bob', 'Dick', 'Harry']
 puts names
 puts
 puts names[0]
+
 
 
 names.each do |name|

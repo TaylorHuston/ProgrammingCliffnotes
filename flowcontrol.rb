@@ -1,4 +1,4 @@
-#strings.rb  - Based on Learn To Program, 2nd Ed.
+#flowcontrol.rb  - Demonstration of loop and if/then syntax
 
 puts 1 < 2
 puts 2 < 1

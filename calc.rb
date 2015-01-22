@@ -1,4 +1,4 @@
-#calc.rb - Based on Learn To Program, 2nd Ed.
+#calc.rb - Basic math operations
 
 puts 1.0 + 2.0
 puts 2.0 * 3.0

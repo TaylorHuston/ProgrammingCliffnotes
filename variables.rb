@@ -1,4 +1,4 @@
-#strings.rb  - Based on Learn To Program, 2nd Ed.
+#strings.rb  - Demonstration of basic variable type and syntax
 
 my_string = '...you can say that again...'
 puts my_string
