@@ -57,3 +57,29 @@ puts calculate(4, 5, add: true)  #9
 puts calculate(-10, 2, 3, add: true)  #-5
 puts calculate(4, 5, subtract: true)  #-1
 puts calculate(-10, 2, 3, subtract: true)  #-15 
+
+Increment = lambda { |x|  return x+1 }  #lambda
+puts Increment.call(7)  #8
+
+puts
+
+module Perimeter
+  def perimeter
+    sides.inject(0) { |sum, side| sum + side }
+  end
+end
+
+class Rectangle
+  include Perimeter #include module
+  
+  def initialize(length, breadth)
+    @length = length
+    @breadth = breadth
+  end
+
+  def sides
+    [@length, @breadth, @length, @breadth]
+  end
+end
+
+puts Rectangle.new(5, 10).perimeter  #30
