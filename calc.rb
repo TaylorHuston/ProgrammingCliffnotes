@@ -14,5 +14,5 @@ puts 5**2 #Exponent
 puts 7%3 #Modulus
 puts (2-5).abs #Absolute value
 
-puts rand
-puts(rand(100))
+puts rand #Rand between 0 and 1
+puts(rand(100)) #Rand between 0 and 99
