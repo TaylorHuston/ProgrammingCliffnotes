@@ -29,3 +29,8 @@ puts [1, 2, 3, 4, 5, 6].select {|number| number % 2 == 0}
 puts
 
 puts [1,2,3,4,5,6,7].delete_if{|i| i < 4 }
+
+puts
+
+array = [[1,2,3],[4,5,6]]
+puts array[1][1]

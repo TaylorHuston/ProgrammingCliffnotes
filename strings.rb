@@ -4,7 +4,7 @@ puts 'Hello, world!'
 puts ''
 puts 'Good-bye.'
 
-puts 'I like' + 'apple pie.'
+puts 'I like ' + 'apple pie.'
 
 puts 'blink' * 4
 
@@ -44,3 +44,16 @@ puts 'Fear is the path to the dark side'.split
 
 puts "I should look into your problem when I get time".gsub('I','We')
 puts 'RubyMonk'.gsub(/[aeiou]/,'1')
+
+puts `date`
+
+
+puts 'What is your name?'
+name = gets.chomp #Remove trailing linebreak
+puts 'Your name is ' + name + '?'
+puts 'Pleased to meet you, ' + name + '!'
+
+
+puts "Homer" =~ /er/  #Regexp
+phone = "(907) 111-2233"
+puts phone.gsup(/\D/, "") #Strip out any non-digits

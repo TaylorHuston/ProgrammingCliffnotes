@@ -37,9 +37,4 @@ puts ''
 puts 'string'.to_s
 puts 3.to_i
 
-puts gets
 
-puts 'What is your name?'
-name = gets.chomp #Remove trailing linebreak
-puts 'Your name is ' + name + '?'
-puts 'Pleased to meet you, ' + name + '!'

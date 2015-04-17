@@ -16,3 +16,16 @@ puts (2-5).abs #Absolute value
 
 puts rand #Rand between 0 and 1
 puts(rand(100)) #Rand between 0 and 99
+
+
+def add(*numbers) #Can accept any number of numbers
+  numbers.inject(0) {
+      |sum, number| sum + number
+    }
+end
+
+def add_with_message(message, *numbers)
+  "#{message} : #{add(*numbers)}"
+end
+
+puts add_with_message("The Sum is", 1, 2, 3)

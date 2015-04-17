@@ -36,16 +36,16 @@ puts ask_recursively "Does 1+1=2?"
 
 #Pass hash to method
 def add(*numbers)
-  numbers.inject(0) { |sum, number| sum + number }  
+  numbers.inject(0) { |sum, number| sum + number }
 end
 
 def subtract(*numbers)
   current_result = numbers.shift
-  numbers.inject(current_result) { |current_result, number| current_result - number }  
+  numbers.inject(current_result) { |current_result, number| current_result - number }
 end
 
 def calculate(*arguments)
-  # if the last argument is a Hash, extract it 
+  # if the last argument is a Hash, extract it
   # otherwise create an empty Hash
   options = arguments[-1].is_a?(Hash) ? arguments.pop : {}
   options[:add] = true if options.empty?
@@ -56,30 +56,17 @@ end
 puts calculate(4, 5, add: true)  #9
 puts calculate(-10, 2, 3, add: true)  #-5
 puts calculate(4, 5, subtract: true)  #-1
-puts calculate(-10, 2, 3, subtract: true)  #-15 
+puts calculate(-10, 2, 3, subtract: true)  #-15
 
 Increment = lambda { |x|  return x+1 }  #lambda
 puts Increment.call(7)  #8
 
 puts
 
-module Perimeter
-  def perimeter
-    sides.inject(0) { |sum, side| sum + side }
-  end
+def three_times
+  yield
+  yield
+  yield
 end
 
-class Rectangle
-  include Perimeter #include module
-  
-  def initialize(length, breadth)
-    @length = length
-    @breadth = breadth
-  end
-
-  def sides
-    [@length, @breadth, @length, @breadth]
-  end
-end
-
-puts Rectangle.new(5, 10).perimeter  #30
+threetimes {puts "hi"}
