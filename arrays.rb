@@ -5,22 +5,45 @@ puts names
 puts
 puts names[0]
 puts
+puts names.inspect
+puts
+puts names.join(",")
+puts
 
 names.each do |name|
   puts 'Hi ' +name
 end
 puts
 
+names.clear
+
+puts names
+
+gets
+
 favorites = []
 favorites.push 'Apples'
-favorites.push 'Oranges'
+favorites << 'Oranges'
+favorites.push 'Grapes'
 puts favorites[0]
 puts favorites.last
 puts favorites.length
+gets
 puts favorites.pop
-puts favorites
+puts favorites.inspect
 puts favorites.length
-puts
+puts favorites.shift
+favorites.unshift('Plums')
+puts favorites.inspect
+
+gets
+
+x = "1,2,3,4,5"
+y = x.split(",")
+puts y.inspect
+puts y.reverse.inspect
+
+gets
 
 puts [1, 2, 3, 4, 5].map { |i| i + 1 }
 puts
@@ -33,4 +56,15 @@ puts [1,2,3,4,5,6,7].delete_if{|i| i < 4 }
 puts
 
 array = [[1,2,3],[4,5,6]]
+puts array[0].inspect
 puts array[1][1]
+
+gets
+
+array = [3,1,5,7,6,4,2]
+array.sort!
+puts array.inspect
+array.delete_at(2)
+puts array.inspect
+array.delete(7)
+puts array.inspect
