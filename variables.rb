@@ -58,5 +58,7 @@ puts !x
 
 puts
 
+SOMECONSTANT = 100 #Naming convention for constants
+SOMECONSTANT = 200 #Not a tru constant since it will let you do this, but it will throw a warning
 
 
