@@ -46,5 +46,17 @@ puts '5 is a number'.to_i #Convert to interger (strip off any text)
 puts 'Whatabout 6?'.to_i  #Can't convert, number not first character
 puts 'I will fight you'.to_f  #Nothing to conver
 
+gets
+
+puts true.class
+puts false.class
+
+x = true
+puts true.class
+puts x
+puts !x
+
+puts
+
 
 

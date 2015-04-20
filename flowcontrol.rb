@@ -1,18 +1,22 @@
 #flowcontrol.rb  - Demonstration of conditionals, loops and if/then syntax
 
-puts 1 < 2
-puts 2 < 1
-puts 1 == 1
-puts 1 != 2
+puts 1 < 2  #True
+puts 2 < 1  #False
+puts 1 == 1 #True
+puts 1 != 2  #True
 
 puts 'cats' < 'dogs'
 puts
 
 puts 'Type a number'
 x = gets.chomp
-x = x.to_i
+x = x.to_i  #Convert to integer
 
-puts
+puts true && true
+puts true || false
+puts true && false
+
+gets
 
 if x > 100
     puts 'Big number'
@@ -22,10 +26,9 @@ else
     puts 'Small number'
 end
 
-puts
+gets
 
-puts "Shorthand" if true
-
+puts "Shorthand" if true #Shorthand if synatx
 
 i = 0
 while i < 5 do
@@ -33,13 +36,13 @@ while i < 5 do
     i = i + 1
 end
 
-puts
+gets
 
 5.times do |y|
     puts "y " + y.to_s
 end
 
-puts
+gets
 
 x = 0
 until x > 5 do
@@ -47,7 +50,7 @@ until x > 5 do
   x = x+1
 end
 
-puts
+gets
 
 array = [1, 2, 3, 4, 5]
 

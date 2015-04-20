@@ -1,4 +1,4 @@
-#arrays.rb - Demonstration of basic array syntax
+#arrays.rb - Demonstration of basic array syntax and ranges
 
 names = ['Bob', 'Dick', 'Harry']
 puts names
@@ -9,6 +9,9 @@ puts names.inspect
 puts
 puts names.join(",")
 puts
+puts names.include?('Bob')
+
+gets
 
 names.each do |name|
   puts 'Hi ' +name
@@ -68,3 +71,20 @@ array.delete_at(2)
 puts array.inspect
 array.delete(7)
 puts array.inspect
+
+gets
+
+inclusiveRange = 1..10  #1 through 10
+puts inclusiveRange.inspect
+puts inclusiveRange.end  #10
+puts
+exclusiveRange = 1...10 #1 through 9
+puts exclusiveRange.inspect
+puts exclusiveRange.end  #Also 10
+
+array = [*inclusiveRange]
+puts array.inspect
+
+gets
+
+
