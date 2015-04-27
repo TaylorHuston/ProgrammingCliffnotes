@@ -113,3 +113,4 @@ puts
 puts (1..10).any? {|i| i % 3==0 } #Are there any instances where this is true?
 puts (1..10).all? {|i| i % 3==0 } #Are all instances true?
 
+puts (1..10).inject(100) {|memo, n| memo +n }.inspect #Set memo to 100, add everything in range into it
