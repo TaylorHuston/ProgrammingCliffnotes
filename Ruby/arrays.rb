@@ -1,4 +1,4 @@
-#arrays.rb - Demonstration of basic array syntax and ranges
+#arrays.rb - Demonstration of basic array/range syntax
 
 names = ['Bob', 'Dick', 'Harry']
 puts names
@@ -48,14 +48,13 @@ puts y.reverse.inspect
 
 gets
 
-puts [1, 2, 3, 4, 5].map { |i| i + 1 }
+puts [1, 2, 3, 4, 5].map { |i| i + 1 } #Add 1 to each value
 puts
 
 puts [1, 2, 3, 4, 5, 6].select {|number| number % 2 == 0}
 puts
 
 puts [1,2,3,4,5,6,7].delete_if{|i| i < 4 }
-
 puts
 
 array = [[1,2,3],[4,5,6]]
@@ -86,5 +85,18 @@ array = [*inclusiveRange]
 puts array.inspect
 
 gets
+ 
+puts inclusiveRange.find {|i| i%3==0 } #Find the first instance where boolean is true
+puts (1..10).find {|i| i%3==0 } #Find the first instance where boolean is true
+puts (1..10).detect {|i| i%3==0 } #Find the first instance where boolean is true
 
+puts
+
+puts (1..10).find_all {|i| i % 3==0 } #Find all instances where boolean is true
+puts (1..10).select {|i| i % 3==0 } #Find all instances where boolean is true
+
+puts
+
+puts (1..10).any? {|i| i % 3==0 } #Are there any instances where this is true?
+puts (1..10).all? {|i| i % 3==0 } #Are all instances true?
 
