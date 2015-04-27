@@ -20,3 +20,19 @@ puts
 student_ages.each do |name, age|
     puts "#{name} is  #{age} years old"
 end
+
+puts
+
+
+h1 = {"a" => 111, "b" =>222 }
+h2 = {"b" => 333, "c" =>444 }
+#Merge the two hashes, using the lowest value for any conflicts
+h1.merge!(h2) do |key, old, new|
+  if old < new
+    old
+  else
+    new
+  end
+end
+
+puts h1
