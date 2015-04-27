@@ -52,6 +52,6 @@ unless x == 1
   puts "x doesn't equal 1"
 end
 
-puts x == 2 ? "It is equal to 2" : "It is not equal to 2"
+puts x == 2 ? "It is equal to 2" : "It is not equal to 2" #Shorthand comparison, first is reult if true, second is result if false
 
 gets

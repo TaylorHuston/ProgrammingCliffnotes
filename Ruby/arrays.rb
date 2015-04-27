@@ -51,6 +51,9 @@ gets
 puts [1, 2, 3, 4, 5].map { |i| i + 1 } #Add 1 to each value
 puts
 
+puts [1, 2, 3, 4, 5].collect { |i| i + 1 } #Same as map
+puts
+
 puts [1, 2, 3, 4, 5, 6].select {|number| number % 2 == 0}
 puts
 
@@ -70,6 +73,16 @@ array.delete_at(2)
 puts array.inspect
 array.delete(7)
 puts array.inspect
+puts array.sort.reverse.inspect
+
+gets
+
+favorites.push 'Bannanas'
+favorites.push 'Grapefruit'
+favorites.push 'Tangerine'
+puts favorites.inspect
+puts favorites.sort.inspect
+puts favorites.sort_by {|fruit| fruit.length }.inspect
 
 gets
 

@@ -36,3 +36,5 @@ h1.merge!(h2) do |key, old, new|
 end
 
 puts h1
+
+puts h1.map { |k, v| "#{k}: #{v *20}" }.inspect
