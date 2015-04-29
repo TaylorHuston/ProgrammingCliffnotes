@@ -1,16 +1,16 @@
 #methodss.rb - Demonstration of some basic method syntax
 
-def say_moo num
+def say_moo num  #Note methods don't need ()
     puts 'Mooooo...'*num  #Prints num times
 end
 
 say_moo 3 #call say_moo with the argument 3
 
 x = 1
-def multiply x
+def multiply(x)  #Can use () for readability though
     x = x*2  #local scope
     puts x  #2
-    return x
+    x  #Last line is auto-returned, no need to Return statement
 end
 y = multiply x
 puts x  #1
@@ -22,7 +22,7 @@ def ask_recursively question
   puts question
   reply = gets.chomp.downcase
   if reply == 'yes'
-    return true
+    return true  #Can use return if needed
   elsif reply == 'no'
     return false
   else
@@ -31,7 +31,7 @@ def ask_recursively question
   end
 end
 
-puts ask_recursively "Does 1+1=2?"
+puts ask_recursively("Does 1+1=2?")
 
 
 #Pass hash to method
@@ -63,10 +63,19 @@ puts Increment.call(7)  #8
 
 puts
 
+#Pass an acutal code block to a method
 def three_times
   yield
   yield
   yield
 end
 
-threetimes {puts "hi"}
+three_times { puts "hi" }
+
+#Defaults
+def say_hi(name="Bob")
+  puts "Hello #{name}"
+end
+
+say_hi("George")
+say_hi
