@@ -61,3 +61,74 @@ class MyClass
 end
 
 puts MyClass.cls_method
+
+
+#Module allows for namespacing
+module ModuleOne
+  class SomeClass
+    def initialize
+      puts "Module One"
+    end
+  end
+end
+  
+module ModuleTwo
+ class SomeClass
+   def initialize
+     puts "Module Two"
+   end
+ end
+end
+    
+mod1 = ModuleOne::SomeClass.new
+mod2 = ModuleTwo::SomeClass.new
+
+
+#Modules allow for mixins (multple inheritance-ish)
+module Names
+  attr_accessor :firstname, :lastname
+end
+
+module Number
+  attr_accessor :phonenumber
+end
+
+class Person
+  include Names
+  include Number
+end
+
+some_guy = Person.new
+some_guy.firstname = "Bob"
+some_guy.phonenumber = 1112223344
+puts some_guy.firstname
+puts some_guy.phonenumber
+
+
+class ToDoList
+  include Enumerable  #Include an official Ruby module
+  attr_accessor :items
+  
+  #Including Enumerable requires you include a each method
+  #Similar to say, a Java Interface
+  def each
+    @items.each do |item|
+      yield item
+    end
+  end
+end
+
+my_list = ToDoList.new
+my_list.items = ['laundry','dishes','vacuum']
+
+#Possible since items is an array
+my_list.items.select do |item|
+  puts item
+end
+
+#Possible because we added each method
+my_list.select do |item|
+  puts item
+end
+
+
