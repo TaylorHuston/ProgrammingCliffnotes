@@ -114,3 +114,9 @@ puts (1..10).any? {|i| i % 3==0 } #Are there any instances where this is true?
 puts (1..10).all? {|i| i % 3==0 } #Are all instances true?
 
 puts (1..10).inject(100) {|memo, n| memo +n }.inspect #Set memo to 100, add everything in range into it
+
+puts
+
+array = [3,1,5,7,6,4,2]
+array.sort! { |x, y| y <=> x } #Fancy way of sorting in reverse order
+puts array.inspect
