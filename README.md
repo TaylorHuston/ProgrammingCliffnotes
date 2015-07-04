@@ -1,6 +1,6 @@
 # Programming Cliffnotes
 ##Who is this for?
-If you're like me you jump between a lot of different programming languages. Somtimes, especially when you're just starting out, it can be hard to remember all of the nuances and peculiarities of each language. So I started keeping files of just common used basic syntax of each language that I use regularly, as a quick and dirt reference.
+If you're like me you jump between a lot of different programming languages. Sometimes, especially when you're just starting out, it can be hard to remember all of the nuances and peculiarities of each language. So I started keeping files of just commonly used, basic syntax of each language that I use regularly as a quick and dirty reference.
 
 So if you need a crash course on a new language, or a refresher on one you haven't used in a bit, hopefully you will find this useful.
 
