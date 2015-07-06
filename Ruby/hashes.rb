@@ -24,6 +24,8 @@ end
 
 puts
 
+puts student_ages.select { |name, age| age < 12 }
+
 
 h1 = {"a" => 111, "b" =>222 }
 h2 = {"b" => 333, "c" =>444 }
@@ -46,7 +48,7 @@ text = gets.chomp
 
 words = text.split(" ")
 
-frequencies = Hash.new(0)
+frequencies = Hash.new(0) #Default values
 
 #Count the frequency of each word
 words.each do |word|
@@ -57,3 +59,11 @@ end
 frequencies = frequencies.sort_by do |count|
     count
 end
+
+#alternative Hash syntax
+new_hash = {
+  one: 1,
+  two: 2
+  }
+
+puts new_hash

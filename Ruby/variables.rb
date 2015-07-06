@@ -59,6 +59,12 @@ puts !x
 puts
 
 SOMECONSTANT = 100 #Naming convention for constants
-SOMECONSTANT = 200 #Not a tru constant since it will let you do this, but it will throw a warning
+SOMECONSTANT = 200 #Not a true constant since it will let you do this, but it will throw a warning
 
+puts
+
+#Symbols
+puts :string == "string" #false
+puts :string == "string".to_sym #true
+puts "string" == :string.to_s #true
 
