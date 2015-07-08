@@ -31,7 +31,7 @@ puts letters.capitalize
 puts letters.reverse
 puts ' a'.capitalize
 puts letters
-letters.reverse! 
+letters.reverse!
 puts letters
 
 gets
@@ -40,7 +40,7 @@ number = 4
 name = "Taylor"
 
 puts "The number #{number} is the same as " + number.to_s #String interpolation
-puts "Hi " + name + " are you related to the other #{name} I know?" 
+puts "Hi " + name + " are you related to the other #{name} I know?"
 
 puts "Hi Bob".include?("Bob")
 

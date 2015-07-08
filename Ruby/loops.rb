@@ -44,5 +44,8 @@ loop do
   puts "x " + x.to_s
 end
 
-  
-    
+1.upto(10) do |x|
+  puts x
+end
+
+
