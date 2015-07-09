@@ -72,6 +72,16 @@ end
 
 three_times { puts "hi" }
 
+def my_yield(param)
+  yield("Bob")
+  yield(param)
+end
+
+my_yield("Taylor") do |s|
+  puts s
+end
+
+
 #Defaults
 def say_hi(name="Bob")
   puts "Hello #{name}"
@@ -79,3 +89,33 @@ end
 
 say_hi("George")
 say_hi
+
+puts
+
+#Procs aren't tehcnically methods, but serve the same purpose as blocks of re-usable code
+cube = Proc.new { |x| x ** 3 }
+puts [1, 2, 3].collect!(&cube)
+
+#Pass a proc into a method
+phrase = Proc.new do
+    puts "Hello there!"
+end
+
+def greeter(&phrase)
+    yield
+end
+
+greeter(&phrase)
+
+#Call a proc directly
+phrase.call
+
+
+#Lambdas server a similar prupose as procs
+strings = ["leonardo", "donatello", "raphael", "michaelangelo"]
+
+symbolize = lambda { |x| x.to_sym }
+
+symbols = strings.collect(&symbolize)
+
+puts symbols.inspect

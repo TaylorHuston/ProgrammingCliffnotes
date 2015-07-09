@@ -2,9 +2,14 @@
 
 class Rectangle
   attr_accessor :length, :breadth #Getter and Setter shorthand
-  
-  
+
   @@total = 0  #Class variable
+
+  #Static method
+  def self.what_am_i?
+    puts "I'm a rectangle"
+  end
+
   def initialize(length, breadth) #Constructor
     @length = length  #Instance variable
     @breadth = breadth
@@ -25,6 +30,8 @@ class Rectangle
   end
 
 end
+
+Rectangle.what_am_i?
 
 small_rect = Rectangle.new(10,15)
 puts small_rect.perimeter.to_s #50
