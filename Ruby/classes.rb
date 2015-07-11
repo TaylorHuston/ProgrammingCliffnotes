@@ -139,3 +139,15 @@ my_list.select do |item|
 end
 
 
+#Extends is like include but for a class, not just instances of a class
+module ToExtend
+  def say
+    puts "I am saying a thing"
+  end
+end
+
+class ExtenderAma
+  extend ToExtend
+end
+
+ExtenderAma.say
