@@ -11,5 +11,5 @@ var alpha = "abcdefghijklmnopqrstuvwxyz"
 console.log(alpha.indexOf("e"));
 console.log(alpha.charAt(11));
 console.log(alpha.toUpperCase());
-console.log(alpha.slice(12,18));
-console.log(alpha.replace("lmnop","ponml"));
+console.log(alpha.slice(12, 18));
+console.log(alpha.replace("lmnop", "ponml"));
