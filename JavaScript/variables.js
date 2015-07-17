@@ -27,5 +27,11 @@ x += 10;
 console.log(x);
 x %= 7; //Modulus
 console.log(x);
-console.log(x++); //Logs x firs, then increments
+console.log(x++); //Logs x first, then increments
 console.log(++x); //Increments, then logs
+
+//Math has other functions
+x = 215.67
+var y = Math.round(x);
+console.log(x); //215.67
+console.log(y); //216
