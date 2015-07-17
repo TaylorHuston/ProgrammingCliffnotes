@@ -6,15 +6,15 @@ var b = 100;
 var c = 100.10;
 var d = true;
 
-alert(a);
-alert(b);
-alert(c);
-alert(d);
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
 
 //Change type
 b = a;
 
-alert(b);
+console.log(b);
 
 //Random value
 var ran = Math.random(); //Between 0 and 1
