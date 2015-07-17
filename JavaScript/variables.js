@@ -16,12 +16,13 @@ b = a;
 
 alert(b);
 
-//Object
+//Create an object
 var person1 = {};
 
-//Dot notation
+//Dot notation for setting attributes
 person1.name = "John Doe";
 
+//Create object with pre-defined attributes
 var person2 = {
   name: "Jane Doe"
 };
@@ -29,7 +30,7 @@ var person2 = {
 alert(person1.name);
 alert(person2.name);
 
-//Object properties can be other objects
+//Object attributes can be other objects
 var people = {};
 people.person1 = person1;
 
@@ -43,24 +44,24 @@ person1.name = "Jack Doe";
 alert(person1.name);
 alert(people.person1.name);
 
-
-var phonebookEntry = new Object(); //When using a constructor
+//When create object with a constructor
+var phonebookEntry = new Object();
 
 phonebookEntry.name = 'Taylor Huston';
 phonebookEntry.number = '(503) 962-9521';
-phonebookEntry.phone = function () { //A method
+//Define a method
+phonebookEntry.phone = function () {
   console.log('Calling ' + this.name + ' at ' + this.number + '...');
 };
 
+//Call a method
 phonebookEntry.phone();
 
 
-
-
-// Creating an array with the constructor:
+// Creating an array with the constructor to set initial size
 var foo = new Array(100);
 
-// Creating an array with the array literal syntax:
+// Creating an array with the array literal syntax
 var bar = [1, "a", 3.5, true, 2]; //Not type specific
 
 alert(foo.length);
