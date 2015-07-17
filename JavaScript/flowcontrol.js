@@ -38,7 +38,7 @@ for (var i = 0; i < 5; i++) {
 }
 
 for (var i = 0; i < 5000; i++) {
-  if (i % 2) {
+  if (i % 2 == 0) {
     continue; //Move to next loop iteration
   }
   console.log(i);
