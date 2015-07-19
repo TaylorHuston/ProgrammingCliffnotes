@@ -23,3 +23,9 @@ console.log(someLists.length);
 myElement.setAttribute("class", "someClass");
 myElement.setAttribute("align", "left");
 console.log(myElement.getAttribute("class"));
+
+//Create and append elements
+var newDiv = document.createElement("div");
+var newText = document.createTextNode("I'm a generated DIV");
+newDiv.appendChild(newText);
+myElement.appendChild(newDiv);
