@@ -6,7 +6,7 @@ var myElement = document.getElementById("someParent");
 //1: Element
 //2: Attribute
 //3: Test
-console.log(myElement.nodeType);  //1
+console.log(myElement.nodeType); //1
 console.log(myElement.innerHTML);
 //Array of any children nodes
 console.log(myElement.childNodes.length);
@@ -29,3 +29,21 @@ var newDiv = document.createElement("div");
 var newText = document.createTextNode("I'm a generated DIV");
 newDiv.appendChild(newText);
 myElement.appendChild(newDiv);
+
+
+//Working with forms
+var emailField = document.getElementById("email");
+
+//When the user clicks or tabs into field
+emailField.onfocus = function () {
+  if (emailField.value == "your email") {
+    emailField.value = "";
+  }
+};
+
+//When the user clicks or tabs out of the field
+emailField.onblur = function () {
+  if (emailField.value == "") {
+    emailField.value = "your email";
+  }
+};
