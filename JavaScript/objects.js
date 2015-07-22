@@ -74,3 +74,16 @@ var allTheCars = new Array();
 allTheCars.push(myCar);
 allTheCars[1] = new Car("Ford", "Focus");
 allTheCars.push(new Car("Honda", "Civic"));
+
+
+//Prototype, kind of like a class
+function Player(n) {
+  this.name = n;
+}
+Player.prototype.sayName = function() {
+  console.log(this.name);
+}
+
+
+var bob = new Player("Bob");
+bob.sayName();
