@@ -32,6 +32,8 @@ myElement.appendChild(newDiv);
 
 
 //Working with forms
+
+//Grab a soecific field
 var emailField = document.getElementById("email");
 
 //When the user clicks or tabs into field
@@ -47,3 +49,17 @@ emailField.onblur = function () {
     emailField.value = "your email";
   }
 };
+
+var myForm = document.getElementById("myForm");
+
+//Check if a checkbox is checked when 'submitting' form
+myForm.onsubmit = function() {
+  var isChecked = document.getElementById("myCheckbox");
+  if(isChecked) {
+    alert("The checkbox is checked");
+  } else {
+    alert("The checkbox isn't checked");
+  }
+  return false; //Prevents the form from actually submitting
+}
+
