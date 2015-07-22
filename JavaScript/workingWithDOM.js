@@ -24,11 +24,22 @@ myElement.setAttribute("class", "someClass");
 myElement.setAttribute("align", "left");
 console.log(myElement.getAttribute("class"));
 
+//Add a class
+myElement.className="someOtherClass";
+console.log(myElement.getAttribute("class"));
+
+
 //Create and append elements
 var newDiv = document.createElement("div");
 var newText = document.createTextNode("I'm a generated DIV");
 newDiv.appendChild(newText);
 myElement.appendChild(newDiv);
+
+
+//Editing CSS
+
+//Add style directly
+myElement.style.backgroundColor = "green";
 
 
 //Working with forms

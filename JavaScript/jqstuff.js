@@ -1,4 +1,4 @@
-$(document).ready(function () { //Function is an even handler that happens when the document is ready
+$(document).ready(function () { //Function is an event handler that happens when the document is ready
 
   //Can select with elemeny type, class, or id.  Essentially same as using CSS selectors.
   $("h1");
@@ -18,20 +18,8 @@ $(document).ready(function () { //Function is an even handler that happens when 
   $(".class1").filter(".class2"); //Everything with class1 AND class2
 
   //Launch external JS functions
-  $('#variabbles').on('click', function () {
-    inputOutput();
-  });
-  $('#inputoutput').on('click', function () {
-    inputOutput();
-  });
-  $('#flowcontrol').on('click', function () {
-    inputOutput();
-  });
-  $('#inputoutput').on('click', function () {
-    inputOutput();
-  });
-  $('#inputoutput').on('click', function () {
-    inputOutput();
+  $('#jQuery').on('click', function () {
+    alert("JQ Button pushed");
   });
 
   //Add content
@@ -40,6 +28,9 @@ $(document).ready(function () { //Function is an even handler that happens when 
   $("#mainParagraph").prepend('Prepend '); //First child
   $("#mainParagraph").append('Append '); //Last child
 
+  //Add class
+  $('#mainParagraph').addClass("jqueryclass");
+  $('li').addClass("liclass");
 
   $('#clickToShow').on('click', function () {
     $('#slideout').slideToggle();
@@ -48,18 +39,22 @@ $(document).ready(function () { //Function is an even handler that happens when 
   //There are lots of other mouse events like mouseEnter and mouseLeave
   //There are keyboard events like keydown and keyup
 
-  var price = +$(this).data('price'); //Get the string from the data-price tag and convert it to a number
-  var quantity = +$(this).val(); //Value from a field
+  $('h2').on('click', function() {
+    $(this).text("Clicked!");
+  });
 
-  $(this).css({
-    '<attr>': '<value>'
-  }); //Add a CSS rule
-
-  $(this).toggleClass('<class>'); //Add/remove a CSS class
-
-  $(this).animate({
-    '<direction>': ,
-    '<amount>'
-  }, < speed > );
+//  var price = +$(this).data('price'); //Get the string from the data-price tag and convert it to a number
+//  var quantity = +$(this).val(); //Value from a field
+//
+//  $(this).css({
+//    '<attr>': '<value>'
+//  }); //Add a CSS rule
+//
+//  $(this).toggleClass('<class>'); //Add/remove a CSS class
+//
+//  $(this).animate({
+//    '<direction>': ,
+//    '<amount>'
+//  }, < speed > );
 
 });
