@@ -1,0 +1,45 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$("document").ready(function () {
+			$("#children").children().css("border", "1px solid blue");
+
+			var x = $("#example");
+			x.prev().css("border", "1px solid green");
+			x.next().css("border", "1px solid yellow");
+
+			x.find(".span").css("border","1px solid cyan");
+
+			var leftMargin = 5;
+			$("#each p").each(function(index, element){
+				$(element).css("margin-left", leftMargin);
+				leftMargin += 10;
+			})
+
+		});
+	</script>
+
+</head>
+<body>
+	<h1>jQuery traversal</h1>
+	<div id="children">
+		<p>I should have a blue border</p>
+		<p>I should have a blue border</p>
+	</div>
+
+	<span class="span">I should have no border</span>
+	<p>I should have a green border</p>
+	<p id="example"><span class="span">I should have cyan border</span></p>
+	<p>I should have a yellow border</p>
+
+	Each paragraph in this div should have a larger left margin
+	<div id="each">
+		<p>Paragraph</p>
+		<p>Paragraph</p>
+		<p>Paragraph</p>
+	</div>
+
+</body>
+
+</html>
