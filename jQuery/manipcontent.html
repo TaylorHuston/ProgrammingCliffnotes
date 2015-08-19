@@ -15,10 +15,25 @@
             });
         
         var adder = $("#adding");
-        adder.before("before");
-        adder.prepend("prepend");
-        adder.append("append");
-        adder.after("after");
+        adder.before("before"); //Before
+        adder.prepend("prepend"); //First child
+        adder.append("append"); //Last child
+        adder.after("after"); //After
+
+        $("#toWrap").wrap('<div style="border: 1px solid green;" />'); //Wrap around each individual element
+        
+        $("button").wrapAll('<div style="border: 1px solid blue;" />'); //Wrap round common parent
+
+        $("#toRemove").remove();
+
+        $('#toReplace').replaceWith("<p id='replaced'>I was replaced</p>");
+
+        $("#attr").attr("title", "Some Title");
+
+        $("#myImage").attr({ src: "cat2.jpg", title: "MeowMeowFluffykins" });
+
+        $("a").removeAttr("href");
+
        });
         function changeHTML() {
             $('#para1').html("<p>I'm an inserted paragraph</p>"); //Any HTML
@@ -49,5 +64,18 @@
     </div>
 
     <div id="adding" style="border: 1px solid red;"><p>Middle</p></div>
+
+    <p id="toWrap">I am being wrapped around<p>
+
+    <p id="toRemove">I should be gone</p>
+
+    <p id="toReplace">Blah</p>
+
+    <a href="#">Some link</a>
+
+    <p id="attr">I have attributes</p>
+
+    <img id="myImage" src="cat1.jpg">
+
 </body>
 </html>
