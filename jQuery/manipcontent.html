@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Creating New Content</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function() {
+            document.getElementById("create").addEventListener("click", function (evt) {
+                changeHTML();
+            });
+            document.getElementById("change").addEventListener("click", function (evt) {
+                changeContent();
+            });
+            document.getElementById("changeAll").addEventListener("click", function (evt) {
+                changeAllTheContent();
+            });
+       });
+        function changeHTML() {
+            $('#para1').html("<p>I'm an inserted paragraph</p>"); //Any HTML
+        }
+        function changeContent() {
+            $("p:last").text("I've changed the last paragraph"); //Only content
+        }
+        function changeAll() {
+            $('#example p').text("Change all")
+        }
+    </script>
+</head>
+<body>
+    <h1>Creating new document content</h1>
+    <div id="example">
+        <p class="a">This is paragraph 1</p>
+        <p id="para1">This is paragraph 2</p>
+        <p class="b">This is paragraph 3</p>
+        <p id="para4" lang="en-us">This is paragraph 4</p>
+        <p id="para5" lang="en-gb">This is paragraph 5</p>
+    </div>
+    <div>
+        <button id="create">Change HTML</button>
+        <button id="change">Change Content</button>        
+        <button id="changeAll">Change All</button>        
+    </div>
+</body>
+</html>
