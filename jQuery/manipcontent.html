@@ -13,6 +13,12 @@
             document.getElementById("changeAll").addEventListener("click", function (evt) {
                 changeAllTheContent();
             });
+        
+        var adder = $("#adding");
+        adder.before("before");
+        adder.prepend("prepend");
+        adder.append("append");
+        adder.after("after");
        });
         function changeHTML() {
             $('#para1').html("<p>I'm an inserted paragraph</p>"); //Any HTML
@@ -23,6 +29,8 @@
         function changeAll() {
             $('#example p').text("Change all")
         }
+
+
     </script>
 </head>
 <body>
@@ -39,5 +47,7 @@
         <button id="change">Change Content</button>        
         <button id="changeAll">Change All</button>        
     </div>
+
+    <div id="adding" style="border: 1px solid red;"><p>Middle</p></div>
 </body>
 </html>
