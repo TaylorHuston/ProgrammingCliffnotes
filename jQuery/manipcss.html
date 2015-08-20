@@ -1,0 +1,34 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript">
+        $("document").ready(function() {	
+        	var toStyle = $("#toStyle");
+
+        	toStyle.css("font-size", "+=5px"); //Increase by 5px
+
+        	toStyle.css({"color" : "red", "text-decoration" : "underline", "background-color" : "blue"}); //Multiple styles
+
+        	toStyle.addClass("addedClass"); //Add a class
+        	console.log(toStyle.hasClass("addedClass"));
+
+        	toStyle.removeClass("addedClass"); //Remove a class
+        	console.log(toStyle.hasClass("addedClass"));
+
+        	toStyle.toggleClass("addedClass"); //Add a class
+        	console.log(toStyle.hasClass("addedClass"));
+
+        	toStyle.toggleClass("addedClass"); //Add a class
+        	console.log(toStyle.hasClass("addedClass"));
+
+        	toStyle.width("400");
+        	toStyle.height("300");
+
+
+        });
+    </script>
+</head>
+<body>
+	<div id="toStyle">I'm going to apply some styling to this</div>
+</body>
+</html>
