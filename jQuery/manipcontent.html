@@ -28,11 +28,13 @@
 
         $('#toReplace').replaceWith("<p id='replaced'>I was replaced</p>");
 
-        $("#attr").attr("title", "Some Title");
+        $("#attr").attr("title", "Some Title"); //Single attribute
 
-        $("#myImage").attr({ src: "cat2.jpg", title: "MeowMeowFluffykins" });
+        $("#myImage").attr({ src: "cat2.jpg", title: "MeowMeowFluffykins" }); //Multiple attributes
 
         $("a").removeAttr("href");
+
+        $("addData").data("key1", 1234); 
 
        });
         function changeHTML() {
@@ -76,6 +78,8 @@
     <p id="attr">I have attributes</p>
 
     <img id="myImage" src="cat1.jpg">
+
+    <p id="addData">I have data associated with me</p>
 
 </body>
 </html>
