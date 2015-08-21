@@ -1,0 +1,100 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#Div1").on("click dblclick", { name: "Div 1" }, function(evt) {
+                updateEventDetails(evt);
+                evt.stopPropagation();
+            });
+            $("#Div2").on("click dblclick", { name: "Div 2" }, function(evt) {
+                updateEventDetails(evt);
+                evt.stopPropagation();
+            });
+            $("#Div3").on("click dblclick", { name: "Div 3" }, function(evt) {
+                updateEventDetails(evt);
+                evt.stopPropagation();
+            });
+            $(".eventer").on("mouseenter", function(evt) {
+                updateEventDetails(evt);
+                evt.stopPropagation();
+            });
+            $(".eventer").on("mouseleave", function(evt) {
+                updateEventDetails(evt);
+                evt.stopPropagation();
+            });
+            $(".eventer").on("mousemove", function(evt) {
+                updateEventDetails(evt);
+                evt.stopPropagation();
+            });
+            
+            $("#input1").keypress(updateEventDetails);
+        });
+        
+        function updateEventDetails(evt) {
+            // clear any current text before we update the value fields
+            $(".detailLine span[id]").text("");
+            
+            $("#evtType").text(evt.type);
+            $("#evtWhich").text(evt.which);
+            $("#evtTarget").text(evt.target.id);
+            if (evt.relatedTarget)
+                $("#evtRelated").text(evt.relatedTarget.tagName);
+            $("#evtPageX").text(evt.pageX);
+            $("#evtPageY").text(evt.pageY);
+            $("#evtClientX").text(evt.clientX);
+            $("#evtClientY").text(evt.clientY);
+            $("#evtMetaKey").text(evt.metaKey);
+            if (evt.data)
+                $("#evtData").text(evt.data.name);
+        }
+    </script>
+    <style>
+        .eventer {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+        }
+        #eventDetails {
+            border: 1px solid #aaa;
+            margin-top: 8pt;
+            padding: 2pt;
+        }
+        .lineitem {
+            width: 120px;
+            display: inline-block
+        }
+    </style>
+</head>
+<body>
+    <p>Click on each of the DIV elements below to see event-related information for each.</p>
+    <div id="Div1" class="eventer">Mouse over and click here (Div1)</div>
+    <div id="Div2" class="eventer">Mouse over and click here (Div2)</div>
+    <div id="Div3" class="eventer">Mouse over and click here (Div3)</div>
+    <div>Type some text here: <input type="text" id="input1"></div>
+    <div id="eventDetails">
+        <h3>Event Details</h3>
+        <div class="detailLine">
+            <span class="lineitem">Event type: </span><span class="lineitem" id="evtType"></span>
+            <span class="lineitem">Key/Button: </span><span class="lineitem" id="evtWhich"></span>
+        </div>
+        <div class="detailLine">
+            <span class="lineitem">Target: </span><span class="lineitem" id="evtTarget"></span>
+            <span class="lineitem">Related Target: </span><span class="lineitem" id="evtRelated"></span>
+        </div>
+        <div class="detailLine">
+            <span class="lineitem">pageX: </span><span class="lineitem" id="evtPageX"></span>
+            <span class="lineitem">pageY: </span><span class="lineitem" id="evtPageY"></span>
+        </div>
+        <div class="detailLine">
+            <span class="lineitem">clientX: </span><span class="lineitem" id="evtClientX"></span>
+            <span class="lineitem">clientY: </span><span class="lineitem" id="evtClientY"></span>
+        </div>
+        <div class="detailLine">
+            <span class="lineitem">Meta Key: </span><span class="lineitem" id="evtMetaKey"></span>
+            <span class="lineitem">data: </span><span class="lineitem" id="evtData"></span>
+        </div>
+    </div>
+</body>
+</html>
