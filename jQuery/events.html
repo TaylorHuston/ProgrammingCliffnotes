@@ -1,0 +1,37 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript">
+        $("document").ready(function() {	
+        	$("#mouse").on("mouseover mouseleave", highlightFunction); //Call a handle
+            $("#mouse").on("click", function(evt) {
+                alert("You clicked in the box");
+            });
+            $("#text").on("keypress", function(evt) {
+                $("#key").text(String.fromCharCode(evt.charCode));
+            })
+
+        });
+        function highlightFunction(evt) {
+        	$("#mouse").toggleClass("highlighted");
+        }
+    </script>
+    <style>
+        div {
+        	height: 400px;
+        	width: 400px;
+            border: 1px solid black;
+        }
+        .highlighted {
+        	background-color: red;
+        }
+    </style>
+</head>
+<body>
+	<div id="mouse"></div>
+
+    <p>Type below</p>
+    <input id="text" type="text" />
+    <p>Last char typed: <span id="key"></span></p>
+</body>
+</html>
