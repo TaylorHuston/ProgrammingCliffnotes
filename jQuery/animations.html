@@ -34,6 +34,13 @@
     			$("#slideDiv").slideToggle("fast", completion);
     		});
 
+    		$("#grow").click(function() {
+    			$("#custom").animate({
+    				width: "+=200",
+    				height: "+=200" }, 
+    				1000);
+    		})
+
     		function completion() {
     			console.log("Complete");
     		}
@@ -65,5 +72,9 @@
 	<button id="slideUp">Slide Up</button>
 	<button id="slideDown">Slide Down</button>
 	<button id="slideToggle">Slide Toggle</button>
+
+	<h2>Custom Animations</h2>
+	<div id="custom"></div>
+	<button id="grow">Grow</button>
 </body>
 </html>
