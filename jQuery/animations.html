@@ -1,0 +1,34 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+    	$(function() {
+    		$("#show").click(function() {
+    			$("#someDiv").show("fast");
+    		});
+    		$("#hide").click(function() {
+    			$("#someDiv").hide(1000, "swing");
+    		});
+    		$("#toggle").click(function() {
+    			$("#someDiv").toggle("slow", completion); //Toggles between hide and show, calls the completion function at end
+    		});
+    		function completion() {
+    			console.log("toggled");
+    		}
+    	});
+    </script>
+    <style>
+    	#someDiv {
+    		width: 200px;
+    		height: 200px;
+    		background-color: blue;
+    	}
+    </style>
+</head>
+<body>
+	<div id="someDiv"></div>
+	<button id="show">Show</button>
+	<button id="hide">Hide</button>
+	<button id="toggle">Toggle</button>
+</body>
+</html>
