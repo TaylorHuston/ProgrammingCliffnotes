@@ -10,15 +10,25 @@
     			$("#someDiv").hide(1000, "swing");
     		});
     		$("#toggle").click(function() {
-    			$("#someDiv").toggle("slow", completion); //Toggles between hide and show, calls the completion function at end
+    			$("#someDiv").toggle("slow", completion); //Toggles between hide and show, calls the completion function at end (optional)
     		});
     		function completion() {
     			console.log("toggled");
     		}
+
+    		$("#fadeIn").click(function() {
+    			$("#fadeDiv").fadeIn(1000);
+    		});
+    		$("#fadeOut").click(function() {
+    			$("#fadeDiv").fadeOut(1000);
+    		});
+    		$("#fadeTo").click(function() {
+    			$("#fadeDiv").fadeTo("slow", 0.3); //Fade to %30 opacity
+    		});
     	});
     </script>
     <style>
-    	#someDiv {
+    	div {
     		width: 200px;
     		height: 200px;
     		background-color: blue;
@@ -26,9 +36,16 @@
     </style>
 </head>
 <body>
+	<h2>Show and Hide</h2>
 	<div id="someDiv"></div>
 	<button id="show">Show</button>
 	<button id="hide">Hide</button>
 	<button id="toggle">Toggle</button>
+
+	<h2>Fade</h2>
+	<div id="fadeDiv"></div>
+	<button id="fadeIn">Fade In</button>
+	<button id="fadeOut">Fade Out</button>
+	<button id="fadeTo">Fade To</button>
 </body>
 </html>
