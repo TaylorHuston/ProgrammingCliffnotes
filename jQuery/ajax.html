@@ -6,6 +6,8 @@
     $(function () {
       getData();
       getShorthand();
+      getXML();
+      getJSON();
     });
 
     function getData() {
@@ -22,6 +24,33 @@
     function getShorthand() {
       $.get("testdata.txt", success); //Shorthand
       $("#results2").load("testdata.html #p2"); //Pull and append, can accept jQuery selector
+    }
+
+    function getXML() {
+      $.get("testxmldata.xml", function (result) {
+        var title = result.getElementsByTagName("title")[0];
+        var name = result.getElementsByTagName("name")[0];
+        var myString = title.firstChild.nodeValue + " by " +
+          name.firstChild.nodeValue;
+
+        $("#ajax").append(myString);
+      });
+    }
+
+    function getJSON() {
+      var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+      $.getJSON(flickrAPI, { //Like get, but specifically for JSON
+        tags: "space needle",
+        tagmode: "any",
+        format: "json"
+      }, function (result) {
+        $.each(result.items, function (i, item) { //Specific to the Flicker API
+          $("<img>").attr("src", item.media.m).appendTo("#ajax").before("<br />");
+          if (i === 4) {
+            return false;
+          }
+        });
+      });
     }
 
     function success(result) {
@@ -41,6 +70,7 @@
 <body>
   <div id="results"></div>
   <div id="results2"></div>
+  <div id="ajax"></div>
 </body>
 
 </html>
