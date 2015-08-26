@@ -1,0 +1,33 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+    	$(function() {
+          getData();
+        });
+
+        function getData() {
+          $.ajax({
+            url: "testdata.txt",
+            type: "GET",
+            dataType: "text"})
+          .done(success) //What happens if call was successfull
+          .fail(error) //What happens if there was an error
+          .always(always);
+        }
+      function success(result) {
+        $("#results").append(result);
+      }
+      function error() {
+        console.log("There was an error!");
+      }
+      function always() {
+        console.log("Request Complete");
+      }
+
+  </script>
+  </head>
+  <body>
+    <div id="results"></div>
+  </body>
+</html>
