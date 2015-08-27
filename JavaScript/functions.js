@@ -25,9 +25,9 @@ var simpleFunction = function () {
 simpleFunction();
 console.log(myScope);
 
-var adder = function(x,y) {
-  return x+y;
+var adder = function (x, y) {
+  return x + y;
 }
 
-var z = adder(2,3);
+var z = adder(2, 3);
 console.log(z);

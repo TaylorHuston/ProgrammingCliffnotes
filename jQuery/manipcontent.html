@@ -1,84 +1,94 @@
 <html>
+
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript">
-        $("document").ready(function() {
-            document.getElementById("create").addEventListener("click", function (evt) {
-                changeHTML();
-            });
-            document.getElementById("change").addEventListener("click", function (evt) {
-                changeContent();
-            });
-            document.getElementById("changeAll").addEventListener("click", function (evt) {
-                changeAllTheContent();
-            });
-        
-        var adder = $("#adding");
-        adder.before("before"); //Before
-        adder.prepend("prepend"); //First child
-        adder.append("append"); //Last child
-        adder.after("after"); //After
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    $("document").ready(function () {
+      document.getElementById("create").addEventListener("click", function (evt) {
+        changeHTML();
+      });
+      document.getElementById("change").addEventListener("click", function (evt) {
+        changeContent();
+      });
+      document.getElementById("changeAll").addEventListener("click", function (evt) {
+        changeAllTheContent();
+      });
 
-        $("#toWrap").wrap('<div style="border: 1px solid green;" />'); //Wrap around each individual element
-        
-        $("button").wrapAll('<div style="border: 1px solid blue;" />'); //Wrap round common parent
+      var adder = $("#adding");
+      adder.before("before"); //Before
+      adder.prepend("prepend"); //First child
+      adder.append("append"); //Last child
+      adder.after("after"); //After
 
-        $("#toRemove").remove();
+      $("#toWrap").wrap('<div style="border: 1px solid green;" />'); //Wrap around each individual element
 
-        $('#toReplace').replaceWith("<p id='replaced'>I was replaced</p>");
+      $("button").wrapAll('<div style="border: 1px solid blue;" />'); //Wrap round common parent
 
-        $("#attr").attr("title", "Some Title"); //Single attribute
+      $("#toRemove").remove();
 
-        $("#myImage").attr({ src: "cat2.jpg", title: "MeowMeowFluffykins" }); //Multiple attributes
+      $('#toReplace').replaceWith("<p id='replaced'>I was replaced</p>");
 
-        $("a").removeAttr("href");
+      $("#attr").attr("title", "Some Title"); //Single attribute
 
-        $("addData").data("key1", 1234); 
+      $("#myImage").attr({
+        src: "cat2.jpg",
+        title: "MeowMeowFluffykins"
+      }); //Multiple attributes
 
-       });
-        function changeHTML() {
-            $('#para1').html("<p>I'm an inserted paragraph</p>"); //Any HTML
-        }
-        function changeContent() {
-            $("p:last").text("I've changed the last paragraph"); //Only content
-        }
-        function changeAll() {
-            $('#example p').text("Change all")
-        }
+      $("a").removeAttr("href");
 
+      $("addData").data("key1", 1234);
 
-    </script>
+    });
+
+    function changeHTML() {
+      $('#para1').html("<p>I'm an inserted paragraph</p>"); //Any HTML
+    }
+
+    function changeContent() {
+      $("p:last").text("I've changed the last paragraph"); //Only content
+    }
+
+    function changeAll() {
+      $('#example p').text("Change all")
+    }
+  </script>
 </head>
+
 <body>
-    <h1>Creating new document content</h1>
-    <div id="example">
-        <p class="a">This is paragraph 1</p>
-        <p id="para1">This is paragraph 2</p>
-        <p class="b">This is paragraph 3</p>
-        <p id="para4" lang="en-us">This is paragraph 4</p>
-        <p id="para5" lang="en-gb">This is paragraph 5</p>
-    </div>
-    <div>
-        <button id="create">Change HTML</button>
-        <button id="change">Change Content</button>        
-        <button id="changeAll">Change All</button>        
-    </div>
+  <h1>Creating new document content</h1>
+  <div id="example">
+    <p class="a">This is paragraph 1</p>
+    <p id="para1">This is paragraph 2</p>
+    <p class="b">This is paragraph 3</p>
+    <p id="para4" lang="en-us">This is paragraph 4</p>
+    <p id="para5" lang="en-gb">This is paragraph 5</p>
+  </div>
+  <div>
+    <button id="create">Change HTML</button>
+    <button id="change">Change Content</button>
+    <button id="changeAll">Change All</button>
+  </div>
 
-    <div id="adding" style="border: 1px solid red;"><p>Middle</p></div>
+  <div id="adding" style="border: 1px solid red;">
+    <p>Middle</p>
+  </div>
 
-    <p id="toWrap">I am being wrapped around<p>
+  <p id="toWrap">I am being wrapped around
+    <p>
 
-    <p id="toRemove">I should be gone</p>
+      <p id="toRemove">I should be gone</p>
 
-    <p id="toReplace">Blah</p>
+      <p id="toReplace">Blah</p>
 
-    <a href="#">Some link</a>
+      <a href="#">Some link</a>
 
-    <p id="attr">I have attributes</p>
+      <p id="attr">I have attributes</p>
 
-    <img id="myImage" src="cat1.jpg">
+      <img id="myImage" src="cat1.jpg">
 
-    <p id="addData">I have data associated with me</p>
+      <p id="addData">I have data associated with me</p>
 
 </body>
+
 </html>

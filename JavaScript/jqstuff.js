@@ -39,22 +39,22 @@ $(document).ready(function () { //Function is an event handler that happens when
   //There are lots of other mouse events like mouseEnter and mouseLeave
   //There are keyboard events like keydown and keyup
 
-  $('h2').on('click', function() {
+  $('h2').on('click', function () {
     $(this).text("Clicked!");
   });
 
-//  var price = +$(this).data('price'); //Get the string from the data-price tag and convert it to a number
-//  var quantity = +$(this).val(); //Value from a field
-//
-//  $(this).css({
-//    '<attr>': '<value>'
-//  }); //Add a CSS rule
-//
-//  $(this).toggleClass('<class>'); //Add/remove a CSS class
-//
-//  $(this).animate({
-//    '<direction>': ,
-//    '<amount>'
-//  }, < speed > );
+  //  var price = +$(this).data('price'); //Get the string from the data-price tag and convert it to a number
+  //  var quantity = +$(this).val(); //Value from a field
+  //
+  //  $(this).css({
+  //    '<attr>': '<value>'
+  //  }); //Add a CSS rule
+  //
+  //  $(this).toggleClass('<class>'); //Add/remove a CSS class
+  //
+  //  $(this).animate({
+  //    '<direction>': ,
+  //    '<amount>'
+  //  }, < speed > );
 
 });

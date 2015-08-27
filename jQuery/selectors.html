@@ -1,65 +1,70 @@
 <html>
+
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script>
-	$("document").ready(function () {
-		$("li").css("border", "1px solid red"); //tag
-		$(".someClass").css("border", "1px solid green"); //class
-		$("#someId").css("border", "1px solid blue"); //ID
-		$("p.someClass").css("border", "1px solid yellow"); //tag.class
-		$("li:last").css("border", "1px solid green"); //:first also works
-		$("li:odd").css("border", "1px solid blue"); //:even also works
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    $("document").ready(function () {
+      $("li").css("border", "1px solid red"); //tag
+      $(".someClass").css("border", "1px solid green"); //class
+      $("#someId").css("border", "1px solid blue"); //ID
+      $("p.someClass").css("border", "1px solid yellow"); //tag.class
+      $("li:last").css("border", "1px solid green"); //:first also works
+      $("li:odd").css("border", "1px solid blue"); //:even also works
 
-		$("#secondList li").css("border", "1px solid beige"); //Descendant
-		$("#secondList li:lt(3)").css("border", "1px solid brown"); //:gt also works
+      $("#secondList li").css("border", "1px solid beige"); //Descendant
+      $("#secondList li:lt(3)").css("border", "1px solid brown"); //:gt also works
 
-		$("div > p").css("border", "1px solid burlywood "); //Immediate child
-		$("span + div").css("border", "1px solid purple"); //Immediate sibling
+      $("div > p").css("border", "1px solid burlywood "); //Immediate child
+      $("span + div").css("border", "1px solid purple"); //Immediate sibling
 
-		$("p[class]").css("color", "green"); //Attribute
-		$("p[class^=my]").css("border", "1px solid darkblue"); //Attribute starts with
-		$("p[class^=my][lang*=lis]").css("border", "1px solid cyan");  //Attribute contains
+      $("p[class]").css("color", "green"); //Attribute
+      $("p[class^=my]").css("border", "1px solid darkblue"); //Attribute starts with
+      $("p[class^=my][lang*=lis]").css("border", "1px solid cyan"); //Attribute contains
 
-		$("p:contains('cornsilk')").css("border", "1px solid cornsilk"); //Contains
-		$("div:has(p[class=a])").css("border", "1px solid crimson"); //Has
-		$("div p:nth-child(2)").css("border", "1px solid forestgreen");
+      $("p:contains('cornsilk')").css("border", "1px solid cornsilk"); //Contains
+      $("div:has(p[class=a])").css("border", "1px solid crimson"); //Has
+      $("div p:nth-child(2)").css("border", "1px solid forestgreen");
 
 
-	});
-	</script>
+    });
+  </script>
 </head>
+
 <body>
-	<h1>jQuery Selectors</h1>
-	<ul id="firstList">
-		<li>I should have a red border</li>
-		<li>I should have a blue border</li>
-		<li>I should have a green border</li>
-	</ul>
+  <h1>jQuery Selectors</h1>
+  <ul id="firstList">
+    <li>I should have a red border</li>
+    <li>I should have a blue border</li>
+    <li>I should have a green border</li>
+  </ul>
 
-	<ul id="secondList">
-		<li>I should have a brown border</li>
-		<li>I should have a brown border</li>
-		<li>I should have a brown border</li>
-		<li>I should have a beige border</li>
-	</ul>
-	<div class="someClass">I should have a green border</div>
-	<div id="someId">I should have a blue border</div>
+  <ul id="secondList">
+    <li>I should have a brown border</li>
+    <li>I should have a brown border</li>
+    <li>I should have a brown border</li>
+    <li>I should have a beige border</li>
+  </ul>
+  <div class="someClass">I should have a green border</div>
+  <div id="someId">I should have a blue border</div>
 
-	<p class="someClass">I should have a yellow border and green text</p>
+  <p class="someClass">I should have a yellow border and green text</p>
 
-	<span>The following div should have a purple border</span>
-	<div><p>I should have a burlywood border</p></div>
+  <span>The following div should have a purple border</span>
+  <div>
+    <p>I should have a burlywood border</p>
+  </div>
 
-	<p class="myClass">I should have a dark blue border</p>
-	<p class="myClass" lang="english">I should have a cyan border</p>
+  <p class="myClass">I should have a dark blue border</p>
+  <p class="myClass" lang="english">I should have a cyan border</p>
 
-	<p>I should have a cornsilk border</p>
+  <p>I should have a cornsilk border</p>
 
-	The following div should have a crimson border
-	<div>
-		<p class="a">I should have a burlywood border</p>
-		<p>I should have a forest green border</p>
-	</div>
+  The following div should have a crimson border
+  <div>
+    <p class="a">I should have a burlywood border</p>
+    <p>I should have a forest green border</p>
+  </div>
 
 </body>
+
 </html>

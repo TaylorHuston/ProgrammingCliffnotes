@@ -80,7 +80,7 @@ allTheCars.push(new Car("Honda", "Civic"));
 function Player(n) {
   this.name = n;
 }
-Player.prototype.sayName = function() {
+Player.prototype.sayName = function () {
   console.log(this.name);
 }
 

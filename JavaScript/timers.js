@@ -23,6 +23,6 @@ function slideshow() {
 var myInterval = setInterval(slideshow, 5000);
 
 //Stop the interval if user clicks on image
-myImage.onclick = function() {
+myImage.onclick = function () {
   clearInterval(myInterval);
 }

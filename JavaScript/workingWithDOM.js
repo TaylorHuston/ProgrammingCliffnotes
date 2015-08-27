@@ -25,7 +25,7 @@ myElement.setAttribute("align", "left");
 console.log(myElement.getAttribute("class"));
 
 //Add a class
-myElement.className="someOtherClass";
+myElement.className = "someOtherClass";
 console.log(myElement.getAttribute("class"));
 
 
@@ -64,13 +64,12 @@ emailField.onblur = function () {
 var myForm = document.getElementById("myForm");
 
 //Check if a checkbox is checked when 'submitting' form
-myForm.onsubmit = function() {
+myForm.onsubmit = function () {
   var isChecked = document.getElementById("myCheckbox");
-  if(isChecked) {
+  if (isChecked) {
     alert("The checkbox is checked");
   } else {
     alert("The checkbox isn't checked");
   }
   return false; //Prevents the form from actually submitting
 }
-
