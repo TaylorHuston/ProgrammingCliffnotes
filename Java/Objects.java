@@ -1,4 +1,7 @@
 import java.text.NumberFormat;
+import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Objects {
 
@@ -69,5 +72,17 @@ public class Objects {
     s1 = "9876543.21";
     doubVal = Double.parseDouble(s1);
     System.out.println(doubVal);
+
+    //Dates
+    Date d = new Date(); //Current time
+    System.out.println(d);
+
+    //Java 8 only
+    LocalDateTime ldt = LocalDateTime.now();
+    System.out.println(ldt);
+
+    LocalDate ld = LocalDate.of(2009, 1, 28);
+    System.out.println(ld);
+
   }
 }
