@@ -68,14 +68,6 @@ public class Variables {
     x+=10;
     System.out.println(x); //17
 
-    //Objects
-    String name = "Bob";
-    Integer myInt = 47;
-    Byte myByte = 3;
-    Short myShort = 12;
-
-    System.out.println(name); //Bob
-    System.out.println(myInt); //47
 
     //Big Decimal, more precise, use for financial transactions and such
     double someVal = .012d;
