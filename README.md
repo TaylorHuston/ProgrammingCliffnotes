@@ -10,4 +10,6 @@ Someone who is completely new to programming. This is a syntax reference. It's n
 ##Contributing
 I am by no stretch of the imagination an expert in any of these languages. I am sure there are things that I missed. I am sure there are things I got wrong. If that's the case, don't hesitate to correct me.
 
-Currently there are Ruby and JavaScript notes. I plan on adding Java shortly, and C++ after that. Any other languages are welcome though.
+Also note this isn't intended to cover every method of every object of every language. Just the most commonly used or particularly helpful syntax.
+
+Currently there are Java, javaScript and Ruby notes. Any other languages are welcome though.
