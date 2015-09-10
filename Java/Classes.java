@@ -1,3 +1,4 @@
+//Tests are in OOTester.java
 public class Classes {
 
   private int instanceVariable; //Variable of each instance of the class (can be public, but frowned upone because of encapsulation)
@@ -5,7 +6,7 @@ public class Classes {
 
   //Constructor with arguement
   public Classes(int x) {
-    instanceVariable = x;
+    this.instanceVariable = x; //Technically the this is not needed
     innerClass = new InnerClass();
   }
 
@@ -36,7 +37,7 @@ public class Classes {
   //Good practice to override the 'toString' method
   @Override
   public String toString() {
-    return "Some string representation of the class";
+    return "Some string representation of the superclass";
   }
 
   //Classes can contain other classes, can only be instantiated from within this class
@@ -45,23 +46,5 @@ public class Classes {
       System.out.println("Inner Class Created");
     }
   }
-
-
-
-  //Test client
-  public static void main(String[] args) {
-    Classes defaultClass = new Classes(); //Default constructor
-    System.out.println(defaultClass.getInt());
-
-    Classes otherClass = new Classes(7);
-    System.out.println(otherClass.getInt());
-
-    otherClass.callPriv(); //Use a public method to access a private one
-
-    Classes.statMethod(); //Static method, no instance needed
-
-    System.out.println(otherClass); //Will use the toString method
-  }
-
 }
 
