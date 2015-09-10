@@ -1,5 +1,5 @@
 //Tests are in OOTester.java
-public class Classes {
+public class Classes implements Interface {
 
   private int instanceVariable; //Variable of each instance of the class (can be public, but frowned upone because of encapsulation)
   private InnerClass innerClass; //Classes can contain complex objects
