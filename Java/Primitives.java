@@ -1,6 +1,6 @@
 import java.math.BigDecimal;
 
-public class Variables {
+public class Primitives {
 
   public static void main(String[] args) {
     //Strictly typed
@@ -10,13 +10,12 @@ public class Variables {
     //Numerical
     byte a; //-128 to 127
     short b; //-32,768 to 32,767
-    int x; //-2,147,483,648 to 2,147,483,647
+    int x = 1; //-2,147,483,648 to 2,147,483,647
     long z; //Unlimted range (within reason)
-    x = 1;
+    z = 213443l; //Note the 'l' after the dclaration
 
     float q = 3.1f; //For precision
     double y = 2.0d; //Higher precision and range than float
-    z = 213443l; //Note the 'l' after the dclaration
 
 
     System.out.println(x + "+" + y + "=" + (x+y)); //Automatic conversion
