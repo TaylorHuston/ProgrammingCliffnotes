@@ -7,9 +7,11 @@ public class OOTester {
     System.out.println(defaultClass.getInt());
 
     Classes otherClass = new Classes(7);
-    System.out.println(otherClass.getInt());
+    System.out.println(otherClass.getInt()); //Public method
+    System.out.println(otherClass.getDouble()); //Public method
 
     otherClass.callPriv(); //Use a public method to access a private one
+    otherClass.absMethod(); //Method in abstract superclass
 
     Classes.statMethod(); //Static method, no instance needed
 

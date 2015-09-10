@@ -1,11 +1,12 @@
 //Tests are in OOTester.java
-public class Classes implements Interface {
+public class Classes extends AbstractClass implements Interface {
 
   private int instanceVariable; //Variable of each instance of the class (can be public, but frowned upone because of encapsulation)
   private InnerClass innerClass; //Classes can contain complex objects
 
   //Constructor with arguement
   public Classes(int x) {
+    super(12.3); //Call abstract syperclass constructor
     this.instanceVariable = x; //Technically the this is not needed
     innerClass = new InnerClass();
   }
@@ -16,8 +17,13 @@ public class Classes implements Interface {
   }
 
   //Public method
+  //Also guaranteed by interface
   public int getInt() {
     return instanceVariable;
+  }
+
+  public double getDouble() {
+    return abstractDouble;
   }
 
   //Private method, can only be called from other class methods

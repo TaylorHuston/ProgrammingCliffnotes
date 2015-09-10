@@ -5,7 +5,7 @@ If you're like me you jump between a lot of different programming languages. Som
 So if you need a crash course on a new language, or a refresher on one you haven't used in a bit, hopefully you will find this useful.
 
 ##Who is this not for?
-Someone who is completely new to programming. This is a syntax reference. It's not a concept reference. It will show you how to make an array in a language. It won't tell you what an array is or why you'd want to use one.
+Someone who is completely new to programming. This is a syntax reference. It's not a concept reference. It's not going to explain to you how inheritance or polymorphism or anything works conceptually. Just a quick reminder on how to implement them.
 
 ##Contributing
 I am by no stretch of the imagination an expert in any of these languages. I am sure there are things that I missed. I am sure there are things I got wrong. If that's the case, don't hesitate to correct me.
