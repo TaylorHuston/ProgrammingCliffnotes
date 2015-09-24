@@ -36,8 +36,10 @@ function variables() {
   //Math has other functions
   x = 215.67
   var y = Math.round(x);
+  var z = Math.floor(x);
   console.log(x); //215.67
   console.log(y); //216
+  console.log(z); //215
 }
 
 varButton.onclick = variables;
