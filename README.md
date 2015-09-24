@@ -12,4 +12,4 @@ I am by no stretch of the imagination an expert in any of these languages. I am 
 
 Also note this isn't intended to cover every method of every object of every language. Just the most commonly used or particularly helpful syntax.
 
-Currently there are Java, javaScript and Ruby notes. Any other languages are welcome though.
+Currently there are Java, JavaScript and Ruby notes. Any other languages are welcome though.
