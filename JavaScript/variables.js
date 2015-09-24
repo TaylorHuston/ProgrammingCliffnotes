@@ -20,7 +20,7 @@ function variables() {
   console.log(b);
 
   //Random value
-  var ran = Math.random(); //Between 0 and 1
+  var ran = Math.random(); //Between 0 and 1 (but not including 1)
 
 
   var x = 1;
