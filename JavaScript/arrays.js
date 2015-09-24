@@ -47,3 +47,6 @@ console.log(sorted);
 
 //2D array
 var twoD = [[1, 1], [1, 1]];
+
+//Join converts array into string with a separator
+console.log(rand.join(" and "));

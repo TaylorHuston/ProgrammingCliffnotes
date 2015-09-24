@@ -17,7 +17,7 @@ console.log(alpha.slice(12, 18)); //Between position from 12 to 17 (doesn't incl
 console.log(alpha.replace("lmnop", "ponml"));
 
 var phrase = "This is a phrase";
-var words = phrase.split(" "); //Splits at a space
+var words = phrase.split(" "); //Splits at a space into an array
 console.log(words);
 
 //Comparison is case-sensitive
