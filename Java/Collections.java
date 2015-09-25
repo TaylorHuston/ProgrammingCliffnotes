@@ -28,6 +28,8 @@ public class Collections {
     myList.add(27);
     myList.add(49);
     System.out.println(myList); //[27, 49]
+    myList.set(0, 29);
+    System.out.println(myList); //[29, 49]
     myList.remove(0);
     System.out.println(myList);  //[49]
     myList.add(68);
