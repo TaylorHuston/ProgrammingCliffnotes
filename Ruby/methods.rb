@@ -10,7 +10,7 @@ x = 1
 def multiply(x)  #Can use () for readability though
     x = x*2  #local scope
     puts x  #2
-    x  #Last line is auto-returned, no need to Return statement
+  x  #Last line is auto-returned, no need for an explicit Return statement
 end
 y = multiply x
 puts x  #1
@@ -22,7 +22,7 @@ def ask_recursively question
   puts question
   reply = gets.chomp.downcase
   if reply == 'yes'
-    return true  #Can use return if needed
+    return true  #Can use explicit Return if needed
   elsif reply == 'no'
     return false
   else
@@ -82,7 +82,7 @@ my_yield("Taylor") do |s|
 end
 
 
-#Defaults
+#Default parameters
 def say_hi(name="Bob")
   puts "Hello #{name}"
 end

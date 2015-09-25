@@ -49,3 +49,5 @@ end
 end
 
 
+times_2 = 2
+times_2 *= 2 while times_2 < 100 #Shorthand while
