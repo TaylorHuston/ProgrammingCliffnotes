@@ -107,6 +107,7 @@ puts
 
 puts (1..10).find_all {|i| i % 3==0 } #Find all instances where boolean is true
 puts (1..10).select {|i| i % 3==0 } #Find all instances where boolean is true
+puts (1..10).reject {|i| i.even? } #Find all instances where boolean is false
 
 puts
 

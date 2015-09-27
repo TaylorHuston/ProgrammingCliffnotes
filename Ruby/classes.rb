@@ -3,7 +3,7 @@
 class Rectangle
   attr_accessor :length, :breadth #Getter and Setter shorthand
 
-  @@total = 0  #Class variable
+  @@total = 0  #Class variable, shared across all instances of class
 
   #Static method
   def self.what_am_i?

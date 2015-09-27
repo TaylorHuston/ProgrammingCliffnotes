@@ -22,6 +22,12 @@ end
 
 gets
 
+for i in 0..5
+  puts i
+end
+
+gets
+
 array = [1, 2, 3, 4, 5]
 
 for i in array
@@ -51,3 +57,4 @@ end
 
 times_2 = 2
 times_2 *= 2 while times_2 < 100 #Shorthand while
+puts times_2 #128

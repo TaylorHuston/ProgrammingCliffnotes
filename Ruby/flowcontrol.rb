@@ -37,9 +37,9 @@ end
 
 gets
 
-puts true && true
-puts true || false
-puts true && false
+puts true && true #True
+puts true || false #True
+puts true && false #false
 
 gets
 
@@ -57,3 +57,19 @@ puts x == 2 ? "It is equal to 2" : "It is not equal to 2" #Shorthand comparison,
 gets
 
 puts "Shorthand" unless false #Shorthand unless syntax
+
+1 == 1       # true
+1.eql? 1     # true
+1 == 1.0     # true
+1.eql? 1.0   # false
+1.0.eql? 1.0 # true
+
+# === is kind of weird. Basically A === B iff A was a set and B would belong in that set
+(1..5) === 3           # => true
+(1..5) === 6           # => false
+
+Integer === 42          # => true
+Integer === 'fourtytwo' # => false
+
+/ell/ === 'Hello'     # => true
+/ell/ === 'Foobar'    # => false

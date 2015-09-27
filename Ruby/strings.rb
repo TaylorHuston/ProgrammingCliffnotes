@@ -69,4 +69,14 @@ puts "Homer" =~ /er/  #Regexp
 phone = "(907) 111-2233"
 puts phone.gsub(/\D/, "") #Strip out any non-digits
 
- gets
+gets
+
+#You can grab strings for editing with %Q
+cur_weather = %Q{It's a hot day outside. Grab your umbrellas...}
+
+single_quoted = 'ice cream \n followed by it\'s a party!'
+double_quoted = "ice cream \n followed by it\'s a party!"
+
+puts single_quoted #ice cream \n followed by it's a party!
+puts double_quoted #ice cream
+                   #  followed by it's a party!
