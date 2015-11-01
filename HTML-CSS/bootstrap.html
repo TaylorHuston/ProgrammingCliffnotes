@@ -26,7 +26,7 @@
     </div>
   </div>
 
-    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">Some Title</a>
@@ -110,8 +110,35 @@
   </div>
   <div class="container-fluid">I'm a fluid, 100% width div</div>
 
+  <div class="container">
+    <div class="row">
+      <!--Bootstrap has 5 color defaults that can be combined with other classes; primary, success, info, warning, danger-->
+      <div class="bg-primary">Primary</div>
+      <div class="bg-success">Success</div>
+      <div class="bg-info">Info</div>
+      <div class="bg-warning">Warning</div>
+      <div class="bg-danger">Danger</div>
 
+      <!--Buttons can be styled by using the btn class, a btn-<color> class, and a btn-<size> class-->
+      <button class="btn btn-primary btn-sm">Small Primary</button>
+      <button class="btn btn-danger btn-lg">Large Danger</button>
+      <br />
+      <br />
 
+      <!--Buttons can be grouped-->
+      <div class="btn-toolbar">
+        <div class="btn-group btn-group-sm">
+          <button class="btn btn-primary">Small Primary</button>
+          <button class="btn btn-danger">Large Danger</button>
+        </div>
+      </div>
+            <br />
+      <div class="btn-group-vertical btn-group-lg">
+        <button class="btn btn-primary">Small Primary</button>
+        <button class="btn btn-danger">Large Danger</button>
+      </div>
+    </div>
+  </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
