@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="anggularDemo">
 
 <head>
   <meta charset="utf-8">
@@ -25,19 +25,29 @@
 <body>
 
   <div class="container">
+
     <div class="row row-content">
       <div class="col-xs-12">
-        <div ng-app>
           <div>
             <label>Name:</label>
             <input type="text" ng-model="yourName" placeholder="Enter a name here">
             <hr>
             <h1>Hello {{yourName}}!</h1>
           </div>
-        </div>
+      </div>
+    </div>
+
+    <div class="row row-content" ng-controller="demoController as demoCon">
+      <div class="col-xs-12">
       </div>
     </div>
   </div>
+
+
+
+
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </body>
 
