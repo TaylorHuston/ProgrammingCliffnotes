@@ -34,18 +34,25 @@
           <input type="text" ng-model="nameText" placeholder="Search">
           <ul>
             <li ng-repeat="person in people | filter:nameText | orderBy:'state'">{{ person.name }} - {{ person.state }}</li>
-            <!-- chain filters -->
           </ul>
+          <h3>Add a customer</h3> Name:
+          <input type="text" ng-model="newPerson.name" placeholder="Name">
+          <br /> State:
+          <input type="text" ng-model="newPerson.state" placeholder="State">
+          <br />
+          <button ng-click="addPerson()">Add</button>
+          <!--There are many directives you can call on buttons-->
         </div>
       </div>
     </div>
 
   </div>
 
-  <!--Example of a basic controller-->
+  <!--Example of a basic module. This of coruse could be in an external JS file (and typically should be)-->
   <script>
     var demoApp = angular.module('demoApp', []); //Empty array is for dependencies
 
+    //Assign a basic controller to this module
     demoApp.controller('demoController', function ($scope) {
       $scope.people = [{
         name: 'Al',
@@ -57,6 +64,15 @@
         name: 'Cat',
         state: 'Colorado'
       }]
+
+      $scope.addPerson = function () {
+        console.log('test');
+        $scope.people.push({
+          name: $scope.newPerson.name,
+          state: $scope.newPerson.state
+        });
+      };
+
     });
   </script>
 </body>
