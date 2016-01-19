@@ -61,9 +61,10 @@
     <!--Example of ng-repeat directive-->
     <div class="row row-content">
       <div class="col-xs-12">
-        <div ng-init="names=['Al', 'Bob', 'Cat']"> <!--ng-init can be used to initialize variables, though in production this should probably be done in a controller-->
+        <div ng-init="people=[{name:'Al',state:'Oklahoma'},{name:'Bob',state:'Alaska'},{name:'Cat',state:'Colorado'}]"> <!--ng-init can be used to initialize variables, though in production this should probably be done in a controller-->
+          <input type="text" ng-model="nameText" placeholder="Search">
           <ul>
-            <li ng-repeat="someVar in names">{{ someVar }}</li>
+            <li ng-repeat="person in people | filter:nameText | orderBy:'state'">{{ person.name }} - {{ person.state | uppercase }}</li> <!-- chain filters -->
           </ul>
         </div>
       </div>
