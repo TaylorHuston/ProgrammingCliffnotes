@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="anggularDemo">
+<html lang="en" ng-app>
 
 <head>
   <meta charset="utf-8">
@@ -12,6 +12,8 @@
   <!--Bootstrap CDN, not actually needed for Angular-->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -26,29 +28,47 @@
 
   <div class="container">
 
+    <!--Hello World-->
+
     <div class="row row-content">
       <div class="col-xs-12">
-          <div>
-            <label>Name:</label>
-            <input type="text" ng-model="yourName" placeholder="Enter a name here">
-            <hr>
-            <h1>Hello {{yourName}}!</h1>
-          </div>
+        <div>
+          <label>Name:</label>
+          <input type="text" ng-model="yourName" placeholder="Enter a name here">
+          <hr>
+          <h1>Hello {{yourName}}!</h1>
+        </div>
       </div>
     </div>
 
+    <!--Example of filter-->
+
+    <div class="row row-content">
+      <div class="col-xs-12">
+        <div>
+          <label>Quantity:</label>
+          <input type="number" ng-model="quant" placeholder="">
+          <br />
+          <label>Price:</label>
+          <input type="number" ng-model="price" placeholder="">
+          <hr> Total {{quant * price | currency}}
+          <!--Runs through the currency filter. There are many filters-->
+        </div>
+      </div>
+    </div>
+
+<!--
     <div class="row row-content" ng-controller="demoController as demoCon">
       <div class="col-xs-12">
       </div>
     </div>
+-->
   </div>
 
 
 
 
 
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </body>
 
 </html>
