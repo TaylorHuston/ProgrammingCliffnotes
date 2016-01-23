@@ -1,6 +1,19 @@
 #anotherParagraph {
-  letter-spacing: 2px;
-  line-height: 2px;
+  letter-spacing: 5px;
+  line-height: 2;
   font-size: 18px;
   font-family: Arial, sans-serif;
+  text-decoration: underline;
+}
+
+a {
+  color: green;
+}
+
+a:visited {
+  color: orange;
+}
+
+a:hover {
+  font-weight: bold;
 }
