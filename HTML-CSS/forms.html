@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Some Title</title>
+
+  <link href="forms.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+
+<body>
+
+  <!--Method is how the form is processed. Action is the URL of destination of the form submission.-->
+  <form method="POST" action="http://www.somewebsite.com/orderform.aspx">
+    <label>Some Field:
+      <!--ID is typically for client side JavaScript stuff, and name is what the server needs to process the form.-->
+      <input type="text" id="aField" name="aField" maxlength="20">
+    </label>
+
+    <br />
+
+    <label>A Password
+      <input type="password" id="aPassword" name="aPassword">
+    </label>
+
+    <!--Use a fieldset to group items.-->
+    <fieldset>
+      <legend>A Legend</legend>
+      <label>Radio 1
+        <input type="radio" name="radioOption" value="1" checked>
+      </label>
+      <br />
+      <label>Radio 2
+        <input type="radio" name="radioOption" value="2">
+      </label>
+      <br />
+      <label>Radio 3
+        <input type="radio" name="radioOption" value="3">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Another Legend</legend>
+      <label>Checkbox 1
+        <input type="checkbox" name="checkOption" value="1" checked>
+      </label>
+      <br />
+      <label>Checkbox 2
+        <input type="checkbox" name="checkOption" value="1">
+      </label>
+      <br />
+      <label>Checkbox 3
+        <input type="checkbox" name="checkOption" value="1">
+      </label>
+    </fieldset>
+
+    <p>
+      <select name="selectMenu">
+        <option value="1">Select 1</option>
+        <option value="2">Select 2</option>
+        <option value="3">Select 3</option>
+      </select>
+    </p>
+
+    <p>
+      <select name="selectMenu2" multiple>
+        <option value="1">Select 1</option>
+        <option value="2" selected>Select 2</option>
+        <option value="3">Select 3</option>
+      </select>
+    </p>
+
+    <p>
+      <label>Text Field:
+        <br />
+        <textarea name="someText" cols="50" rows="10" maxlength="1000"></textarea>
+      </label>
+    </p>
+
+    <button type="submit" value="submit">Submit</button>
+
+  </form>
+
+</body>
