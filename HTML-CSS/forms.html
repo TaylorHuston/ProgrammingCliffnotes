@@ -14,14 +14,42 @@
   <form method="POST" action="http://www.somewebsite.com/orderform.aspx">
     <label>Some Field:
       <!--ID is typically for client side JavaScript stuff, and name is what the server needs to process the form.-->
-      <input type="text" id="aField" name="aField" maxlength="20">
+      <input type="text" id="aField" name="aField" maxlength="20" placeholder="Placeholder">
     </label>
 
     <br />
 
     <label>A Password
-      <input type="password" id="aPassword" name="aPassword">
+      <input type="password" id="aPassword" name="aPassword" required>
     </label>
+
+    <br />
+
+    <label>An Email
+      <!--Autofocus is the field where the cursor starts.-->
+      <input type="email" id="anEmail" name="anEmail" autofocus>
+    </label>
+
+    <br />
+
+    <label>A URL
+      <input type="url" id="aURL" name="aURL">
+    </label>
+
+    <br />
+
+    <label>Range
+      <!--By default a range is between 0 and 100.-->
+      <input type="range" id="aRange" name="aRange" value=47>
+    </label>
+
+    <br />
+
+    <label>Number
+      <input type="number" id="aNumber" name="aNumber">
+    </label>
+
+    <br />
 
     <!--Use a fieldset to group items.-->
     <fieldset>
@@ -75,6 +103,23 @@
         <br />
         <textarea name="someText" cols="50" rows="10" maxlength="1000"></textarea>
       </label>
+    </p>
+
+    <p>
+      <label>Data List
+        <input type="text" list=someList>
+
+        <datalist id="someList">
+          <option label="First" value="First"></option>
+          <option label="Second" value="Second"></option>
+          <option label="Third" value="Third"></option>
+        </datalist>
+
+      </label>
+
+
+
+
     </p>
 
     <button type="submit" value="submit">Submit</button>
