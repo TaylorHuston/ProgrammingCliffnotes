@@ -39,3 +39,9 @@ nav > ul > li {
 nav > ul > li > a {
   text-decoration: none;
 }
+
+footer {
+  background-image: url(https://placekitten.com/200/300);
+  background-repeat: repeat;
+  height: 400px;
+}
