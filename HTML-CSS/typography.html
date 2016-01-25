@@ -5,137 +5,159 @@
   <meta charset="utf-8">
   <title>Some Title</title>
 
-  <link href="typography.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 
 <body>
 
-  <!--Block level element. Each element can have an ID and one or more classes. IDs must be unique per page.-->
-  <header id="headerID" class="someClass">
-    <!--hgroup to group header items together-->
-    <hrgroup>
-      <h1 id="pageTitle" class="titleText">Page title</h1>
-      <h2>Page Subtitle</h2>
-    </hrgroup>
+  <!--Using inline styles for better note reading, you would never do this in the real world.-->
+  <h1>font-family</h1>
+  <p style="font-family:Arial;">font-family:Arial;</p>
+  <p style="font-family:Times;">font-family:Times;</p>
+  <p style="font-family:Georgia;">font-family:Georgia;</p>
+  <p style="font-family:Constantia;">font-family:Constantia;</p>
 
-    <!--Block level element used to identify the navigation-->
-    <nav>
-      <!--Unordered List, <ul>, contains List Elements, <li>-->
-      <ul>
-        <!--a element is an href (link)-->
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <hr>
 
+  <h1>font-size</h1>
+  <p style="font-size:1em;">font-size:1em;</p>
+  <p style="font-size:1.3em;">font-size:1.3em;</p>
+  <p style="font-size:110%;">font-size:110%;</p>
+  <p style="font-size:14px;">font-size:14px;</p>
+  <p style="font-size:smaller;">font-size:smaller;</p>
+  <p style="font-size:small;">font-size:small;</p>
+  <p style="font-size:medium;">font-size:medium;</p>
+  <p style="font-size:large;">font-size:large;</p>
+  <p style="font-size:larger;">font-size:larger;</p>
+  <p style="font-size:x-large;">font-size:x-large;</p>
+  <p style="font-size:xx-large;">font-size:xx-large;</p>
 
-  <section>
+  <hr>
 
-    <!--Paragraphs are block level-->
-    <p id="someID" class="someClass">
+  <h1>font-weight</h1>
+  <p style="font-weight:normal;">font-weight:normal;</p>
+  <p style="font-weight:lighter;">font-weight:lighter;</p>
+  <p style="font-weight:bold;">font-weight:bold;</p>
+  <p style="font-weight:bolder;">font-weight:bolder;</p>
+  <p style="font-weight:100;">font-weight:100;</p>
+  <p style="font-weight:900;">font-weight:900;</p>
 
-      <!--Headers are used for various page and section titles. Typically rendered as being larger/bolder than normal text, but you should override that with CSS.-->
-      <h1>Heading 1</h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
+  <hr>
 
+  <h1>font-style</h1>
+  <p style="font-style:normal;">font-style:normal;</p>
+  <p style="font-style:italic;">font-style:italic;</p>
+  <p style="font-style:oblique;">font-style:oblique;</p>
 
-      <!--href is the address, target="_blank" allows it to open in a new tab.-->
-      <a href="#anotherParagraph" target="_blank">A link</a>
-      <br />
+  <hr>
 
-      <!--Spans are generic inline elements-->
-      <span>Some span</span>
-      <br />
+  <h1>font-variant</h1>
+  <p style="font-variant:normal;">font-variant:normal;</p>
+  <p style="font-variant:small-caps;">font-variant:small-caps;</p>
 
-      <!--Strong is typically rendered as bold text. Text that has 'strong' importance.-->
-      <strong>Strong</strong>
-      <br />
+  <hr>
 
-      <!--B is typically rendered as bold text. Text that you want to draw attention to but doesn't have any semantic difference.-->
-      <b>B</b>
-      <br />
+  <h1>letter-spacing</h1>
+  <p style="letter-spacing:normal;">letter-spacing:normal;</p>
+  <p style="letter-spacing:.2em;">letter-spacing:.2em;</p>
 
-      <!--Mark is usually rendered as highlighted text.-->
-      <mark>Mark</mark>
-      <br />
+  <hr>
 
-      <!--Emphasis is typically rendered as italics. Used to indicate 'stressed emphasis'.-->
-      <em>Emphasis</em>
-      <br />
+  <h1>word-spacing</h1>
+  <p style="word-spacing:normal;">word-spacing:normal; This is a test.</p>
+  <p style="word-spacing:.5em;">word-spacing:.5em; This is a test.</p>
 
-      <!--I is typically rendered as italics. Used to indicate 'alternative voice or mood'.-->
-      <em>I</em>
-      <br />
+  <hr>
 
-      <!--Strikethrough is for information that is no longer relevant but should be saved-->
-      <s>Strikethrough</s>
-      <br />
+  <h1>line-height</h1>
+  <p style="line-height:normal;">Some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text. Some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text. Some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text. Some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text.</p>
+  <p style="line-height:2em;">Some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text. Some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text. Some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text. Some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text. Some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text.</p>
 
-      <!--Del is for information that can be safely removed-->
-      <del>Del</del>
-      <br />
+  <hr>
 
-      <!--Small is rendered smaller than the surrounding text.-->
-      <small>Small</small>
-      <br />
+  <h1>text-transform</h1>
+  <p style="text-transform:capitalize;">text-transform: capitalize;</p>
+  <p style="text-transform:uppercase;">text-transform: uppercase;</p>
+  <p style="text-transform:lowercase;">Text-transform: lowercase;</p>
 
-      <!--Cite is usually rendered in italics. Used to represent the title of another work.-->
-      <cite>Cite</cite>
-      <br />
+  <hr>
 
-      <!--Used to represent a block of content from somewhere else, the 'cite' element.-->
-      <blockquote cite=" ">Block quote
-    </blockquote>
-      <br />
+  <h1>text-align</h1>
+  <p style="text-align:left;">text-align:left;</p>
+  <p style="text-align:center;">text-align:center;</p>
+  <p style="text-align:right;">text-align:right;</p>
 
-      <!--Code is typically rendered in monospace.-->
-      <code>Code code code</code>
-      <br />
+  <hr>
 
-      <!--Pre keeps all formatting and whitespace.-->
-      <pre>
-      if (x == y) {
-        System.out.println("Hello World");
-      }
-      </pre>
-
-    </p>
-
-    <p id="anotherParagraph">
-      Usually called 'The Doctor.' Or 'The Caretaker.' Or 'Get off this planet.' Though, strictly speaking, that probably isn't a name. Father Christmas. Santa Claus. Or, as I’ve always known him, Jeff. No. You're too short and bossy, and your nose is all funny. There's something that doesn't make sense. Let's go and poke it with a stick. Bow ties are cool. Brave heart, Clara. Frightened people. Give me a Dalek any day. Overconfidence, this, and a small screwdriver. I’m absolutely sorted. Come along, Pond!
-
-    </p>
+  <h1>vertical-align</h1>
 
 
-  </section>
+  <p>
+    <h1 style="font-size:36px;line-height:1.2em;">Text
+    <span style="font-size:14px;vertical-align:top;">vertical-align:top;</span>
+  </h1>
+  </p>
 
-  <section id="lists">
-    <!--Unordered lists where the order isn't important.-->
-    <ul>
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-    </ul>
+  <p>
+    <h1 style="font-size:36px;line-height:1.2em;">Text
+    <span style="font-size:14px;vertical-align:middle;">vertical-align:middle;</span>
+  </h1>
+  </p>
 
-    <!--Ordered lists where the order is important.-->
-    <ol>
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-    </ol>
+  <p>
+    <h1 style="font-size:36px;line-height:1.2em;">Text
+    <span style="font-size:14px;vertical-align:bottom;">vertical-align:bottom;</span>
+  </h1>
+  </p>
 
-    <!--Definition list. I've never bothered to use one in a live website.-->
-    <dl>
-      <dt>Question 1</dt>
-      <dd>Answer 1</dd>
-    </dl>
+  <p>
+    <h1 style="font-size:36px;line-height:1.2em;">Text
+    <span style="font-size:14px;vertical-align:super;">vertical-align:super;</span>
+  </h1>
+  </p>
+
+  <p>
+    <h1 style="font-size:36px;line-height:1.2em;">Text
+    <span style="font-size:14px;vertical-align:sub;">vertical-align:sub;</span>
+  </h1>
+  </p>
+
+  <p>
+    <h1 style="font-size:36px;line-height:1.2em;">Text
+    <span style="font-size:14px;vertical-align:baseline;">vertical-align:baseline;</span>
+  </h1>
+  </p>
+
+  <p>
+    <h1 style="font-size:36px;line-height:1.2em;">Text
+    <span style="font-size:14px;vertical-align:text-top;">vertical-align:text-top;</span>
+  </h1>
+  </p>
+
+  <p>
+    <h1 style="font-size:36px;line-height:1.2em;">Text
+    <span style="font-size:14px;vertical-align:text-bottom;">vertical-align:text-bottom;</span>
+  </h1>
+  </p>
 
 
-  </section>
 
+  <hr>
+
+  <h1>text-indent</h1>
+  <p style="text-indent:0px;">text-indent:0px;</p>
+  <p style="text-indent:25px;">text-indent:25px;</p>
+
+  <hr>
+
+  <hr>
+
+  <h1>text-decoration</h1>
+  <p style="text-decoration:none;">text-decoration:none;</p>
+  <p style="text-decoration:underline;">text-decoration:underline;</p>
+  <p style="text-decoration:overline;">text-decoration:overline;</p>
+  <p style="text-decoration:line-through;">text-decoration:line-through;</p>
+
+  <hr>
 </body>
 
 </html>
