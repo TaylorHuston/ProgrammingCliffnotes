@@ -2,7 +2,7 @@
 
 var varButton = document.getElementById("variables");
 
-function variables() {
+var variables = function() {
   //Weakly-typed
   var a = "I am a string";
   var b = 100;
@@ -22,16 +22,15 @@ function variables() {
   //Random value
   var ran = Math.random(); //Between 0 and 1 (but not including 1)
 
-
   var x = 1;
   x++;
-  console.log(x);
+  console.log(x); //2
   x += 10;
-  console.log(x);
+  console.log(x); //12
   x %= 7; //Modulus
-  console.log(x);
-  console.log(x++); //Logs x first, then increments
-  console.log(++x); //Increments, then logs
+  console.log(x); //5
+  console.log(x++); //5. Logs x first, then increments
+  console.log(++x); //7. Increments, then logs
 
   //Math has other functions
   x = 215.67
