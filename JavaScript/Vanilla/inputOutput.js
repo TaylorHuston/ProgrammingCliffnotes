@@ -2,7 +2,7 @@
 
 var inputButton = document.getElementById("inputoutput");
 
-var inputOutput = function () {
+function inputOutput() {
   alert("I am an alert box");
   confirm("I am a confirm box, click okay to continue");
 

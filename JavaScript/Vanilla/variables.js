@@ -2,7 +2,7 @@
 
 var varButton = document.getElementById("variables");
 
-var variables = function() {
+function variables() {
   //Weakly-typed
   var a = "I am a string";
   var b = 100;

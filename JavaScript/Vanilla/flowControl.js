@@ -2,7 +2,7 @@
 
 var flowButton = document.getElementById("flowcontrol");
 
-var flowControl = function () {
+function flowControl() {
   var age = prompt("How old are you?");
 
   if (age > 30) {
