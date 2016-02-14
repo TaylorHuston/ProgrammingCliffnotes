@@ -23,14 +23,20 @@ var variables = function() {
   var ran = Math.random(); //Between 0 and 1 (but not including 1)
 
   var x = 1;
+
   x++;
   console.log(x); //2
+
   x += 10;
   console.log(x); //12
+
   x %= 7; //Modulus
   console.log(x); //5
-  console.log(x++); //5. Logs x first, then increments
-  console.log(++x); //7. Increments, then logs
+
+  x *= 10;
+  console.log(x); //50
+  console.log(x++); //50. Logs x first, then increments
+  console.log(++x); //52. Increments, then logs
 
   //Math has other functions
   x = 215.67
