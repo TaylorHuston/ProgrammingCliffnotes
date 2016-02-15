@@ -49,6 +49,8 @@ function variables() {
   var aString = "55"; //String
   var aNumber = Number(aString);
   console.log(isNaN(aNumber)); //is Not a Number, false
+
+  console.log(Math.PI); //BRING ME SOME PIE
 }
 
 varButton.onclick = variables;
