@@ -9,6 +9,7 @@ console.log(formatted);
 
 //String have a variety of self-explanatory methods
 var alpha = "abcdefghijklmnopqrstuvwxyz"
+console.log(alpha.length); //26
 console.log(alpha.indexOf("e")); //First occurence
 console.log(alpha.indexOf("DDDD")); //Returns -1
 console.log(alpha.charAt(11)); //l
