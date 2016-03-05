@@ -1,89 +1,95 @@
 //Object syntax
+var objectsButton = document.getElementById("objects");
 
-//Create an object
-var person1 = {};
+function objects() {
+  //Create an object
+  var person1 = {};
 
-//Dot notation for setting attributes
-person1.name = "John Doe";
+  //Dot notation for setting attributes
+  person1.name = "John Doe";
 
-//Create object with pre-defined attributes
-var person2 = {
-  name: "Jane Doe"
-};
+  //Create object with pre-defined attributes
+  var person2 = {
+    name: "Jane Doe"
+  };
 
-console.log(person1.name);
-console.log(person2.name);
+  console.log(person1.name);
+  console.log(person2.name);
 
-//Object attributes can be other objects
-var people = {};
-people.person1 = person1;
+  //Object attributes can be other objects
+  var people = {};
+  people.person1 = person1;
 
-//Bracket notation
-people["person2"] = person2;
+  //Bracket notation
+  people["person2"] = person2;
 
-console.log(people["person1"].name);
-console.log(people.person2.name);
+  console.log(people["person1"].name);
+  console.log(people.person2.name);
 
-person1.name = "Jack Doe";
-console.log(person1.name);
-console.log(people.person1.name);
+  person1.name = "Jack Doe";
+  console.log(person1.name);
+  console.log(people.person1.name);
 
-//When create object with a constructor
-var phonebookEntry = new Object();
+  //When creating an object with a constructor
+  var phonebookEntry = new Object();
 
-phonebookEntry.name = 'Taylor Huston';
-phonebookEntry.number = '(503) 962-9521';
-//Define a method
-phonebookEntry.phone = function () {
-  console.log('Calling ' + this.name + ' at ' + this.number + '...');
-};
+  phonebookEntry.name = 'Taylor Huston';
+  phonebookEntry.number = '(503) 962-9521';
 
-//Call a method
-phonebookEntry.phone();
+  //Define a method on the object
+  phonebookEntry.phone = function () {
+    console.log('Calling ' + this.name + ' at ' + this.number + '...');
+  };
+
+  //Call a method
+  phonebookEntry.phone();
+
+  //Methods
+  bob = new Object();
+  bob.setAge = function (age) { //Object specific method
+    bob.age = age;
+  }
+  bob.setAge(20);
+
+  console.log(bob.age);
+
+  function setWeight(weight) {
+    this.weight = weight;
+  };
+
+  //Assign generic functon as an object method
+  bob.setWeight = setWeight;
+  bob.setWeight(150);
+
+  console.log(bob.weight);
+
+  //Constructor
+  function Car(make, model) {
+    this.make = make;
+    this.model = model;
+  }
+
+  var myCar = new Car("Toyota", "Prius");
+  console.log(myCar.make);
 
 
-//Methods
-bob = new Object();
-bob.setAge = function (age) { //Object specific method
-  bob.age = age;
+  var allTheCars = new Array();
+  allTheCars.push(myCar);
+  allTheCars[1] = new Car("Ford", "Focus");
+  allTheCars.push(new Car("Honda", "Civic"));
+
+
+  //Prototype, kind of like a class
+  function Player(n) {
+    this.name = n;
+  }
+  Player.prototype.sayName = function () {
+    console.log(this.name);
+  }
+
+
+  var bob = new Player("Bob");
+  bob.sayName();
 }
-bob.setAge(20);
 
-console.log(bob.age);
-
-var setWeight = function (weight) {
-  this.weight = weight;
-};
-bob.setWeight = setWeight; //Use generic functon as object method
-bob.setWeight(150);
-
-console.log(bob.weight);
-
-
-//Constructor
-function Car(make, model) {
-  this.make = make;
-  this.model = model;
-}
-
-var myCar = new Car("Toyota", "Prius");
-console.log(myCar.make);
-
-
-var allTheCars = new Array();
-allTheCars.push(myCar);
-allTheCars[1] = new Car("Ford", "Focus");
-allTheCars.push(new Car("Honda", "Civic"));
-
-
-//Prototype, kind of like a class
-function Player(n) {
-  this.name = n;
-}
-Player.prototype.sayName = function () {
-  console.log(this.name);
-}
-
-
-var bob = new Player("Bob");
-bob.sayName();
+objectsButton.onclick = objects;
