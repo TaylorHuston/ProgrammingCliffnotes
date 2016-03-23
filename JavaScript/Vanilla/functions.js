@@ -36,6 +36,25 @@ function functions() {
 
   var z = adder(2, 3);
   console.log(z); //5
+
+  //Functions can return other functions and assign them
+  function multiplier(factor) {
+    return function (number) {
+      return number * factor;
+    }
+  }
+
+  var twice = multiplier(2); //Returns an instance of the nexted function above with number = 2;
+  console.log(twice(5));
+
+  //Standard recursion rules apply
+  function power(base, expon) {
+    if (expon == 0) {
+      return 1;
+    } else {
+      return base * power(base, expon--);
+    }
+  }
 }
 
 functionButton.onclick = functions;
