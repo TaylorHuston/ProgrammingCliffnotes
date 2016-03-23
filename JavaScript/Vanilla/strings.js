@@ -31,6 +31,12 @@ function strings() {
 
   console.log(str1 < str2); //True
   console.log(str1 < str3); //False
+
+  //Can force convert to string
+  var number = 7;
+  var myString = String(number);
+  myString = "0" + myString;
+  console.log(myString);
 }
 
 stringButton.onclick = strings;
