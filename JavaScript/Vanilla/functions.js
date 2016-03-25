@@ -55,6 +55,16 @@ function functions() {
       return base * power(base, expon--);
     }
   }
+
+  //Functions always have access to a special 'arguments' variable
+  function someArgs(myBool) {
+    var someBool = myBool;
+    for (var i = 1; i < arguments.length; i++) {
+      console.log(arguments[i]);
+    }
+    return;
+  }
+  someArgs(true, 1, 2, 3);
 }
 
 functionButton.onclick = functions;
