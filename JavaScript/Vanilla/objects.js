@@ -9,12 +9,15 @@ function objects() {
   person1.name = "John Doe";
 
   //Create object with pre-defined attributes
+  //Properties with non cvalid variable names use quotes
   var person2 = {
-    name: "Jane Doe"
+    firstName: "Jane",
+    "last name": "Doe"
   };
 
   console.log(person1.name);
-  console.log(person2.name);
+  console.log(person2.firstName);
+  console.log(person2["last name"]);
 
   //Object attributes can be other objects
   var people = {};
@@ -90,6 +93,36 @@ function objects() {
 
   var bob = new Player("Bob");
   bob.sayName();
+
+  //Object equality
+  var object1 = {
+    val: 10
+  };
+  var object2 = object1;
+  var object3 = {
+    val: 10
+  };
+  console.log(object1 == object2); //True
+  console.log(object1 == object3); //false
+  object1.val = 15;
+  console.log(object2.val); //15
+
+  //Bracket notation can use variables
+  var population = {}
+
+  function addPop(city, pop) {
+    population[city] = pop;
+  }
+  addPop("New York", "Eleventymillion");
+  console.log(population["New York"]);
+
+  addPop("Chicago", "Seventeen Thousand");
+  addPop("Seattle", 12);
+
+  //Object for loop
+  for (var city in population) {
+    console.log(city + " : " + population[city]);
+  }
 }
 
 objectsButton.onclick = objects;
