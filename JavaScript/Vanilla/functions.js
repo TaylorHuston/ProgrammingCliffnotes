@@ -50,7 +50,7 @@ function functions() {
   //Call the returned function automatically
   var third = multiplier(3)(5);
   console.log(third);
-  
+
   //Standard recursion rules apply
   function power(base, expon) {
     if (expon == 0) {
@@ -59,7 +59,6 @@ function functions() {
       return base * power(base, expon--);
     }
   }
-
 
   //Functions always have access to a special 'arguments' variable
   function someArgs(myBool) {
@@ -70,6 +69,23 @@ function functions() {
     return;
   }
   someArgs(true, 1, 2, 3);
+
+  //Passing functions to other functions is very powerful
+  var anotherArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  //In this example you can use any function in the palce of test to filter on any criteria (note that filter is a standard array method, only defined here manually as an example)
+  function filter(array, test) {
+    var passed = [];
+    for (var i = 0; i < array.length; i++) {
+      if (test(array[i])) {
+        passed.push(array[i]);
+      }
+    }
+    return passed;
+  }
+  //Pass anonymous function to filter, in this case one that test for even numbers
+  console.log(filter(anotherArray, function(number) {
+    return (number % 2 == 0);
+  }));
 }
 
 functionButton.onclick = functions;
