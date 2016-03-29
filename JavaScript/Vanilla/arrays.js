@@ -1,5 +1,5 @@
 //Array syntax
-var functionButton = document.getElementById("arrays");
+//var functionButton = document.getElementById("arrays");
 
 function arrays() {
   console.log("test");
@@ -47,6 +47,14 @@ function arrays() {
 
   var sorted = rand.sort();
   console.log(sorted); //1,3,3,5,8,9
+  
+  //Use forEach to run a function on each element of an array
+  var sum = 0;
+  sorted.forEach(function(someVal) {
+    console.log(someVal);
+    sum += someVal;
+  });
+  console.log(sum);
 
   //2D array
   var twoD = [[1, 1], [1, 1]];
@@ -55,4 +63,5 @@ function arrays() {
   console.log(rand.join(" and ")); //1 and 3 and 3 and 5 and 8 and 9
 }
 
-functionButton.onclick = arrays;
+//functionButton.onclick = arrays;
+arrays();
