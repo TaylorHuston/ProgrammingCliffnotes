@@ -47,6 +47,10 @@ function functions() {
   var twice = multiplier(2); //Returns an instance of the nexted function above with number = 2;
   console.log(twice(5));
 
+  //Call the returned function automatically
+  var third = multiplier(3)(5);
+  console.log(third);
+  
   //Standard recursion rules apply
   function power(base, expon) {
     if (expon == 0) {
@@ -55,6 +59,7 @@ function functions() {
       return base * power(base, expon--);
     }
   }
+
 
   //Functions always have access to a special 'arguments' variable
   function someArgs(myBool) {
@@ -68,3 +73,4 @@ function functions() {
 }
 
 functionButton.onclick = functions;
+functions();
