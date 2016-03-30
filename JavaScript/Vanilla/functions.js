@@ -1,6 +1,3 @@
-//Functions
-var functionButton = document.getElementById("functions");
-
 function functions() {
 
   //Standard functions are hoisted when the file is first loaded, can be used before they are defined
@@ -11,7 +8,7 @@ function functions() {
     return 72;
   }
 
-  var name = prompt("What is your name?");
+  var name = "Taylor"
 
   //Anonymous functions are not hoisted, must be defined in the code before they are used
   var sayHi = function (name) {
@@ -88,5 +85,4 @@ function functions() {
   }));
 }
 
-functionButton.onclick = functions;
 functions();
