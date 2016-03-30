@@ -47,20 +47,54 @@ function arrays() {
 
   var sorted = rand.sort();
   console.log(sorted); //1,3,3,5,8,9
-  
+
   //Use forEach to run a function on each element of an array
   var sum = 0;
-  sorted.forEach(function(someVal) {
+  sorted.forEach(function (someVal) {
     console.log(someVal);
     sum += someVal;
   });
   console.log(sum);
+
+  //Use filter to exclude certain elements
+  console.log(sorted.filter(function (val) {
+    return (val % 2 == 0);
+  }));
+
+  //Use map to apply a function to each element of an array and build a NEW array from the results
+  console.log(sorted.map(function (val) {
+    return (val * 2);
+  }));
+
+  //Reduce returns a single value based on a function ran on each array element in order. Internal logic looks something like
+  //function reduce(array, combine, start) {
+  //var current = start;
+  //for (var i = 0; i < array.length; i++)
+  //current = combine(current, array[i]);
+  //return current;
+  //}
+
+  //Use reduce to combine all elements
+  console.log(sorted.reduce(function (x, y) {
+    return x + y;
+  }));
+
+  //Use reduce to find smallest element
+  console.log(sorted.reduce(function (x, y) {
+    if (x < y) {
+      return x;
+    } else {
+      return y;
+    }
+  }));
 
   //2D array
   var twoD = [[1, 1], [1, 1]];
 
   //Join converts array into string with a separator
   console.log(rand.join(" and ")); //1 and 3 and 3 and 5 and 8 and 9
+
+
 }
 
 //functionButton.onclick = arrays;
