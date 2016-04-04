@@ -91,6 +91,11 @@ function objects() {
   }
 
 
+  console.log(Object.getPrototypeOf({}) == Object.prototype); //True
+  console.log(Object.getPrototypeOf(isNaN) == Function.prototype);  //True
+  console.log(Object.getPrototypeOf([]) == Array.prototype);  //True
+
+
   var bob = new Player("Bob");
   bob.sayName();
 
@@ -123,6 +128,9 @@ function objects() {
   for (var city in population) {
     console.log(city + " : " + population[city]);
   }
+
+
+
 }
 
 objectsButton.onclick = objects;
