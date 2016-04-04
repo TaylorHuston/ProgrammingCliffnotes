@@ -79,10 +79,25 @@ function functions() {
     }
     return passed;
   }
+
   //Pass anonymous function to filter, in this case one that test for even numbers
-  console.log(filter(anotherArray, function(number) {
+  console.log(filter(anotherArray, function (number) {
     return (number % 2 == 0);
   }));
+
+  //Apply allows you to call a function and specify the 'this', followed by an array of args
+  function speak(x, y) {
+    console.log("I am a " + this.type + ", " + x + " " + y);
+  }
+
+  var someObject = {
+    type: "Human"
+  };
+
+  speak.apply(someObject, [10, 12]);
+
+  //Call is similar, but doesn't take the arguments as an array
+  speak.call({type: "Cat"}, "Hello", 47);
 }
 
 functions();
