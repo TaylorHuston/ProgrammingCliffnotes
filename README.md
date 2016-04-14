@@ -14,8 +14,8 @@ Also note this isn't intended to cover every method of every object of every lan
 
 Currently there are Java, JavaScript and Ruby notes. Any other languages are more than welcome though.
 
-REFERENCES:
-JavaScript: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference</a>
+REFERENCES<br />>
+JavaScript: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference</a><br />
 JavaScript: <a href="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf" target="_blank">http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf</a>
 
 Java: <a href="https://docs.oracle.com/javase/8/docs/api/" target="_blank">https://docs.oracle.com/javase/8/docs/api/</a>
