@@ -67,6 +67,15 @@ function functions() {
   }
   someArgs(true, 1, 2, 3);
 
+  function sum() {
+    var total = 0;
+    for (var i = 0; i < arguments.length; i++) {
+      total += arguments[i];
+    }
+    return total;
+  }
+  console.log(sum(1, 2, 3));
+
   //Passing functions to other functions is very powerful
   var anotherArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   //In this example you can use any function in the palce of test to filter on any criteria (note that filter is a standard array method, only defined here manually as an example)
@@ -97,7 +106,9 @@ function functions() {
   speak.apply(someObject, [10, 12]);
 
   //Call is similar, but doesn't take the arguments as an array
-  speak.call({type: "Cat"}, "Hello", 47);
+  speak.call({
+    type: "Cat"
+  }, "Hello", 47);
 }
 
 functions();
