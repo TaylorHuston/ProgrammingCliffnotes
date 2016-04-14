@@ -1,4 +1,4 @@
-//Input and output
+//Input and output in context of a browser window
 
 var inputButton = document.getElementById("inputoutput");
 

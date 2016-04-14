@@ -1,5 +1,4 @@
 //Date object syntax
-var dateButton = document.getElementById("dates");
 
 function dates() {
   var today = new Date(); //Current date and time
@@ -25,4 +24,4 @@ function dates() {
   console.log(date1.getTime() == date2.getTime()) //True
 }
 
-dateButton.onclick = dates;
+dates();

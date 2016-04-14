@@ -1,9 +1,7 @@
 //Conditionals and loops
 
-var flowButton = document.getElementById("flowcontrol");
-
 function flowControl() {
-  var age = prompt("How old are you?");
+  var age = 29;
 
   if (age > 30) {
     console.log("Damn you old");
@@ -35,7 +33,6 @@ function flowControl() {
   var highScore = (score1 > score2) ? score1 : score2;
   console.log(highScore); //200
 
-  alert("Continue");
 
   //Loops
   for (var i = 0; i < 5; i++) {
@@ -61,7 +58,6 @@ function flowControl() {
     console.log(x);
   }
 
-
   do {
     x--;
     console.log(x);
@@ -84,4 +80,4 @@ function flowControl() {
   }
 }
 
-flowButton.onclick = flowControl;
+flowControl();

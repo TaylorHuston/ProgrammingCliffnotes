@@ -1,3 +1,5 @@
+//Objects
+
 function objects() {
   //Create an object
   var person1 = {};

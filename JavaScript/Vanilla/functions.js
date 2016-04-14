@@ -1,3 +1,5 @@
+//Functions
+
 function functions() {
 
   //Standard functions are hoisted when the file is first loaded, can be used before they are defined

@@ -1,7 +1,5 @@
 //A basic program going over the different variable types in JS
 
-var varButton = document.getElementById("variables");
-
 function variables() {
   //Weakly-typed
   var a = "I am a string";
@@ -53,4 +51,4 @@ function variables() {
   console.log(Math.PI); //BRING ME SOME PIE
 }
 
-varButton.onclick = variables;
+variables();

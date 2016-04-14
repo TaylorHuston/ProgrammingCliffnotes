@@ -1,6 +1,5 @@
 //Basic error handing
 
-
 function sqrRoot(x) {
   try {
     if (x == "") throw {

@@ -1,7 +1,5 @@
 //Basic string functions
 
-var stringButton = document.getElementById("strings");
-
 function strings() {
   var s = "Supercalifragilisticexpealadocious";
   console.log(s);
@@ -39,5 +37,5 @@ function strings() {
   console.log(myString);
 }
 
-stringButton.onclick = strings;
+strings();
 

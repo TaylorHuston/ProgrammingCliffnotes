@@ -1,5 +1,4 @@
 //Array syntax
-//var functionButton = document.getElementById("arrays");
 
 function arrays() {
   console.log("test");
@@ -97,5 +96,4 @@ function arrays() {
 
 }
 
-//functionButton.onclick = arrays;
 arrays();
