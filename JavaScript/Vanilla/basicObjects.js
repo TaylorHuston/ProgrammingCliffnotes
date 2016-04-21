@@ -12,6 +12,12 @@ function objects() {
   var person2 = {
     firstName: "Jane",
     "last name": "Doe"
+
+    //Objects can contain other objects
+    address: {
+      street: '123 main street'
+      city: 'your Town'
+    }
   };
 
   console.log(person1.name);
@@ -64,63 +70,6 @@ function objects() {
   bob.setWeight(150);
 
   console.log(bob.weight);
-
-  //Constructor
-  function Car(make, model) {
-    this.make = make;
-    this.model = model;
-  }
-
-  var myCar = new Car("Toyota", "Prius");
-  console.log(myCar.make);
-
-
-  var allTheCars = new Array();
-  allTheCars.push(myCar);
-  allTheCars[1] = new Car("Ford", "Focus");
-  allTheCars.push(new Car("Honda", "Civic"));
-
-
-  //Constructor
-  function Player(n) {
-    this.name = n;
-    this.speak = function () {
-      console.log("Speak");
-    }
-  }
-  Player.prototype.sayName = function () {
-      console.log(this.name);
-    }
-    //Create a new instance of Player
-  var bob = new Player("Bob");
-  bob.sayName();
-
-  //Prototype, very similar, but with some subtle differences
-  var playerPrototype = {
-    speak: function () {
-      console.log("Speak");
-    }
-  }
-  var george = Object.create(playerPrototype);
-  bob.speak();
-  george.speak();
-  console.log(bob.hasOwnProperty('speak')); //True. Has this function from the constructor
-  console.log(george.hasOwnProperty('speak')); //False. George doesn't have this function, it's prototype does
-
-  //All Objects come from inherited prototypes
-  console.log(Object.getPrototypeOf({}) == Object.prototype); //True
-  console.log(Object.getPrototypeOf(isNaN) == Function.prototype); //True
-  console.log(Object.getPrototypeOf([]) == Array.prototype); //True
-
-  console.log(bob.toString()); //Inherited toString function from base Object prototype
-  bob.toString = function () {
-    return this.name;
-  }
-  console.log(bob.toString()); //Call overridden toString method
-
-  //Create a new object that doesn't inherit from a prototype
-  var noProto = Object.create(null);
-
 
   //Object equality
   var object1 = {
