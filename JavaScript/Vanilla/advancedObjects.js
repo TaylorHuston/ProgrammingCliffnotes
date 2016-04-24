@@ -79,7 +79,7 @@ function objects() {
 
   //Inheritance
   function Employee(n, s) {
-    Person.call(n);
+    Person.call(n); //.call allows for 'this' to be passed as context
     this.status = s;
   }
 
