@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.util.Random;
 
 public class Primitives {
 
@@ -77,6 +78,14 @@ public class Primitives {
     BigDecimal bigVal = new BigDecimal(strVal);
     BigDecimal bSum = bigVal.add(bigVal).add(bigVal);
     System.out.println(bSum.toString());
+    
+    //Generate random numbers
+    //java,util.Random has many more options than this, check API
+    Random rand = new Random();
+    for (int i = 0; i < 5; i++) {
+      System.out.print(rand.nextInt(10) + " "); //Integer between 0 and 9
+    }
+    
 
 
   }
