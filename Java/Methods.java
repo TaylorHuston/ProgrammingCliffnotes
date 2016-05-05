@@ -1,4 +1,4 @@
-public class Functions {
+public class Methods {
 
   public static void main(String[] args) {
     int x = 127;
