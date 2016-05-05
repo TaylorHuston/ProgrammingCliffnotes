@@ -6,7 +6,7 @@ public class Collections {
 
   public static void main(String[] args) {
 
-    //Arrays. Size set at runtime and cannot be changes
+    //Arrays. Size set at runtime and cannot be changed
     int[] array1 = {3, 9, 6}; //Setting values at creation
     for (int x : array1) {
       System.out.print(x+" "); //3 9 6
@@ -23,7 +23,7 @@ public class Collections {
     array3[0][0] = 1;
     System.out.println(array3[0][0]); //1
 
-    //ArrayLists. Act like resizable array. Stored in memory similar to an array (sequentially).
+    //ArrayLists. Act like resizable array. Stored in memory similar to an resizing-array (sequentially).
     List<Integer> myList = new ArrayList<>();
     myList.add(27);
     myList.add(49);
