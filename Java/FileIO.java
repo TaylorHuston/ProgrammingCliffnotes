@@ -10,7 +10,7 @@ import java.util.Scanner;
         File inputFile = new File("data.txt");
         ArrayList<String> answers = new ArrayList<String>();
 
-        //Must always use a try-Catch block
+        //Must always use a Try-Catch block when doing file IO
         try {
 
             Scanner input = new Scanner(inputFile);
@@ -23,5 +23,14 @@ import java.util.Scanner;
         } catch (Exception e) {
 
         }
+
+      File outputFile = new File("output.txt");
+      try {
+        PrintWriter out = new PrintWriter(outputFile);
+        out.println("Banananana");
+        out.close();
+      } catch (Exception e) {
+
+      }
     }
   }
