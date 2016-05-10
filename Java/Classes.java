@@ -35,7 +35,7 @@ public class Classes extends AbstractClass implements Interface {
     privMethod();
   }
 
-  //Static methods don't need an isntance of the class
+  //Static methods don't need an instance of the class
   public static void statMethod() {
     System.out.println("Static Method");
   }

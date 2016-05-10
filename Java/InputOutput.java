@@ -12,6 +12,10 @@ public class InputOutput {
     String fromConsole = in.nextLine();
     System.out.println("Your input was: "+fromConsole);
 
+    System.out.print("A Double: ");
+    Double newDbl = in.nextDouble(); //Will throw and error if not a numeric value
+    System.out.println("Your input was: "+newDbl);
+
   }
   
 }
