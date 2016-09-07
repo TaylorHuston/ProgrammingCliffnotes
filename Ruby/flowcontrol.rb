@@ -40,10 +40,12 @@ gets
 puts true && true #True
 puts true || false #True
 puts true && false #false
+puts true and true #True
 
 gets
 
 puts "Shorthand" if true #Shorthand if synatx
+puts "True" if true and true #Multiple conditions
 
 gets
 
