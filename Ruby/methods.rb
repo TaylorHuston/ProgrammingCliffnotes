@@ -18,7 +18,7 @@ puts y  #2
 
 
 #Recursive method
-def ask_recursively question
+def ask_recursively(question)
   puts question
   reply = gets.chomp.downcase
   if reply == 'yes'
@@ -70,7 +70,7 @@ def three_times
   yield
 end
 
-three_times { puts "hi" }
+three_times { puts "hi" } #Will print "hi" three times
 
 def my_yield(param)
   yield("Bob")
