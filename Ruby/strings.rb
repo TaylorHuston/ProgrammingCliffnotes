@@ -11,11 +11,11 @@ puts 'blink' * 4 #Print a sting multiple times
 gets
 
 puts 12 + 12
-puts '12' + '12'
+puts '12' + '12' #1212
 puts '12 + 12'
 
 puts 2 * 5
-puts '2' * 5
+puts '2' * 5 #22222
 puts '2 * 5'
 
 puts 'You\'re swell!' #Escape a character
@@ -80,3 +80,8 @@ double_quoted = "ice cream \n followed by it\'s a party!"
 puts single_quoted #ice cream \n followed by it's a party!
 puts double_quoted #ice cream
                    #  followed by it's a party!
+
+name[0] = "B" #Strings can use array notation
+puts name #Baylor
+name[0] = "Yaaa"
+puts name #Yaaaaylor

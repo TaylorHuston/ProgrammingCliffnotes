@@ -63,7 +63,7 @@ SOMECONSTANT = 200 #Not a true constant since it will let you do this, but it wi
 
 puts
 
-#Symbols
+#Symbols. Guaranteed to be unique and immutable
 puts :string == "string" #false
 puts :string == "string".to_sym #true
 puts "string" == :string.to_s #true
