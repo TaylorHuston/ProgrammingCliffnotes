@@ -31,7 +31,7 @@ class Rectangle
 
 end
 
-Rectangle.what_am_i?
+Rectangle.what_am_i? #I'm a rectangle
 
 small_rect = Rectangle.new(10,15)
 puts small_rect.perimeter.to_s #50
@@ -44,19 +44,54 @@ puts small_rect.perimeter #400
 #Inheritance
 class Square < Rectangle
   
- def initialize(length)
-   @length = length
-   @breadth = length
-   @@total += 1
- end
-
+  def initialize(length)
+    @length = length
+    @breadth = length
+    @@total += 1
+  end
   
+  #Override method
+  def area
+    @length * @length
+  end
+
 end
 
 perfect_square = Square.new(20)
 puts perfect_square.perimeter #80
+puts perfect_square.area #400
 
 puts Rectangle.total #2
+
+
+#Class with coded setters and getters
+class Car
+  def initialize (make, model)
+    @make = make
+    @model = model
+  end
+
+  #Getters
+  def make
+    @make
+  end
+
+  def model
+    @model
+  end
+
+  #Setter
+  def model= (new_model)
+    @model = new_model
+  end
+end
+
+myCar = Car.new("Toyota", "Prius")
+puts myCar.make #Toyota
+puts myCar.model #Prius
+myCar.model = "Camry"
+puts myCar.model #Camry
+
 
 #Class with a static method
 class MyClass
@@ -67,7 +102,14 @@ class MyClass
 
 end
 
-puts MyClass.cls_method
+puts MyClass.cls_method #Static Method
+
+#Add method to class outside of original definition
+def MyClass.other_method
+  return "Other Method"
+end
+
+puts MyClass.other_method #Other Method
 
 
 #Module allows for namespacing
