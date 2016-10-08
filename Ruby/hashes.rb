@@ -24,6 +24,23 @@ end
 
 puts
 
+#Same as above?
+student_ages.each_pair do |name, age|
+    puts "#{name} is  #{age} years old"
+end
+
+puts
+
+student_ages.each_key do |name|
+    puts "#{name}"
+end
+
+puts
+
+student_ages.each_value do |age|
+    puts "#{age}"
+end
+
 puts student_ages.select { |name, age| age < 12 }
 
 
@@ -60,10 +77,15 @@ frequencies = frequencies.sort_by do |count|
     count
 end
 
-#alternative Hash syntax
+#alternative Hash syntax, when using symbols as keys
 new_hash = {
   one: 1,
   two: 2
   }
 
 puts new_hash
+
+#Has with default values
+new_hash = Hash.new(0)
+new_hash["a"] += 1
+puts new_hash["a"] #1
