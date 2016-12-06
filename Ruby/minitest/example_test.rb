@@ -6,3 +6,14 @@ class ExampleTest < Minitest::Test
   end
 end
 
+class Bacon
+  def self.saved?
+    false
+  end
+end
+
+class BaconTest < Minitest::Test
+  def test_saved
+    assert Bacon.saved?, "Our bacon was not saved :(" #Failure error message
+  end
+end
