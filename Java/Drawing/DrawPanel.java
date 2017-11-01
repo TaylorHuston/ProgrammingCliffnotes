@@ -5,7 +5,9 @@ public class DrawPanel extends JPanel {
 
     //Draw an x from the corners of the panel
     public void paintComponent(Graphics g) {
-        super.paintComponent(g);  //Ensure panel displays correctly
+        //Ensure panel displays correctly
+        //Should be the first method you call in any JPanel
+        super.paintComponent(g);  
 
         int width = getWidth();
         int height = getHeight();
