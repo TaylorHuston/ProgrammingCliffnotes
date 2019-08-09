@@ -60,6 +60,7 @@ puts
 
 SOMECONSTANT = 100 #Naming convention for constants
 SOMECONSTANT = 200 #Not a true constant since it will let you do this, but it will throw a warning
+puts SOMECONSTANT
 
 puts
 
@@ -68,3 +69,10 @@ puts :string == "string" #false
 puts :string == "string".to_sym #true
 puts "string" == :string.to_s #true
 
+puts
+
+puts 'a'.class
+puts 5.class
+puts 3.2.class
+puts :string.class
+puts true.class

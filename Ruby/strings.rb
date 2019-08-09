@@ -23,6 +23,7 @@ puts 'You\'re swell!' #Escape a character
 gets
 
 letters = 'aAbBcCdDeE'
+puts letters
 puts letters.length
 puts letters.upcase
 puts letters.downcase
@@ -50,7 +51,11 @@ puts "Ruby is a beautiful language".start_with?("Ruby")
 puts "I can't work with any other language but Ruby".end_with?("Ruby")
 puts "I am a Rubyist".index("R")
 
-puts 'Fear is the path to the dark side'.split
+gets
+
+puts 'Fear is the path to the dark side'.split #split onto mutiple lines
+
+gets
 
 puts "I should look into your problem when I get time".gsub('I','We')
 puts 'RubyMonk'.gsub(/[aeiou]/,'1')
@@ -65,7 +70,7 @@ puts 'Your name is ' + name + '?'
 puts 'Pleased to meet you, ' + name + '!'
 
 
-puts "Homer" =~ /er/  #Regexp
+puts "Homer" =~ /er/  #Regexp, 3, index of first match
 phone = "(907) 111-2233"
 puts phone.gsub(/\D/, "") #Strip out any non-digits
 
@@ -82,6 +87,8 @@ puts double_quoted #ice cream
                    #  followed by it's a party!
 
 name[0] = "B" #Strings can use array notation
-puts name #Baylor
+puts name
 name[0] = "Yaaa"
-puts name #Yaaaaylor
+puts name
+
+puts name.class #String
