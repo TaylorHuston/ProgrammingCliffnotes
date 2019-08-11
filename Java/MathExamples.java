@@ -1,6 +1,6 @@
 //Some examples of the math class
 
-public class MathExamples
+public class MathExamples {
     public static void main(String args[]) {
         System.out.println(Math.abs(-27.3)); //27.3 Absolute value
         System.out.println(Math.ceil(9.8)); //10 round to next integer
