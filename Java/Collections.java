@@ -23,6 +23,12 @@ public class Collections {
     array3[0][0] = 1;
     System.out.println(array3[0][0]); //1
 
+    int[] array4 = array1; //Both now refer to the same object
+    System.out.println(array4.equals(array1)); //True, compares if they point to the same object
+    int[] arrayCopy = new int[3];
+    System.arraycopy(array1, 0, arrayCopy, 0, array1.length);  //Copies values of the array
+    System.out.println(Arrays.equals(array1, copyArray)); //True, compares values
+
     //ArrayLists. Act like resizable array. Stored in memory similar to an resizing-array (sequentially).
     List<Integer> myList = new ArrayList<>();
     myList.add(27);
