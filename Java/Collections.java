@@ -27,10 +27,11 @@ public class Collections {
     System.out.println(array4.equals(array1)); //True, compares if they point to the same object
     int[] arrayCopy = new int[3];
     System.arraycopy(array1, 0, arrayCopy, 0, array1.length);  //Copies values of the array
-    System.out.println(Arrays.equals(array1, copyArray)); //True, compares values
+    System.out.println(Arrays.equals(array1, arrayCopy)); //True, compares values
+    System.out.println();
 
     //ArrayLists. Act like resizable array. Stored in memory similar to an resizing-array (sequentially).
-    List<Integer> myList = new ArrayList<>();
+    ArrayList<Integer> myList = new ArrayList<>();
     myList.add(27);
     myList.add(49);
     System.out.println(myList); //[27, 49]
@@ -41,6 +42,7 @@ public class Collections {
     myList.add(68);
     System.out.println(myList.get(1)); //68
     System.out.println(myList.indexOf(68)); //1
+    myList.clear(); //myList is now empty
     System.out.println();
 
 
