@@ -3,15 +3,18 @@ body {
   font-size: 14px;
   letter-spacing: 1px;
   line-height: 2;
-  background-color: aqua; /*Colors can be named, hex, or RGBA*/
+  background-color: aqua;
+  /*Colors can be named, hex, or RGBA*/
 }
 
 
 /*Target IDs with #*/
 #sectionID {
   width: 90%;
-  margin: 0 auto;  /*trick for centering block level elements*/
-  padding: 10px; /*Padding is inside the border of an element */
+  margin: 0 auto;
+  /*trick for centering block level elements*/
+  padding: 10px;
+  /*Padding is inside the border of an element */
   border: solid 1px green;
 }
 
@@ -27,16 +30,17 @@ nav {
 }
 
 /*Target the child of an element*/
-nav > ul {
-  list-style-type: none; /*Or choose from other style types*/
+nav>ul {
+  list-style-type: none;
+  /*Or choose from other style types*/
 }
 
-nav > ul > li {
+nav>ul>li {
   display: inline-block;
   text-decoration: none;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
   text-decoration: none;
 }
 
