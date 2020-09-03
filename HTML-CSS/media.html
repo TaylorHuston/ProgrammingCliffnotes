@@ -3,21 +3,34 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Some Title</title>
+  <title>Media</title>
 
-  <link href="media.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 
 <body>
+  <style>
+    #smallImage {
+      width: 300px;
+      height: 300px;
+    }
+
+    #scaledImage {
+      transform: scale(2);
+    }
+  </style>
 
   <!--Basic image tag. Can speciy width and height, though you should do this with CSS instead-->
-  <img src="cat.jpg" alt="cat" width=300 height=300>
+  <img src="media/cat.jpg" alt="cat" width=300 height=300>
 
-  <img src="cat.jpg" alt="cat" id="smallImage">
+  <img src="media/cat.jpg" alt="cat" id="smallImage">
 
   <!--Figure is used for grouping together an image with a caption.-->
-  <img src="cat.jpg" alt="cat" id="smallImage">
-  <figcaption>Grumpy cat</figcaption>
+  <figure>
+    <img src="media/cat.jpg" alt="cat">
+    <figcaption>Grumpy cat</figcaption>
+  </figure>
+
+  <img src="media/cat.jpg" alt="cat" id="scaledImage">
 
 </body>
 
