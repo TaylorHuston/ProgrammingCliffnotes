@@ -86,8 +86,6 @@ public class Primitives {
       System.out.print(rand.nextInt(10) + " "); //Integer between 0 and 9
     }
     
-
-
   }
 
 }

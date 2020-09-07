@@ -1,5 +1,3 @@
-
-
 //Examples of some boolean logic
 public class Boolean {
 

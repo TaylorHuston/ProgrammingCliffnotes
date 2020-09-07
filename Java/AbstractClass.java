@@ -12,6 +12,6 @@ public abstract class AbstractClass {
     System.out.println("Abstract method call");
   }
 
-  //Or Abstrac methods that must be implemented in subclasses
+  //Or Abstract methods that must be implemented in subclasses
   public abstract double getDouble();
 }
