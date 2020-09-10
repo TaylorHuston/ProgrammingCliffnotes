@@ -67,3 +67,15 @@ print(x >= y) #True
 print(str1 == str2) #False
 print(str1 != str2) #True
 print(str1 > str2)  #True (string length)
+
+#Bitwise
+a = 0b11110000
+b = 0b11001100
+print(a)  #240
+print(bin(a))  #0b11110000
+print(bin(a&b))  #0b11000000
+print(bin(a|b))  #0b11111100
+print(bin(a^b))  #0b111100
+print(bin(b >> 3))  #0b11001
+print(bin(a << 2))  #0b1111000000
+
