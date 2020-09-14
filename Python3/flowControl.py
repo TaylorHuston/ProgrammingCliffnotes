@@ -27,3 +27,16 @@ for c in myStr:
 
 for x in range(0, 10):
     pass  #Loops and If Statements require a block, pass can be used as a placeholder
+
+
+test = 11
+
+if test > 0:
+    if test > 10:
+        print("Greater than 10")
+    else:
+        print("Positive")
+elif test < 0:
+    print("Negative")
+else:
+    print("Zero")
