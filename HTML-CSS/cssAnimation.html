@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Animation</title>
+
+<!--In HTML file for readbility, in real world should be in external sheet.-->
+<style>
+
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+  }
+
+  #rect {
+    animation-name: rainbow;
+    animation-duration: 4s;
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-color: blue;
+    }
+
+    50% {
+      background-color: green;
+    }
+
+    100% {
+      background-color: yellow;
+    }
+  }
+
+  #rect2:hover {
+      animation-name: hover;
+      animation-duration: 2s;
+  }
+
+  @keyframes hover {
+      100% {
+        background-color: blue;
+      }
+  }
+ </style>
+  
+</head>
+<div id="rect"></div>
+<div id="rect2"></div>
+
+
+<body>
+
+
+
+</body>
+
+</html>
