@@ -5,51 +5,81 @@
   <meta charset="utf-8">
   <title>CSS Animation</title>
 
-<!--In HTML file for readbility, in real world should be in external sheet.-->
-<style>
-
-  div {
-    height: 40px;
-    width: 70%;
-    background: black;
-    margin: 50px auto;
-    border-radius: 5px;
-  }
-
-  #rect {
-    animation-name: rainbow;
-    animation-duration: 4s;
-  }
-
-  @keyframes rainbow {
-    0% {
-      background-color: blue;
+  <!--In HTML file for readbility, in real world should be in external sheet.-->
+  <style>
+    div {
+      height: 40px;
+      width: 70%;
+      background: black;
+      margin: 50px auto;
+      border-radius: 5px;
     }
 
-    50% {
-      background-color: green;
+    #rect {
+      animation-name: rainbow;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
     }
 
-    100% {
-      background-color: yellow;
-    }
-  }
+    @keyframes rainbow {
+      0% {
+        background-color: blue;
+      }
 
-  #rect2:hover {
+      50% {
+        background-color: green;
+      }
+
+      100% {
+        background-color: yellow;
+      }
+    }
+
+    #rect2:hover {
       animation-name: hover;
       animation-duration: 2s;
-  }
+      animation-fill-mode: forwards;
+    }
 
-  @keyframes hover {
+    @keyframes hover {
       100% {
         background-color: blue;
       }
-  }
- </style>
-  
+    }
+
+    #ball {
+      top: 10px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      position: relative;
+      animation-name: bounce;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    @keyframes bounce {
+      45%{
+        height: 50px;
+        width: 50px;
+      }
+      47% {
+        height: 20px;
+        width: 70px;
+      }
+      50% {
+        top: 200px;
+
+      }
+    }
+  </style>
+
 </head>
 <div id="rect"></div>
 <div id="rect2"></div>
+<div id="ball"></div>
+
 
 
 <body>
