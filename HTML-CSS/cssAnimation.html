@@ -53,38 +53,51 @@
       width: 50px;
       border-radius: 50%;
       position: relative;
-      animation-name: bounce;
+      animation-name: bounce, squish;
       animation-duration: 2s;
       animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
+      animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5), linear;
     }
 
+
     @keyframes bounce {
-      45%{
+      0% {
+        top: 10px;
+      }
+      35% {
+        top: 200px;
+      }
+      40% {
+        top: 210px;
+      }
+      95% {
+        top: 10px;
+      }
+    }
+
+    @keyframes squish {
+      35% {
         height: 50px;
         width: 50px;
       }
-      47% {
-        height: 20px;
+      40% {
+        height: 30px;
         width: 70px;
       }
-      50% {
-        top: 200px;
-
+      55% {
+        height: 50px;
+        width: 50px;
       }
     }
   </style>
 
 </head>
-<div id="rect"></div>
-<div id="rect2"></div>
-<div id="ball"></div>
-
-
 
 <body>
 
-
+  <div id="rect"></div>
+  <div id="rect2"></div>
+  <div id="ball" class="squish"></div>
 
 </body>
 
