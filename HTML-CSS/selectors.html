@@ -1,123 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Selectors</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Selectors</title>
+  <body>
+    <!--In HTML file for readbility, in real world should be in external sheet.-->
+    <style>
+      section {
+        height: 400px;
+        background-color: aqua;
+        box-sizing: border-box;
+        position: static;
+        overflow: hidden;
+        font-family: arial;
+      }
 
-</head>
+      .sectionClass {
+        background-color: red;
+      }
 
+      #sectionID {
+        background-color: mediumpurple;
+      }
 
-<body>
-  <!--In HTML file for readbility, in real world should be in external sheet.-->
-  <style>
-    section {
-      height: 400px;
-      background-color: aqua;
-      box-sizing: border-box;
-      position: static;
-      overflow: hidden;
-      font-family: arial;
-    }
+      p {
+        color: blue;
+      }
 
-    .sectionClass {
-      background-color: red;
-    }
+      #sectionID p {
+        /*ID takes precedence over class*/
+        color: white;
+      }
 
-    #sectionID {
-      background-color: mediumpurple;
-    }
+      .paragraphClass {
+        color: green;
+      }
 
-    p {
-      color: blue;
-    }
+      p:first-of-type {
+        margin-left: 20px;
+      }
 
-    #sectionID p {
-      /*ID takes precedence over class*/
-      color: white;
-    }
+      li:first-child {
+        font-weight: bold;
+      }
 
-    .paragraphClass {
-      color: green;
-    }
+      li:last-child {
+        font-style: italic;
+      }
 
-    p:first-of-type {
-      margin-left: 20px;
-    }
+      li:nth-child(2) {
+        text-decoration: underline;
+      }
 
-    li:first-child {
-      font-weight: bold;
-    }
+      p[title] {
+        /*Can be used for any attribute.*/
+        font-style: italic;
+      }
 
-    li:last-child {
-      font-style: italic;
-    }
+      section p {
+        /*All descendants*/
+        font-size: 18px;
+      }
 
-    li:nth-child(2) {
-      text-decoration: underline;
-    }
+      section > p {
+        /*Immediate children only*/
+        font-size: 23px;
+      }
+    </style>
 
-    p[title] {
-      /*Can be used for any attribute.*/
-      font-style: italic;
-    }
+    <section></section>
 
-    section p {
-      /*All descendants*/
-      font-size: 18px;
-    }
+    <section class="sectionClass"></section>
 
-    section>p {
-      /*Immediate children only*/
-      font-size: 23px;
-    }
-  </style>
+    <section class="sectionClass" id="sectionID">
+      <p>
+        Some text. Some text. Some text. Some text. Some text. Some text. Some
+        text. Some text. Some text. Some text. Some text. Some text. Some text.
+        Some text. Some text. Some text. Some text. Some text. Some text. Some
+        text. Some text. Some text. Some text. Some text. Some text. Some text.
+        Some text. Some text. Some text. Some text. Some text. Some text. Some
+        text. Some text. Some text. Some text. Some text. Some text. Some text.
+        Some text. Some text. Some text. Some text. Some text.
+      </p>
 
-  <section>
+      <p class="paragraphClass">
+        Some text. Some text. Some text. Some text. Some text. Some text. Some
+        text. Some text. Some text. Some text. Some text. Some text. Some text.
+        Some text. Some text. Some text. Some text. Some text. Some text. Some
+        text. Some text. Some text. Some text. Some text. Some text. Some text.
+        Some text. Some text. Some text. Some text. Some text. Some text. Some
+        text. Some text. Some text. Some text. Some text. Some text. Some text.
+        Some text. Some text. Some text. Some text. Some text.
+      </p>
 
-  </section>
+      <article>
+        <p>
+          Some text. Some text. Some text. Some text. Some text. Some text. Some
+          text. Some text. Some text. Some text. Some text. Some text. Some
+          text. Some text. Some text. Some text. Some text. Some text. Some
+          text. Some text. Some text. Some text. Some text. Some text. Some
+          text. Some text. Some text. Some text. Some text. Some text. Some
+          text. Some text. Some text. Some text. Some text. Some text. Some
+          text. Some text. Some text. Some text. Some text. Some text. Some
+          text. Some text.
+        </p>
+      </article>
+    </section>
 
-  <section class="sectionClass">
+    <p title="someTitle">
+      Some text. Some text. Some text. Some text. Some text. Some text. Some
+      text. Some text. Some text. Some text. Some text. Some text. Some text.
+      Some text. Some text. Some text. Some text. Some text. Some text. Some
+      text. Some text. Some text. Some text. Some text. Some text. Some text.
+      Some text. Some text. Some text. Some text. Some text. Some text. Some
+      text. Some text. Some text. Some text. Some text. Some text. Some text.
+      Some text. Some text. Some text. Some text. Some text.
+    </p>
 
-  </section>
-
-  <section class="sectionClass" id="sectionID">
-
-    <p>Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
-      Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some
-      text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some
-      text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some
-      text. Some text. Some text. Some text. </p>
-
-    <p class="paragraphClass">Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
-      Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some
-      text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some
-      text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some
-      text. Some text. Some text. Some text. Some text. Some text. </p>
-
-    <article>
-      <p>Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
-        Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
-        Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
-        Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
-        Some text. Some text. Some text. Some text. </p>
-    </article>
-
-  </section>
-
-  <p title="someTitle">Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some
-    text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
-    Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some
-    text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
-    Some text. Some text. Some text. Some text. </p>
-
-  <ul>
-    <li>First</li>
-    <li>Second</li>
-    <li>Third</li>
-    <li>Fourth</li>
-  </ul>
-
-</body>
-
+    <ul>
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+      <li>Fourth</li>
+    </ul>
+  </body>
 </html>
