@@ -41,3 +41,11 @@ myList2.pop()
 println(myList2) //[-4, 6, 11, 19]
 myList2.remove(2)
 println(myList2) //[-4, 6, 19]
+
+String name = "Bob"
+def name2 = "Sally"
+
+println name.getClass()  //String
+println name2.getClass()  //String
+
+

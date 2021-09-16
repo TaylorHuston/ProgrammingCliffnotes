@@ -1,0 +1,19 @@
+
+Person person = new Person()
+
+person.setFirstName("John")
+person.setLastName("Doe")
+person.setAge(49)
+
+println person.getFullName()
+println person.getAge()
+
+if (person.getAge() >= 45 && person.getAge() <=65) {
+    println "middle aged"
+}
+
+def persons = [person, new Person(firstName: "Bob", lastName: "Smith", age: 75)]  //Shorthand for creating new objects
+
+for (Person p : persons) {
+    println p.getFullName()
+}
