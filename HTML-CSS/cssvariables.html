@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>CSS Variables</title>
-  </head>
 
-  <style>
-    /*Variables must be defined in a ruleset like any other CSS property, using the root pseudo one 
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Variables</title>
+</head>
+
+<style>
+  /*Variables must be defined in a ruleset like any other CSS property, using the root pseudo one 
         will give scope it to every other selector*/
-    :root {
-      --dark-gray: rgb(25, 25, 25);
-    }
+  :root {
+    --dark-gray: rgb(25, 25, 25);
+  }
 
-    body {
-      /*variables can be overriden like anything else in CSS*/
-      --dark-gray: rgb(30, 30, 30);
-      background: var(--dark-gray);
-    }
-  </style>
+  body {
+    /*variables can be overriden like anything else in CSS*/
+    --dark-gray: rgb(30, 30, 30);
+    background: var(--dark-gray);
+  }
+</style>
+
 </html>

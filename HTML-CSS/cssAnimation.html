@@ -1,103 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>CSS Animation</title>
 
-    <!--In HTML file for readbility, in real world should be in external sheet.-->
-    <style>
-      div {
-        height: 40px;
-        width: 70%;
-        background: black;
-        margin: 50px auto;
-        border-radius: 5px;
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Animation</title>
+
+  <!--In HTML file for readbility, in real world should be in external sheet.-->
+  <style>
+    div {
+      height: 40px;
+      width: 70%;
+      background: black;
+      margin: 50px auto;
+      border-radius: 5px;
+    }
+
+    #rect {
+      animation-name: rainbow;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes rainbow {
+      0% {
+        background-color: blue;
       }
 
-      #rect {
-        animation-name: rainbow;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
+      50% {
+        background-color: green;
       }
 
-      @keyframes rainbow {
-        0% {
-          background-color: blue;
-        }
-
-        50% {
-          background-color: green;
-        }
-
-        100% {
-          background-color: yellow;
-        }
+      100% {
+        background-color: yellow;
       }
+    }
 
-      #rect2:hover {
-        animation-name: hover;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
+    #rect2:hover {
+      animation-name: hover;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes hover {
+      100% {
+        background-color: blue;
       }
+    }
 
-      @keyframes hover {
-        100% {
-          background-color: blue;
-        }
-      }
+    #ball {
+      top: 10px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      position: relative;
+      animation-name: bounce, squish;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5), linear;
+    }
 
-      #ball {
+    @keyframes bounce {
+      0% {
         top: 10px;
+      }
+
+      35% {
+        top: 200px;
+      }
+
+      40% {
+        top: 210px;
+      }
+
+      95% {
+        top: 10px;
+      }
+    }
+
+    @keyframes squish {
+      35% {
         height: 50px;
         width: 50px;
-        border-radius: 50%;
-        position: relative;
-        animation-name: bounce, squish;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5), linear;
       }
 
-      @keyframes bounce {
-        0% {
-          top: 10px;
-        }
-
-        35% {
-          top: 200px;
-        }
-
-        40% {
-          top: 210px;
-        }
-
-        95% {
-          top: 10px;
-        }
+      40% {
+        height: 30px;
+        width: 70px;
       }
 
-      @keyframes squish {
-        35% {
-          height: 50px;
-          width: 50px;
-        }
-
-        40% {
-          height: 30px;
-          width: 70px;
-        }
-
-        55% {
-          height: 50px;
-          width: 50px;
-        }
+      55% {
+        height: 50px;
+        width: 50px;
       }
-    </style>
-  </head>
+    }
+  </style>
+</head>
 
-  <body>
-    <div id="rect"></div>
-    <div id="rect2"></div>
-    <div id="ball" class="squish"></div>
-  </body>
+<body>
+  <div id="rect"></div>
+  <div id="rect2"></div>
+  <div id="ball" class="squish"></div>
+</body>
+
 </html>

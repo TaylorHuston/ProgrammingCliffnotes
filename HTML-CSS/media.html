@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Media</title>
-  </head>
 
-  <body>
-    <style>
-      #smallImage {
-        width: 300px;
-        height: 300px;
-      }
+<head>
+  <meta charset="utf-8" />
+  <title>Media</title>
+</head>
 
-      #scaledImage {
-        transform: scale(2);
-      }
-    </style>
+<body>
+  <style>
+    #smallImage {
+      width: 300px;
+      height: 300px;
+    }
 
-    <!--Basic image tag. Can speciy width and height, though you should do this with CSS instead-->
-    <img src="media/cat.jpg" alt="cat" width="300" height="300" />
+    #scaledImage {
+      transform: scale(2);
+    }
+  </style>
 
-    <img src="media/cat.jpg" alt="cat" id="smallImage" />
+  <!--Basic image tag. Can speciy width and height, though you should do this with CSS instead-->
+  <img src="media/cat.jpg" alt="cat" width="300" height="300" />
 
-    <!--Figure is used for grouping together an image with a caption.-->
-    <figure>
-      <img src="media/cat.jpg" alt="cat" />
-      <figcaption>Grumpy cat</figcaption>
-    </figure>
+  <img src="media/cat.jpg" alt="cat" id="smallImage" />
 
-    <img src="media/cat.jpg" alt="cat" id="scaledImage" />
+  <!--Figure is used for grouping together an image with a caption.-->
+  <figure>
+    <img src="media/cat.jpg" alt="cat" />
+    <figcaption>Grumpy cat</figcaption>
+  </figure>
 
-    <audio id="audioClip" controls>
-      <source src="https://s3.amazonaws.com/freecodecamp/screen-reader.mp3" type="audio/mpeg">
+  <img src="media/cat.jpg" alt="cat" id="scaledImage" />
+
+  <audio id="audioClip" controls>
+    <source src="https://s3.amazonaws.com/freecodecamp/screen-reader.mp3" type="audio/mpeg">
   </audio>
-  
-  </body>
+
+</body>
+
 </html>

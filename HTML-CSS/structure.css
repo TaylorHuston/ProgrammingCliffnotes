@@ -28,17 +28,17 @@ nav {
 }
 
 /*Target the child of an element*/
-nav > ul {
+nav>ul {
   list-style-type: none;
   /*Or choose from other style types*/
 }
 
-nav > ul > li {
+nav>ul>li {
   display: inline-block;
   text-decoration: none;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
   text-decoration: none;
 }
 
