@@ -12,74 +12,64 @@
   <!--Method is how the form is processed. Action is the URL of destination of the form submission.-->
   <form method="POST" action="http://www.somewebsite.com/orderform.aspx">
     <label>Some Field:
-      <!--ID is typically for client side JavaScript stuff, and name is what the server needs to process the form.-->
       <input type="text" id="aField" name="aField" maxlength="20" placeholder="Placeholder" />
     </label>
 
-    <br />
 
-    <label>A Password
+    <p>
+      <label for="aPassword">A Password</label>
       <input type="password" id="aPassword" name="aPassword" required />
-    </label>
+    </p>
 
-    <br />
+    <label for="anEmail">An Email</label>
+    <!--Autofocus is the field where the cursor starts.-->
+    <input type="email" id="anEmail" name="anEmail" autofocus />
 
-    <label>An Email
-      <!--Autofocus is the field where the cursor starts.-->
-      <input type="email" id="anEmail" name="anEmail" autofocus />
-    </label>
-
-    <br />
-
-    <label>A URL
+    <p>
+      <label for="aURL">A URL</label>
       <input type="url" id="aURL" name="aURL" />
-    </label>
 
-    <br />
+    </p>
 
-    <label>Range
+    <p>
+      <label for="aRange">Range</label>
       <!--By default a range is between 0 and 100.-->
       <input type="range" id="aRange" name="aRange" value="47" />
-    </label>
+    </p>
 
-    <br />
-
-    <label>Number
+    <p>
+      <label for="aNumber">Number</label>
       <input type="number" id="aNumber" name="aNumber" />
-    </label>
+    </p>
 
-    <br />
+    <p>
+      <!--Use a fieldset to group items.-->
+      <fieldset>
+        <legend>A Legend</legend>
+        <input type="radio" id="radio1" name="radioOption" value="1" checked />
+        <label for="radio1">Radio 1</label>
+        <br />
+        <input type="radio" id="radio2" name="radioOption" value="2" />
+        <label for="radio2">Radio 2</label>
+        <br />
+        <input type="radio" id="radio3" name="radioOption" value="3" />
+        <label for="radio3">Radio 3</label>
+      </fieldset>
+    </p>
 
-    <!--Use a fieldset to group items.-->
-    <fieldset>
-      <legend>A Legend</legend>
-      <label>Radio 1
-        <input type="radio" name="radioOption" value="1" checked />
-      </label>
-      <br />
-      <label>Radio 2
-        <input type="radio" name="radioOption" value="2" />
-      </label>
-      <br />
-      <label>Radio 3
-        <input type="radio" name="radioOption" value="3" />
-      </label>
-    </fieldset>
-
-    <fieldset>
-      <legend>Another Legend</legend>
-      <label>Checkbox 1
-        <input type="checkbox" name="checkOption" value="1" checked />
-      </label>
-      <br />
-      <label>Checkbox 2
-        <input type="checkbox" name="checkOption" value="1" />
-      </label>
-      <br />
-      <label>Checkbox 3
-        <input type="checkbox" name="checkOption" value="1" />
-      </label>
-    </fieldset>
+    <p>
+      <fieldset>
+        <legend>Another Legend</legend>
+        <label for="check1">Checkbox 1</label>
+        <input type="checkbox" id="check1" name="checkOption" value="1" checked />
+        <br />
+        <label for="check2">Checkbox 2</label>
+        <input type="checkbox" id="check2" name="checkOption" value="1" />
+        <br />
+        <label for="check3">Checkbox 3</label>
+        <input type="checkbox" id="check3" name="checkOption" value="1" />
+      </fieldset>
+    </p>
 
     <p>
       <select name="selectMenu">
@@ -98,14 +88,13 @@
     </p>
 
     <p>
-      <label>Text Field:
+      <label for="text">Text Field:</label>
         <br />
-        <textarea name="someText" cols="50" rows="10" maxlength="1000"></textarea>
-      </label>
+        <textarea id="text" name="someText" cols="50" rows="10" maxlength="1000"></textarea>
     </p>
 
     <p>
-      <label>Data List
+      <label>Data List</label>
         <input type="text" list="someList" />
 
         <datalist id="someList">
@@ -113,9 +102,13 @@
           <option label="Second" value="Second"></option>
           <option label="Third" value="Third"></option>
         </datalist>
-      </label>
     </p>
 
+    <p>
+      <label for="someDate">Date</label>
+      <input type="date" id="someDate" name="myDate" />
+    </p>
+    
     <button type="submit" value="submit">Submit</button>
   </form>
 </body>
