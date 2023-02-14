@@ -79,3 +79,9 @@ print(bin(a^b))  #0b111100
 print(bin(b >> 3))  #0b11001
 print(bin(a << 2))  #0b1111000000
 
+#Constant
+MAX_CONNECTIONS = 5000
+
+
+universe_age = 14_000_000_000
+print(universe_age) #14000000000
