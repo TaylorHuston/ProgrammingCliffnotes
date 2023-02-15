@@ -20,14 +20,6 @@ print(str1[1:5]) #ello
 print(str1[2:]) #llo
 print(str1[:4]) #Hell
 
-myList1 = [1,2.3,3,4,"bob"]
-myList2 = [17, "34"]
-print(myList1) #[1,2.3,3,4,"bob"]
-print(myList1[4]) #bob
-print(myList1+myList2) #[1, 2.3, 3, 4, 'bob', 17, '34']
-
-myList1[3] = 34234
-print(myList1[3]) #34234
 
 myTuple = (123131, 12321321, 1231) #tuples are not mutable
 print(myTuple) #(123131, 12321321, 1231)
