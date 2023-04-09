@@ -45,3 +45,12 @@ print(cars)
 cars.reverse()
 print(cars) #['subaru', 'toyota', 'audi', 'bmw']
 print(len(cars))
+
+even_numbers = list(range(2, 11, 2)) #start, end, increment
+print(even_numbers) #[2, 4, 6, 8, 10]
+
+
+digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+print(min(digits)) #0
+print(max(digits)) #9
+print(sum(digits)) #45
