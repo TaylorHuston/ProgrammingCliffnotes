@@ -16,6 +16,11 @@ print("Languages:\nPython\nC\nJavaScript") #New line
 print("Python ".rstrip()) #Strip right whitespace
 print("  Python".lstrip()) #Strip left whitespace
 
+print('''
+      This is a multiline string)
+      Hello Hello  
+      ''')
+
 nostarch_url = 'https://nostarch.com'
 print(nostarch_url.removeprefix('https://')) #nostarch.com
 
