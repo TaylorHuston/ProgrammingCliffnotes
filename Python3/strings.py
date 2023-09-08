@@ -21,6 +21,13 @@ print('''
       Hello Hello  
       ''')
 
+
+name = input("Enter your name: ") #Input is always a string
+print(f"Hello, {name}")
+print("Hello " + name)
+
+print("Hello ", input("Enter your name: ")) #This is a bit more efficient
+
 nostarch_url = 'https://nostarch.com'
 print(nostarch_url.removeprefix('https://')) #nostarch.com
 
