@@ -8,17 +8,32 @@ while(i < 10):
     print(i)
     i += 1
 
+for x in range(0, 10):
+    print(x)    #Prints 0-9
+
+for x in range(10):  #Starts at 0 by default
+    print(x)    #Prints 0-9
 
 for x in range(10, 15):
     if x == 12:
         break  #Stops the loop
     print(x)
 
-
-for x in range(10, 15):
-    if x == 12:
+for x in range(20, 25):
+    if x == 22:
         continue  #Stops this iteration of the loop
+    print(x)
 
+for x in range(100, 200, 10): #Increment by 10
+    print(x)
+
+for x in range(200, 100, -10): #Decrement by 10
+    print(x)
+
+sum = 0
+for x in range(0, 100):
+    sum += x
+print(sum)
 
 myStr = "test"  #Also works for lists
 for c in myStr:
@@ -27,6 +42,7 @@ for c in myStr:
 
 for x in range(0, 10):
     pass  #Loops and If Statements require a block, pass can be used as a placeholder
+
 
 
 test = 11
@@ -40,3 +56,17 @@ elif test < 0:
     print("Negative")
 else:
     print("Zero")
+
+x = 7
+
+if x == 1 or x == 2 or x == 3:
+    print("true")
+else:
+    print("false") #false
+
+flag = True
+
+while flag:
+    inputs = input("Enter STOP to exit program: ")
+    if inputs == "STOP":
+        flag = False
