@@ -9,6 +9,7 @@
 # !! - Entire last command, including arguments. A common pattern is to execute a command only for it to fail due to missing permissions; you can quickly re-execute the command with sudo by doing sudo !!
 # $_ - Last argument from the last command. If you are in an interactive shell, you can also quickly get this value by typing Esc followed by . or Alt+.
 
+# grep for the string foobar, add it as a comment if not found
 for file in "$@"; do
     grep foobar "$file" > /dev/null 2> /dev/null
     # When pattern is not found, grep has exit status 1

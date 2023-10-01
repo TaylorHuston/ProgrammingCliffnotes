@@ -15,9 +15,14 @@ mkdir foo bar
 # This creates files foo/a, foo/b, ... foo/h, bar/a, bar/b, ... bar/h
 touch {foo,bar}/{a..h}
 touch foo/x bar/y
-# Show differences between files in foo and bar
+
+# Show differences between files in foo and bar, process substitution is used here
 diff <(ls foo) <(ls bar)
 # Outputs
 # < x
 # ---
 # > y
+
+echo "Starting program at $(date)" # Date will be substituted
+
+echo "Running program $0 with $# arguments with pid $$"
