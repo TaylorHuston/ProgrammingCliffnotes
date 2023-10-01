@@ -1,3 +1,4 @@
+#!/bin/bash
 foo=bar
 
 echo $foo
