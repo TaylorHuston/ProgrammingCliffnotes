@@ -33,3 +33,16 @@ print(nostarch_url.removeprefix('https://')) #nostarch.com
 
 some_file = "python_notes.txt"
 print(some_file.removesuffix(".txt"))
+
+#r-strings (raw)
+print(r"Hello\nHello") #Hello\nHello
+
+#End of string keyword replacement, mostly used to replace the automatic new line in scripts
+print("Hello", end="xyz") #Helloxyz
+print("foo", end="")
+print("bar", end="")
+print("baz") #foobarbaz
+
+#Length of string
+print(len("Hello")) #5
+
