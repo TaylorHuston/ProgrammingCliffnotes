@@ -1,8 +1,13 @@
 str1 = "some string"
 
-print(str1.title())
-print(str1.upper())
-print(str1.lower())
+print(str1.title()) #Some String
+print(str1.upper()) #SOME STRING
+print(str1.lower()) #some string
+print(str1.capitalize()) #Some string
+print(str1.swapcase()) #SOME STRING
+print(str1.replace("some", "another")) #another string
+print(str1.isupper()) #False
+print(str1.islower()) #True
 
 #f-strings
 first_name = "john"
