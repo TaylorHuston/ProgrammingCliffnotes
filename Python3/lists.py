@@ -84,13 +84,26 @@ print(type(myTuple)) #<class 'tuple'>
 myDict = {'Name' : 'Tom', 'Height': 6.2}
 print(myDict)  #{'Name': 'Tom', 'Height': 6.2}
 print(myDict['Name'])  #Tom
+
 myDict['Name'] = "Jerry"
 print(myDict['Name'])  #Jerry
+print(myDict.get('Name')) #Jerry
 
 myDict.clear()
 print(myDict) #{}
 del myDict
 #print(myDict)  this will throw an error
+
+moonwalks = {"Neil Armstrong": 1969,
+             "Buzz Aldrin": 1969,
+             "Alan Shepard": 1971,
+             "Eugene Cernan": 1972,
+             "Michael Jackson": 1983}
+appollo_11 = {"Neil Armstrong", "Buzz Aldrin"}
+print(moonwalks.keys()) #dict_keys(['Neil Armstrong', 'Buzz Aldrin', 'Alan Shepard', 'Eugene Cernan', 'Michael Jackson'])
+print(moonwalks.values()) #dict_values([1969, 1969, 1971, 1972, 1983])
+print(moonwalks.keys() & appollo_11) #{'Buzz Aldrin', 'Neil Armstrong'}
+print("Buzz Aldrin" in moonwalks) #True
 
 #Sets
 set1= {1,1,2,3,5,6,5}
