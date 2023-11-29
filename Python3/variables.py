@@ -37,24 +37,6 @@ print(num5) #12
 str3 = str(num1)
 print(type(str3)) #<class 'str'>
 
-#Tuples and Dictionaries
-myTuple = (123131, 12321321, 1231) #tuples are not mutable
-print(myTuple) #(123131, 12321321, 1231)
-print(myTuple[1]) #12321321
-print(type(myTuple)) #<class 'tuple'>
-
-myDict = {'Name' : 'Tom', 'Height': 6.2}
-print(myDict)  #{'Name': 'Tom', 'Height': 6.2}
-print(myDict['Name'])  #Tom
-myDict['Name'] = "Jerry"
-print(myDict['Name'])  #Jerry
-
-myDict.clear()
-print(myDict) #{}
-del myDict
-#print(myDict)  this will throw an error
-
-
 
 
 #Constant

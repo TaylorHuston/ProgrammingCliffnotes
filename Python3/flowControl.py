@@ -35,9 +35,15 @@ for x in range(0, 100):
     sum += x
 print(sum)
 
-myStr = "test"  #Also works for lists
+#String iteration, also works for lists
+myStr = "test" 
 for c in myStr:
     print(c)
+
+#This also works, just not considered "good python"
+for i in range(len(myStr)):
+    print(myStr[i])
+
 
 
 for x in range(0, 10):

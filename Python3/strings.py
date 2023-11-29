@@ -8,6 +8,9 @@ print(str1.swapcase()) #SOME STRING
 print(str1.replace("some", "another")) #another string
 print(str1.isupper()) #False
 print(str1.islower()) #True
+print(str1.find("string")) #5
+print(str1.find("foo")) #-1
+print("some" in str1) #True
 
 #f-strings
 first_name = "john"
