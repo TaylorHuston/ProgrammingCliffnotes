@@ -26,6 +26,18 @@ def printer(*args, **kwargs):
     print(args)
     print(kwargs)
 
+#Does is include all digits 0-9?
+def has_all_digits(numbers):
+    for n in numbers:
+        if set(str(n)) == set("0123456789"):
+            return n
+    return
+
+#Custom generator, supplies values only when needed, better for memory
+def squares_generator():
+    for n in range(10**8 +1):
+        yield n**2
+
 test = 10
 print(test)  #10
 print(myFunction(test))  #20
@@ -41,3 +53,8 @@ another_number = function_adder(5, doubler)
 print(another_number)  #11
 
 printer("Hello", "World", "Test", a="Yes", b="No")  #('Hello', 'World', 'Test') {'a': 'Yes', 'b': 'No'}
+
+print(has_all_digits([1424872341, 1236490835741, 12341960523]))
+squares = squares_generator()
+#This will print out the first square that has all the digits 0-9
+print(has_all_digits(squares))

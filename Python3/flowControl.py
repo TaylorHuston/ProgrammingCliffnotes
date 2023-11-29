@@ -73,6 +73,16 @@ else:
 flag = True
 
 while flag:
-    inputs = input("Enter STOP to exit program: ")
+    inputs = input("Enter STOP to exit loop: ")
     if inputs == "STOP":
         flag = False
+
+
+#Custom interator
+def characters(string):
+    for c in string:
+        yield c
+    return
+
+for c in characters("foobar"):
+    print(c)
