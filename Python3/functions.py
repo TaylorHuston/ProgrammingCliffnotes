@@ -1,4 +1,6 @@
-#!/usr/bin/python3
+import calendar
+from datetime import datetime
+from datetime import timezone
 
 def myFunction(param):
     test = 9 
@@ -6,6 +8,8 @@ def myFunction(param):
     param = param*2
     return param
 
+def dayname(time):
+    return calendar.day_name[time.weekday()]
 
 test = 10
 print(test)  #10
