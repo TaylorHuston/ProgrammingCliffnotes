@@ -105,6 +105,20 @@ print(moonwalks.values()) #dict_values([1969, 1969, 1971, 1972, 1983])
 print(moonwalks.keys() & appollo_11) #{'Buzz Aldrin', 'Neil Armstrong'}
 print("Buzz Aldrin" in moonwalks) #True
 
+for key in moonwalks:
+    print(f"{key} walked on the moon in {moonwalks[key]}")
+
+for name, year in moonwalks.items():
+    print(f"{name} walked on the moon in {year}")
+
+tests1 = {"Math": 75, "Physics": 99}
+tests2 = {"Chemistry": 87, "Biology": 95}
+test_scores = tests1 | tests2
+print(test_scores) #{'Math': 75, 'Physics': 99, 'Chemistry': 87, 'Biology': 95}
+retests = {"Math": 100, "Physics": 100}
+test_scores |= retests
+print(test_scores) #{'Math': 100, 'Physics': 100, 'Chemistry': 87, 'Biology': 95}
+
 #Sets
 set1= {1,1,2,3,5,6,5}
 print(set1) #{1, 2, 3, 5, 6}
