@@ -11,6 +11,8 @@ print(str1.islower()) #True
 print(str1.find("string")) #5
 print(str1.find("foo")) #-1
 print("some" in str1) #True
+print(str1[0]) #s
+
 
 #f-strings
 first_name = "john"
@@ -53,4 +55,12 @@ print("baz") #foobarbaz
 
 #Length of string
 print(len("Hello")) #5
+
+print("ant cat bat".split()) #['ant', 'cat', 'bat']")
+print("ant,cat,bat".split(",")) #['ant', 'cat', 'bat']
+print("ant\nbat\ncat".splitlines()) #['ant', 'bat', 'cat']
+a = ["ant", "bat", "cat"]
+print("".join(a)) #antbatcat
+print(" ".join(a)) #ant bat cat
+print("a".join(a)) #aantabatacat
 

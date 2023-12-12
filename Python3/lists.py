@@ -43,8 +43,9 @@ cars = ['bmw', 'audi', 'toyota', 'subaru']
 print(cars)
 print(cars[-1]) #subaru
 
-cars.reverse()
+cars.reverse() #mutates
 print(cars) #['subaru', 'toyota', 'audi', 'bmw']
+print(list(reversed(cars))) #['bmw', 'audi', 'toyota', 'subaru'] does not mutate
 print(len(cars))
 
 even_numbers = list(range(2, 11, 2)) #start, end, increment
@@ -71,9 +72,16 @@ print(digits == digits3) #True
 print(digits is digits2) #True
 print(digits is digits3) #False
 
+#Enumerate is a better way to iterate through lists.
 for i,e in enumerate(digits):
     print(f"digits[{i}] = {e}")
 
+#Also works, considered less 'pythonic'
+for i in range(len(digits)):
+    print(f"digits[{i}] = {digits[i]}")
+
+for i in digits:
+    print(i)
 
 #Tuples and Dictionaries
 myTuple = (123131, 12321321, 1231) #tuples are not mutable
@@ -123,7 +131,7 @@ print(test_scores) #{'Math': 100, 'Physics': 100, 'Chemistry': 87, 'Biology': 95
 set1= {1,1,2,3,5,6,5}
 print(set1) #{1, 2, 3, 5, 6}
 
-set2 = {27,5,55,41,2}
+set2 = set([27,5,55,41,2]) #Another way to define a set
 print(set1.intersection(set2)) #{2, 5}
 print(set1.union(set2)) #{1, 2, 3, 5, 6, 41, 55, 27}
 print(set1.difference(set2)) #{1, 3, 6}
