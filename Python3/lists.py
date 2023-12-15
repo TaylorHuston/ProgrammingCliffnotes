@@ -95,7 +95,7 @@ print(myDict['Name'])  #Tom
 
 myDict['Name'] = "Jerry"
 print(myDict['Name'])  #Jerry
-print(myDict.get('Name')) #Jerry
+print(myDict.get('Name')) #Jerry, safer if you don't know if the key actually exists
 
 myDict.clear()
 print(myDict) #{}
@@ -107,7 +107,7 @@ moonwalks = {"Neil Armstrong": 1969,
              "Alan Shepard": 1971,
              "Eugene Cernan": 1972,
              "Michael Jackson": 1983}
-appollo_11 = {"Neil Armstrong", "Buzz Aldrin"}
+appollo_11 = {"Neil Armstrong", "Buzz Aldrin"} #Set
 print(moonwalks.keys()) #dict_keys(['Neil Armstrong', 'Buzz Aldrin', 'Alan Shepard', 'Eugene Cernan', 'Michael Jackson'])
 print(moonwalks.values()) #dict_values([1969, 1969, 1971, 1972, 1983])
 print(moonwalks.keys() & appollo_11) #{'Buzz Aldrin', 'Neil Armstrong'}
@@ -121,7 +121,7 @@ for name, year in moonwalks.items():
 
 tests1 = {"Math": 75, "Physics": 99}
 tests2 = {"Chemistry": 87, "Biology": 95}
-test_scores = tests1 | tests2
+test_scores = tests1 | tests2 #Python 3.9 and newer
 print(test_scores) #{'Math': 75, 'Physics': 99, 'Chemistry': 87, 'Biology': 95}
 retests = {"Math": 100, "Physics": 100}
 test_scores |= retests
