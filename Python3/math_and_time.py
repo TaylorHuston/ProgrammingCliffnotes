@@ -72,10 +72,11 @@ print(now.hour)
 moon_landing = datetime(1969, 7, 20, 20, 17, 40, tzinfo=timezone.utc)
 print(moon_landing)
 
-print(now-moon_landing)
+print(now-moon_landing) #Time since moon landing
 
-print(moon_landing.weekday()) #6 is Sunday
-print(calendar.day_name[0]) #0 is Monday 
+print(moon_landing.weekday()) #6  (Sunday)
+print(list(calendar.day_name)) #['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+print(calendar.day_name[0]) #Monday 
 
 dayname = calendar.day_name[datetime.now().weekday()]
 print(dayname)
