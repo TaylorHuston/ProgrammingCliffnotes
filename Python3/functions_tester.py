@@ -15,10 +15,13 @@ print(another_number)  #11
 
 printer("Hello", "World", "Test", a="Yes", b="No")  #('Hello', 'World', 'Test') {'a': 'Yes', 'b': 'No'}
 
-print(has_all_digits([1424872341, 1236490835741, 12341960523]))
+print(has_all_digits([1424872341, 1236490835741, 12341960523])) #1236490835741
 squares = squares_generator()
 
 #This will print out the first square that has all the digits 0-9
 print(has_all_digits(squares))
+
+squares2 = (n**2 for n in range(10**8 +1)) #This is a generator expression, it does the same thing as squares_generator()
+print(has_all_digits(squares2))
 
 print(deriver(square, 3))  #6.000009999951316

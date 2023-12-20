@@ -39,7 +39,7 @@ def printer(*args, **kwargs):
 def has_all_digits(numbers):
     '''Returns the first number that has all digits 0-9'''
     for n in numbers:
-        if set(str(n)) == set("0123456789"):
+        if set(str(n)) == set("0123456789"): #Sets can take in any iterable, and will only store unique values
             return n
     return
 
