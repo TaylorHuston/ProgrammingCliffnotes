@@ -1,3 +1,4 @@
 *.class
 .vscode
 Python3/__pycache__
+Python3/venv/
