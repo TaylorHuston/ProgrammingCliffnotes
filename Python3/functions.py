@@ -29,12 +29,18 @@ def function_adder(x, func):
     '''Calls a function on a number, then adds 1 to it'''
     return func(x) + 1
 
+def print_x(x, y):
+    '''Prints out the value assigned to x'''
+    print(x)
+    return
+
 #*args passes in unknown number of arguments, turns them into a tuple
 #**kwargs passes in unknown number of arguments, turns them into a dictionary
 def printer(*args, **kwargs):
     '''Prints out all arguments and keyword arguments'''
     print(args)
     print(kwargs)
+    return
 
 def has_all_digits(numbers):
     '''Returns the first number that has all digits 0-9'''
