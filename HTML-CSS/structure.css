@@ -1,3 +1,8 @@
+* {
+  outline: solid 1px red;
+  /*Outline is a great way to see the box model of an element*/
+}
+
 body {
   font-family: Arial, sans-serif;
   font-size: 14px;
@@ -5,6 +10,7 @@ body {
   line-height: 2;
   background-color: aqua;
   /*Colors can be named, hex, or RGBA*/
+
 }
 
 /*Target IDs with #*/
