@@ -34,6 +34,24 @@ def print_x(x, y):
     print(x)
     return
 
+def default_function(x, y=5):
+    '''Adds two numbers together, with a default value for y'''
+    return x + y
+
+def return_tuple(x, y):
+    '''Returns a tuple of two numbers'''
+    return (x, y)
+
+def return_list(x, y):
+    '''Returns a list of two numbers'''
+    return [x, y]
+
+#Python treats functions as first class objects, meaning they can be passed around like any other object
+#You can pass a function as an argument to another function
+#You can return a function from another function
+#You can assign a function to a variable
+x=lambda x: x + 1 #This is a lambda function, it is a small anonymous function
+
 #*args passes in unknown number of arguments, turns them into a tuple
 #**kwargs passes in unknown number of arguments, turns them into a dictionary
 def printer(*args, **kwargs):
