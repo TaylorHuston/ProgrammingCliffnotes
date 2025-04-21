@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from functions import *
 #It is generally not recomended to import all functions from a file, but for this example it gets the job done
 

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from pytest import skip
 
 def test_true():

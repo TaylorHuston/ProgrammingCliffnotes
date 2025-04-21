@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import re
 
 zip_code = r"\d{5}" #regex for five digits in a row

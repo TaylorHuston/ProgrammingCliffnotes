@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 str1 = "some string"
 
 print(str1.title()) #Some String

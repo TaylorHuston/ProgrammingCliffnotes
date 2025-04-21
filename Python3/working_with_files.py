@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 with open("test_output.txt", "w") as file:
     file.write("This is a test file.\n")
     file.write("This is the second line.\n")
