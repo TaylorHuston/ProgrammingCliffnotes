@@ -2,116 +2,116 @@
 
 myList1 = [1, 2.3, 3, 4, "bob"]
 myList2 = [17, "34"]
-print(myList1) #[1,2.3,3,4,"bob"]
-print(myList1[4]) #bob
-print(myList1+myList2) #[1, 2.3, 3, 4, 'bob', 17, '34']
+print(myList1) # [1, 2.3, 3, 4, "bob"]
+print(myList1[4]) # bob
+print(myList1+myList2) # [1, 2.3, 3, 4, 'bob', 17, '34']
 
 myList2.append(65)
-print(myList2) #[17, '34', 65]
-print(myList2[-1]) #65
+print(myList2) # [17, '34', 65]
+print(myList2[-1]) # 65
 
 myList2.insert(0, 23)
-print(myList2) #[23, 17, '34', 65]
+print(myList2) # [23, 17, '34', 65]
 
 del myList2[0]
-print(myList2) #[17, '34', 65]
+print(myList2) # [17, '34', 65]
 
-print(myList2.pop())  #65
-print(myList2) #[17, '34']
+print(myList2.pop())  # 65
+print(myList2) # [17, '34']
 
 myList1.pop(0)
-print(myList1) #[2.3, 3, 4, 'bob']
+print(myList1) # [2.3, 3, 4, 'bob']
 
 myList1.remove("bob")
-print(myList1) #[2.3, 3, 4]
+print(myList1) # [2.3, 3, 4]
 
 myList1[2] = 34234
 print(myList1)
-print(myList1[2]) #34234
+print(myList1[2]) # 34234
 
 cars = ['bmw', 'audi', 'toyota', 'subaru']
-cars.sort() #mutates
-print(cars) #['audi', 'bmw', 'subaru', 'toyota']
+cars.sort() # mutates
+print(cars) # ['audi', 'bmw', 'subaru', 'toyota']
 
 cars.sort(reverse=True)
-print(cars) #['toyota', 'subaru', 'bmw', 'audi']
+print(cars) # ['toyota', 'subaru', 'bmw', 'audi']
 
-print(sorted(cars))#['audi', 'bmw', 'subaru', 'toyota'] does not mutate
-print(cars) #['toyota', 'subaru', 'bmw', 'audi']
+print(sorted(cars)) # ['audi', 'bmw', 'subaru', 'toyota'] does not mutate
+print(cars) # ['toyota', 'subaru', 'bmw', 'audi']
 
 cars = ['bmw', 'audi', 'toyota', 'subaru']
 print(cars)
-print(cars[-1]) #subaru
+print(cars[-1]) # subaru
 
-cars.reverse() #mutates
-print(cars) #['subaru', 'toyota', 'audi', 'bmw']
-print(list(reversed(cars))) #['bmw', 'audi', 'toyota', 'subaru'] does not mutate
+cars.reverse() # mutates
+print(cars) # ['subaru', 'toyota', 'audi', 'bmw']
+print(list(reversed(cars))) # ['bmw', 'audi', 'toyota', 'subaru'] does not mutate
 print(len(cars))
 
-even_numbers = list(range(2, 11, 2)) #start, end, increment
-print(even_numbers) #[2, 4, 6, 8, 10]
+even_numbers = list(range(2, 11, 2)) # start, end, increment
+print(even_numbers) # [2, 4, 6, 8, 10]
 
 
 digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-print(min(digits)) #0
-print(max(digits)) #9
-print(sum(digits)) #45
+print(min(digits)) # 0
+print(max(digits)) # 9
+print(sum(digits)) # 45
 
-print(digits[0:3]) #[1, 2, 3]
-print(digits[:3]) #[1, 2, 3]
-print(digits[3:]) #[4, 5, 6, 7, 8, 9, 0]
-print(digits[-3:]) #[8, 9, 0]
-print(digits[0:10:2]) #[1, 3, 5, 7, 9]
-print(digits[::-1]) #[0, 9, 8, 7, 6, 5, 4, 3, 2, 1] clever, but kind of hideous
+print(digits[0:3]) # [1, 2, 3]
+print(digits[:3]) # [1, 2, 3]
+print(digits[3:]) # [4, 5, 6, 7, 8, 9, 0]
+print(digits[-3:]) # [8, 9, 0]
+print(digits[0:10:2]) # [1, 3, 5, 7, 9]
+print(digits[::-1]) # [0, 9, 8, 7, 6, 5, 4, 3, 2, 1] clever, but kind of hideous
 
-digits2 = digits #Copies reference, not values
-digits3 = digits.copy() #Copies values, not reference
+digits2 = digits # Copies reference, not values
+digits3 = digits.copy() # Copies values, not reference
 
-print(digits == digits2) #True
-print(digits == digits3) #True
-print(digits is digits2) #True
-print(digits is digits3) #False
+print(digits == digits2) # True
+print(digits == digits3) # True
+print(digits is digits2) # True
+print(digits is digits3) # False
 
-#Enumerate is a better way to iterate through lists.
-for i,e in enumerate(digits):
+# Enumerate is a better way to iterate through lists.
+for i, e in enumerate(digits):
     print(f"digits[{i}] = {e}")
 
-#Also works, considered less 'pythonic'
+# Also works, considered less 'pythonic'
 for i in range(len(digits)):
     print(f"digits[{i}] = {digits[i]}")
 
 for i in digits:
     print(i)
 
-#Tuples and Dictionaries
-myTuple = (123131, 12321321, 1231) #tuples are not mutable
-print(myTuple) #(123131, 12321321, 1231)
-print(myTuple[1]) #12321321
-print(type(myTuple)) #<class 'tuple'>
+# Tuples and Dictionaries
+myTuple = (123131, 12321321, 1231) # tuples are not mutable
+print(myTuple) # (123131, 12321321, 1231)
+print(myTuple[1]) # 12321321
+print(type(myTuple)) # <class 'tuple'>
 
-myDict = {'Name' : 'Tom', 'Height': 6.2}
-print(myDict)  #{'Name': 'Tom', 'Height': 6.2}
-print(myDict['Name'])  #Tom
+myDict = {'Name': 'Tom', 'Height': 6.2}
+print(myDict)  # {'Name': 'Tom', 'Height': 6.2}
+print(myDict['Name'])  # Tom
 
 myDict['Name'] = "Jerry"
-print(myDict['Name'])  #Jerry
-print(myDict.get('Name')) #Jerry, safer if you don't know if the key actually exists
+print(myDict['Name'])  # Jerry
+print(myDict.get('Name')) # Jerry, safer if you don't know if the key actually exists
 
 myDict.clear()
-print(myDict) #{}
+print(myDict) # {}
 del myDict
-#print(myDict)  this will throw an error
+# print(myDict)  this will throw an error
 
 moonwalks = {"Neil Armstrong": 1969,
              "Buzz Aldrin": 1969,
              "Alan Shepard": 1971,
              "Eugene Cernan": 1972,
              "Michael Jackson": 1983}
-appollo_11 = {"Neil Armstrong", "Buzz Aldrin"} #Set
-print(moonwalks.keys()) #dict_keys(['Neil Armstrong', 'Buzz Aldrin', 'Alan Shepard', 'Eugene Cernan', 'Michael Jackson'])
-print(moonwalks.values()) #dict_values([1969, 1969, 1971, 1972, 1983])
-print(moonwalks.keys() & appollo_11) #{'Buzz Aldrin', 'Neil Armstrong'}
-print("Buzz Aldrin" in moonwalks) #True
+apollo_11 = {"Neil Armstrong", "Buzz Aldrin"} # Set
+print(moonwalks.keys()) # dict_keys(['Neil Armstrong', 'Buzz Aldrin', 'Alan Shepard', 'Eugene Cernan', 'Michael Jackson'])
+print(moonwalks.values()) # dict_values([1969, 1969, 1971, 1972, 1983])
+print(moonwalks.keys() & apollo_11) # {'Buzz Aldrin', 'Neil Armstrong'}
+print("Buzz Aldrin" in moonwalks) # True
 
 for key in moonwalks:
     print(f"{key} walked on the moon in {moonwalks[key]}")
@@ -121,23 +121,23 @@ for name, year in moonwalks.items():
 
 tests1 = {"Math": 75, "Physics": 99}
 tests2 = {"Chemistry": 87, "Biology": 95}
-test_scores = tests1 | tests2 #Python 3.9 and newer
-print(test_scores) #{'Math': 75, 'Physics': 99, 'Chemistry': 87, 'Biology': 95}
+test_scores = tests1 | tests2 # Python 3.9 and newer
+print(test_scores) # {'Math': 75, 'Physics': 99, 'Chemistry': 87, 'Biology': 95}
 retests = {"Math": 100, "Physics": 100}
 test_scores |= retests
-print(test_scores) #{'Math': 100, 'Physics': 100, 'Chemistry': 87, 'Biology': 95}
+print(test_scores) # {'Math': 100, 'Physics': 100, 'Chemistry': 87, 'Biology': 95}
 
-#Sets
-set1= {1,1,2,3,5,6,5}
-print(set1) #{1, 2, 3, 5, 6}
+# Sets
+set1 = {1, 1, 2, 3, 5, 6, 5}
+print(set1) # {1, 2, 3, 5, 6}
 
-set2 = set([27,5,55,41,2]) #Another way to define a set
-print(set1.intersection(set2)) #{2, 5}
-print(set1.union(set2)) #{1, 2, 3, 5, 6, 41, 55, 27}
-print(set1.difference(set2)) #{1, 3, 6}
+set2 = set([27, 5, 55, 41, 2]) # Another way to define a set
+print(set1.intersection(set2)) # {2, 5}
+print(set1.union(set2)) # {1, 2, 3, 5, 6, 41, 55, 27}
+print(set1.difference(set2)) # {1, 3, 6}
 
-print(type(())) #<class 'tuple'>
-print(type({})) #<class 'dict'>
-print(type(set())) #<class 'set'>
+print(type(())) # <class 'tuple'>
+print(type({})) # <class 'dict'>
+print(type(set())) # <class 'set'>
 
 

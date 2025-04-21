@@ -7,13 +7,13 @@ def urlify(string):
     return string.lower().replace(" ", "-")
 
 #urls: imperative version
-def imperatitve_urls(states):
+def imperative_urls(states):
     urls = []
     for state in states:
         urls.append(urlify(state))
     return urls
 
-print(imperatitve_urls(states))
+print(imperative_urls(states))
 
 #urls: functional version, list comprehension
 def functional_urls(states):
@@ -22,19 +22,19 @@ def functional_urls(states):
 print(functional_urls(states))
 
 #singles: imperative version
-def imperatitve_singles(states):
+def imperative_singles(states):
     singles = []
     for state in states:
         if len(state.split()) == 1:
             singles.append(state)
     return singles
 
-print(imperatitve_singles(states))
+print(imperative_singles(states))
 
 #list comprehension to print only even numbers
 print([n for n in range(10) if n % 2 == 0])
 
-#singles: funcationl version
+#singles: functional version
 def functional_singles(states):
     return [state for state in states if len(state.split()) == 1]
 
@@ -51,18 +51,18 @@ print(imperative_lengths(states))
 
 #lengths: functional version
 def functional_lengths(states):
-    return{state: len(state) for state in states}
+    return {state: len(state) for state in states}
 
 print(functional_lengths(states))
 
-#genertor comprehension
-squares = (n**2 for n in range(10**8 + 1)) 
+#generator comprehension
+squares = (n ** 2 for n in range(10 ** 8 + 1))
 
 #set comprehension with intersection
-print({n for n in range(5,21)} & {n for n in range(10) if n % 2 ==0})
+print({n for n in range(5, 21)} & {n for n in range(10) if n % 2 == 0})
 
 #set comprehension with union
-print({n for n in range(5,21)} | {n for n in range(10) if n % 2 ==0})
+print({n for n in range(5, 21)} | {n for n in range(10) if n % 2 == 0})
 
 numbers = range(0, 101)
 

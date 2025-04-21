@@ -70,8 +70,8 @@ print(f"Reference counts for 5 after assignment: {sys.getrefcount(5)}")
 # Get the size of an object in bytes
 print(f"Size of an integer (5): {sys.getsizeof(5)} bytes")
 print(f"Size of a string ('hello'): {sys.getsizeof('hello')} bytes")
-print(f"Size of a list ([1,2,3]): {sys.getsizeof([1,2,3])} bytes")
-print(f"Size of a dict({{1:2}}): {sys.getsizeof({1:2})} bytes")
+print(f"Size of a list ([1, 2, 3]): {sys.getsizeof([1, 2, 3])} bytes")
+print(f"Size of a dict({1: 2}): {sys.getsizeof({1: 2})} bytes")
 
 # Interactive mode check
 print_section("Interactive Mode")
