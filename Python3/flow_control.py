@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/flow_control.py
+
+"""
+Demonstrates flow control structures in Python including conditionals and loops.
+"""
 
 #Note the whitespace, different from curly bracket languages
 

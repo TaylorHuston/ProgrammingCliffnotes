@@ -1,11 +1,8 @@
 #!/usr/bin/python3
+# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/data_structures.py
+
 """
-Python Data Structures
-This file demonstrates the main data structures in Python:
-- Lists
-- Tuples
-- Dictionaries
-- Sets
+Demonstrates Python's built-in data structures and their operations.
 """
 
 # ==========================================

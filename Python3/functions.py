@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/functions.py
+
+"""
+Demonstrates various function definitions and usage patterns in Python.
+"""
+
 import calendar
 from datetime import datetime
 from datetime import timezone

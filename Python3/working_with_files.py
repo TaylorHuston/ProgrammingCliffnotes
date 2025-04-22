@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/working_with_files.py
+
 """
-Working with Files in Python
-This file demonstrates basic file operations in Python.
+Demonstrates file handling operations in Python.
 """
 
 # ==========================================

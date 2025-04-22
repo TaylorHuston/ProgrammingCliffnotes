@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/logical_operators.py
+
+"""
+Demonstrates logical operators and boolean expressions in Python.
+"""
 
 print((4>5) or (4==4))  #True
 print((4>5) and (4==4))  #False

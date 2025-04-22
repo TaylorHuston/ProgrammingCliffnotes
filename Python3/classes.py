@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/classes.py
+
+"""
+Demonstrates class definitions and object-oriented programming in Python.
+"""
 
 class Animal:
     """A base Animal class"""

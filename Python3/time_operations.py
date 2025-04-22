@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/time_operations.py
+
 """
-Time Operations in Python
-This file demonstrates working with time, dates, and calendars in Python.
+Demonstrates date and time handling in Python.
 """
 import time
 from datetime import datetime, timezone, timedelta

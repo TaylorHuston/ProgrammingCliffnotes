@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/regex.py
+
+"""
+Demonstrates regular expression patterns and usage in Python.
+"""
+
 import re
 
 zip_code = r"\d{5}" #regex for five digits in a row

@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/test_examples.py
+
+"""
+Demonstrates testing frameworks and approaches in Python.
+"""
+
 from pytest import skip
 
 def test_true():

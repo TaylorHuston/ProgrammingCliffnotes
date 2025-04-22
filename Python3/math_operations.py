@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/math_operations.py
+
 """
-Mathematical Operations in Python
-This file demonstrates basic and advanced mathematical operations.
+Demonstrates mathematical operations and functions in Python.
 """
 import math
 

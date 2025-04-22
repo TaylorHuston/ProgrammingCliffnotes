@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/basic_data_types.py
+
 """
 Basic Data Types in Python
 This file demonstrates variables, strings, and basic type operations in Python.

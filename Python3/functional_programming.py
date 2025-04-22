@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 # filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/functional_programming.py
+
+"""
+Demonstrates functional programming concepts in Python.
+"""
+
 states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"]
 
 def urlify(string):

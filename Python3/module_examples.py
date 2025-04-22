@@ -1,10 +1,8 @@
 #!/usr/bin/python3
+# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/module_examples.py
+
 """
-Python Module Examples
-This file demonstrates usage of several important Python modules:
-- os module: Operating system interfaces
-- sys module: System-specific parameters and functions
-- re module: Regular expressions
+Demonstrates module imports and usage in Python.
 """
 
 import os
