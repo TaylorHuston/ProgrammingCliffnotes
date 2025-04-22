@@ -31,6 +31,7 @@ Python is an interpreted language.
 - **classes.py** - Object-oriented programming with classes and inheritance
 - **functional_programming.py** - Functional programming paradigms
 - **module_examples.py** - Examples of common Python modules (os, sys, re)
+- **subprocess_examples.py** - Examples of running external commands using the subprocess module
 - **working_with_files.py** - File operations (reading, writing, etc.)
 - **working_with_url.py** - Working with URL requests
 - **regex.py** - Regular expression examples
