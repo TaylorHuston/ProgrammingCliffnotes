@@ -4,13 +4,18 @@ function variables() {
   //Weakly-typed
   var a = "I am a string";
   var b = 100;
-  var c = 100.10;
+  var c = 100.1;
   var d = true;
 
   console.log(a);
   console.log(b);
   console.log(c);
   console.log(d);
+
+  console.log(typeof a); //string
+  console.log(typeof b); //number
+  console.log(typeof c); //number
+  console.log(typeof d); //boolean
 
   //Change type
   b = a;
@@ -37,7 +42,7 @@ function variables() {
   console.log(++x); //52. Increments, then logs
 
   //Math has other functions
-  x = 215.67
+  x = 215.67;
   var y = Math.round(x);
   var z = Math.floor(x);
   console.log(x); //215.67
