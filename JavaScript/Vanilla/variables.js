@@ -24,8 +24,6 @@ function variables() {
   b = a;
 
   console.log(b); //I am a string
-  console.log(Number(b)); //NaN (Not a Number))
-  console.log(isNaN(b)); //true, b is not a number
 
   //Random value
   var ran = Math.random(); //Between 0 and 1 (but not including 1)

@@ -27,6 +27,12 @@ function flowControl() {
   console.log(1 === "1"); // False, strict equality
   console.log(1 != 1); // False
 
+  console.log(Boolean("")); // False
+  console.log(Boolean("non-empty")); // True
+  console.log(Boolean("false")); // True
+  console.log(Boolean(0)); // False
+  console.log(Boolean(3)); // True
+
   var score1 = 100;
   var score2 = 200;
   // Ternary      *condition* ? *result if true* : *result if false*
