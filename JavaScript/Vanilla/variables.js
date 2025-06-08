@@ -52,12 +52,12 @@ function variables() {
   console.log(y); //216
   console.log(z); //215
 
-  var aString = "55"; //String
-  console.log(isNaN(aString)); //is Not a Number, true
+  var aString = "55"; // String
+  console.log(isNaN(aString)); // is Not a Number, true
   var aNumber = Number(aString); // Convert to number
-  console.log(isNaN(aNumber)); //is Not a Number, false
+  console.log(isNaN(aNumber)); // is Not a Number, false
 
-  console.log(Math.PI); //BRING ME SOME PIE
+  console.log(Math.PI); // BRING ME SOME PIE
 }
 
 variables();
