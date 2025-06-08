@@ -6,21 +6,26 @@ function variables() {
   var b = 100;
   var c = 100.1;
   var d = true;
+  var e = a + " " + b; //Concatenation
 
   console.log(a);
   console.log(b);
   console.log(c);
   console.log(d);
+  console.log(e);
 
   console.log(typeof a); //string
   console.log(typeof b); //number
   console.log(typeof c); //number
   console.log(typeof d); //boolean
+  console.log(typeof e); //string
 
   //Change type
   b = a;
 
-  console.log(b);
+  console.log(b); //I am a string
+  console.log(Number(b)); //NaN (Not a Number))
+  console.log(isNaN(b)); //true, b is not a number
 
   //Random value
   var ran = Math.random(); //Between 0 and 1 (but not including 1)
