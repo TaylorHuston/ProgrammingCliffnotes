@@ -53,7 +53,8 @@ function variables() {
   console.log(z); //215
 
   var aString = "55"; //String
-  var aNumber = Number(aString);
+  console.log(isNaN(aString)); //is Not a Number, true
+  var aNumber = Number(aString); // Convert to number
   console.log(isNaN(aNumber)); //is Not a Number, false
 
   console.log(Math.PI); //BRING ME SOME PIE
