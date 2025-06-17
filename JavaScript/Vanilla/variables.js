@@ -58,6 +58,11 @@ function variables() {
   console.log(isNaN(aNumber)); // is Not a Number, false
 
   console.log(Math.PI); // BRING ME SOME PIE
+
+  var name = "John";
+  console.log("Hello".concat(" ", name, "!")); // Using concat to join strings
+  console.log(`Hello ${name}!`); // Using template literals to join strings
+  console.log("Hello " + name + "!"); // Using + to join strings
 }
 
 variables();
