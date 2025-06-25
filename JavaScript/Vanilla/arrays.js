@@ -41,15 +41,22 @@ function arrays() {
 
   var rand = [1, 5, 3, 9, 8, 3];
 
-  var reverse = rand.reverse();
-  console.log(reverse);
+  console.log(rand); // [1, 5, 3, 9, 8, 3]
+  rand.reverse(); // Reverse the array in place
+  console.log(rand); // [3, 8, 9, 5, 3, 1]
+  rand.sort(); // Sorts the array in place, but sorts as strings by default
+  console.log(rand); // [1, 3, 3, 5, 8, 9]
+  // Slice returns a new array with elements from start to end (not including end)
+  console.log(rand.slice(1, 4)); // [3, 3, 5]
+  console.log(rand.slice(1)); // [3, 3, 5, 8, 9] - from index 1 to end
+  console.log(rand.slice(-3)); // [5, 8, 9] - from the end
+  console.log(rand.splice(1, 3)); // [3, 3, 5] - removes elements from index 1 to index 3 (not including index 3) and returns them
+  console.log(rand); // [1, 8, 9] - original array modified
+  rand.splice(1, 0, 2, 4); // Inserts 2 and 4 at index 1 without removing any elements
+  console.log(rand); // [1, 2, 4, 8, 9] - original array modified
 
-  var sorted = rand.sort();
-  console.log(sorted); // 1,3,3,5,8,9
-
-  // Use forEach to run a function on each element of an array
   var sum = 0;
-  sorted.forEach(function (someVal) {
+  rand.forEach(function (someVal) {
     console.log(someVal);
     sum += someVal;
   });
@@ -57,14 +64,14 @@ function arrays() {
 
   // Use filter to exclude certain elements
   console.log(
-    sorted.filter(function (val) {
+    rand.filter(function (val) {
       return val % 2 == 0;
     })
   );
 
   // Use map to apply a function to each element of an array and build a NEW array from the results
   console.log(
-    sorted.map(function (val) {
+    rand.map(function (val) {
       return val * 2;
     })
   );
@@ -79,14 +86,14 @@ function arrays() {
 
   // Use reduce to combine all elements
   console.log(
-    sorted.reduce(function (x, y) {
+    rand.reduce(function (x, y) {
       return x + y;
     })
   );
 
   // Use reduce to find smallest element
   console.log(
-    sorted.reduce(function (x, y) {
+    rand.reduce(function (x, y) {
       if (x < y) {
         return x;
       } else {
@@ -97,9 +104,12 @@ function arrays() {
 
   // 2D array
   var twoD = [
-    [1, 1],
-    [1, 1],
+    [1, 2],
+    [3, 4],
   ];
+
+  console.log(twoD[0][0]); // 1
+  console.log(twoD[1][1]); // 4
 
   // Join converts array into string with a separator
   console.log(rand.join(" and ")); // 1 and 3 and 3 and 5 and 8 and 9
