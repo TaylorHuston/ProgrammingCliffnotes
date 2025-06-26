@@ -1,7 +1,7 @@
 // Conditionals and loops
 
 function flowControl() {
-  var age = 29;
+  let age = 29;
 
   if (age > 30) {
     console.log("Damn you old");
@@ -33,19 +33,19 @@ function flowControl() {
   console.log(Boolean(0)); // False
   console.log(Boolean(3)); // True
 
-  var score1 = 100;
-  var score2 = 200;
+  let score1 = 100;
+  let score2 = 200;
   // Ternary      *condition* ? *result if true* : *result if false*
-  var highScore = score1 > score2 ? score1 : score2;
+  let highScore = score1 > score2 ? score1 : score2;
   console.log(highScore); // 200
 
   // Loops
-  for (var i = 0; i < 5; i++) {
+  for (let i = 0; i < 5; i++) {
     console.log(i);
   }
 
   // This loop will print off odd numbers 1..15
-  for (var i = 0; i < 5000; i++) {
+  for (let i = 0; i < 5000; i++) {
     if (i % 2 == 0) {
       continue; // Move to next loop iteration
     }
@@ -56,7 +56,7 @@ function flowControl() {
   }
 
   // This loop will print all numbers 1..10
-  var x = 0;
+  let x = 0;
   while (x < 10) {
     x++;
     console.log(x);
@@ -68,7 +68,7 @@ function flowControl() {
   } while (x > 0);
 
   // Switch
-  var lunch = "Sammich";
+  let lunch = "Sammich";
   switch (lunch) {
     case "Sammich":
       console.log("Sammich, like a sandwich but with 10% more redneck.");

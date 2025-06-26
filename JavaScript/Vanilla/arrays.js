@@ -3,10 +3,10 @@
 function arrays() {
   console.log("test");
   // Creating an array with the constructor to set initial size (though arrays in JS are dynamic anyway)
-  var foo = new Array(100);
+  let foo = new Array(100);
 
   // Creating an array with the array literal syntax
-  var bar = [1, "a", 3.5, true, 2]; // Not type specific
+  let bar = [1, "a", 3.5, true, 2]; // Not type specific
 
   console.log(foo.length); // 100
   console.log(bar.length); // 5
@@ -39,7 +39,7 @@ function arrays() {
   console.log(fub.length); // 5
   console.log(fub[0]); // undefined
 
-  var rand = [1, 5, 3, 9, 8, 3];
+  let rand = [1, 5, 3, 9, 8, 3];
 
   console.log(rand); // [1, 5, 3, 9, 8, 3]
   rand.reverse(); // Reverse the array in place
@@ -55,7 +55,7 @@ function arrays() {
   rand.splice(1, 0, 2, 4); // Inserts 2 and 4 at index 1 without removing any elements
   console.log(rand); // [1, 2, 4, 8, 9] - original array modified
 
-  var sum = 0;
+  let sum = 0;
   rand.forEach(function (someVal) {
     console.log(someVal);
     sum += someVal;
@@ -103,7 +103,7 @@ function arrays() {
   );
 
   // 2D array
-  var twoD = [
+  let twoD = [
     [1, 2],
     [3, 4],
   ];

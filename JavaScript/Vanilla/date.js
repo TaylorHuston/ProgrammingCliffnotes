@@ -1,11 +1,11 @@
 // Date object syntax
 
 function dates() {
-  var today = new Date(); // Current date and time
+  let today = new Date(); // Current date and time
 
   console.log(today);
 
-  var y2k = new Date(2000, 0, 1); // Months are 0-index
+  let y2k = new Date(2000, 0, 1); // Months are 0-indexed
 
   // Dates have a range of self-explanatory methods
   console.log(y2k.getMonth());
@@ -17,8 +17,8 @@ function dates() {
   today.setMonth(5); // Can set the values individually
   console.log(today);
 
-  var date1 = new Date(2000, 0, 1);
-  var date2 = new Date(2000, 0, 1);
+  let date1 = new Date(2000, 0, 1);
+  let date2 = new Date(2000, 0, 1);
 
   console.log(date1 == date2); // False, two different objects
   console.log(date1.getTime() == date2.getTime()); // True

@@ -2,14 +2,14 @@
 
 function objects() {
   // Create an object
-  var person1 = {};
+  let person1 = {};
 
   // Dot notation for setting attributes
   person1.name = "John Doe";
 
   // Create object with pre-defined attributes
   // Properties with non valid variable names use quotes
-  var person2 = {
+  let person2 = {
     firstName: "Jane",
     "last name": "Doe",
     // Objects can contain other objects
@@ -24,7 +24,7 @@ function objects() {
   console.log(person2["last name"]);
 
   // Object attributes can be other objects
-  var people = {};
+  let people = {};
   people.person1 = person1;
 
   // Bracket notation
@@ -48,7 +48,7 @@ function objects() {
   console.log(people.person2.address); // { street: '123 main street', city: 'your Town' }
 
   // When creating an object with a constructor
-  var phonebookEntry = new Object();
+  let phonebookEntry = new Object();
 
   phonebookEntry.name = "Jack Huston";
   phonebookEntry.number = "860-555-1212";
@@ -62,7 +62,7 @@ function objects() {
   phonebookEntry.phone();
 
   // Methods
-  var bob = new Object();
+  let bob = new Object();
   bob.setAge = function (age) {
     // Object specific method
     bob.age = age;
@@ -82,11 +82,11 @@ function objects() {
   console.log(bob.weight);
 
   // Object equality
-  var object1 = {
+  let object1 = {
     val: 10,
   };
-  var object2 = object1;
-  var object3 = {
+  let object2 = object1;
+  let object3 = {
     val: 10,
   };
   console.log(object1 == object2); // True
@@ -95,7 +95,7 @@ function objects() {
   console.log(object2.val); // 15
 
   // Bracket notation can use variables
-  var population = {};
+  let population = {};
 
   function addPop(city, pop) {
     population[city] = pop;
@@ -107,12 +107,12 @@ function objects() {
   addPop("Seattle", 12);
 
   // Object for loop
-  for (var city in population) {
+  for (let city in population) {
     console.log(city + " : " + population[city]);
   }
 
   // Getters and setters. Looks like normal attributes but actually methods. Encapsulation.
-  var somePerson = {
+  let somePerson = {
     mySex: "Male",
     myAge: 25,
     get age() {
