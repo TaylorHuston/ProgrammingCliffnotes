@@ -33,15 +33,25 @@ function objects() {
   console.log(people["person1"].name);
   console.log(people.person2.name);
 
-  person1.name = "Jack Doe";
-  console.log(person1.name);
-  console.log(people.person1.name);
+  person1.name = "Jack Doe"; // Update attribute
+  console.log(person1.name); // Jack Doe
+  console.log(people.person1.name); // Jack Doe
+  console.log("name" in person1); // True
+  console.log("age" in person1); // False
+  delete person1.name; // Remove attribute
+  console.log("name" in person1); // False
+  console.log(Object.keys(person2)); // ['firstName', 'last name', 'address']
+  console.log(Object.keys(people)); // ['person1', 'person2']
+  console.log(Object.values(people)); // [ { name: 'Jack Doe' }, { firstName: 'Jane', 'last name': 'Doe', address: { street: '123 main street', city: 'your Town' } } ]
+  console.log(Object.values(person2)); // [ 'Jane', 'Doe', { street: '123 main street', city: 'your Town' } ]
+  console.log(Object.entries(person2)); // [ [ 'firstName', 'Jane' ], [ 'last name', 'Doe' ], [ 'address', { street: '123 main street', city: 'your Town' } ] ]
+  console.log(people.person2.address); // { street: '123 main street', city: 'your Town' }
 
   // When creating an object with a constructor
   var phonebookEntry = new Object();
 
-  phonebookEntry.name = "Taylor Huston";
-  phonebookEntry.number = "(503) 962-9521";
+  phonebookEntry.name = "Jack Huston";
+  phonebookEntry.number = "860-555-1212";
 
   // Define a method on the object
   phonebookEntry.phone = function () {
