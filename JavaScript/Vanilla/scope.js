@@ -16,8 +16,8 @@ foo(); // 4, 2, 48
 
 // Let vs Var
 function run() {
-  var foo = "Foo";
-  let bar = "Bar";
+  var foo = "Foo"; // var is function-scoped or globally-scoped
+  let bar = "Bar"; // let is block-scoped, meaning it is only accessible within the block it is defined in
 
   console.log(foo, bar); // Foo Bar
 
