@@ -2,7 +2,7 @@
 
 function objects() {
   // Basic object
-  var object1 = {
+  let object1 = {
     prop1: 1,
     method1: function () {
       return this.prop1;
@@ -12,14 +12,14 @@ function objects() {
   console.log(object1.method1());
 
   // Basic inheritance
-  var object2 = Object.create(object1);
+  let object2 = Object.create(object1);
   object2.prop1 = 2;
   console.log(object2.method1());
 
   // Constructor
   function Person(n) {
     this.name = n;
-    var privateVar = "This is private";
+    let privateVar = "This is private";
     // Can declare functions within constructor, but this is not recommended, unless you need access to a private variable
     this.speak = function () {
       console.log("Speak");
@@ -41,7 +41,7 @@ function objects() {
     console.log(toRepeat);
   };
 
-  var bob = new Person("Bob");
+  let bob = new Person("Bob");
   bob.speak();
   bob.sayName();
   bob.repeat("hello");
@@ -62,7 +62,7 @@ function objects() {
   console.log(bob.toString()); // Call overridden toString method
 
   // Create directly from prototype, no constructor
-  var playerPrototype = {
+  let playerPrototype = {
     speak: function () {
       console.log("Speak");
     },
@@ -79,3 +79,5 @@ function objects() {
     this.status = s;
   }
 }
+
+objects();
