@@ -11,6 +11,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Conditional />
     <MyButtonComponent />
+    <MyButtonComponent />
     <Profile />
     <ShoppingList />
   </StrictMode>

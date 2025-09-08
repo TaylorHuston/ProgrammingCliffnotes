@@ -1,6 +1,19 @@
+import { useState } from "react";
+
 function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    alert("You clicked me!");
+    setCount(count + 1);
+  }
+
   // className is used to apply CSS styles in React
-  return <button className="pink-button">Click Me!</button>;
+  return (
+    <button className="pink-button" onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
 }
 
 // `export default` denotes the main component in the file.
