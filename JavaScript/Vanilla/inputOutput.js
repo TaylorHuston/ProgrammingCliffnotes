@@ -1,12 +1,12 @@
 //Input and output in context of a browser window
 
-var inputButton = document.getElementById("inputoutput");
+let inputButton = document.getElementById("inputOutput");
 
 function inputOutput() {
   alert("I am an alert box");
   confirm("I am a confirm box, click okay to continue");
 
-  var someVal = prompt("Use a prompt to get data");
+  let someVal = prompt("Use a prompt to get data");
 
   //Pops up
   alert("You input " + someVal);
@@ -21,6 +21,6 @@ function inputOutput() {
   console.info("I'm for general info");
   console.debug("I am a debug message");
   console.warn("I am a warning");
-};
+}
 
 inputButton.onclick = inputOutput;
