@@ -7,6 +7,7 @@ import Profile from "./Profile.jsx";
 import Conditional from "./Conditional.jsx";
 import ShoppingList from "./Lists.jsx";
 import MyButtonShared from "./MyButtonShared.jsx";
+import Board from "./TicTacToe.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -15,5 +16,7 @@ createRoot(document.getElementById("root")).render(
     <MyButtonShared />
     <Profile />
     <ShoppingList />
+    <Board />
+    <App />
   </StrictMode>
 );
