@@ -41,6 +41,9 @@
   color: #888;
 }
 
-.pink-button {
-  background-color: pink;
+.green-button {
+  background-color: lightgreen;
+}
+.purple-button {
+  background-color: purple;
 }

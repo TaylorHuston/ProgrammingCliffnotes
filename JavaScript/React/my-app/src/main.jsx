@@ -6,12 +6,13 @@ import MyButtonComponent from "./MyButton.jsx";
 import Profile from "./Profile.jsx";
 import Conditional from "./Conditional.jsx";
 import ShoppingList from "./Lists.jsx";
+import MyButtonShared from "./MyButtonShared.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Conditional />
     <MyButtonComponent />
-    <MyButtonComponent />
+    <MyButtonShared />
     <Profile />
     <ShoppingList />
   </StrictMode>
