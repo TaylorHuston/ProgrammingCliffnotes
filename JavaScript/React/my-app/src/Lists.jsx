@@ -4,7 +4,7 @@ const products = [
   { title: "Apple", isFruit: true, id: 3 },
 ];
 
-export default function ShoppingList() {
+export default function Lists() {
   // Need to assign a key prop when creating lists of elements in React
   // so React can keep track of each element between renders.
   // The key should be a string or number that is unique among its siblings.
