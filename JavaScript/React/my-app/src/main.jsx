@@ -4,9 +4,11 @@ import "./index.css";
 import App from "./App.jsx";
 import MyButtonComponent from "./MyButton.jsx";
 import Profile from "./Profile.jsx";
+import Conditional from "./Conditional.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <Conditional />
     <MyButtonComponent />
     <Profile />
   </StrictMode>
