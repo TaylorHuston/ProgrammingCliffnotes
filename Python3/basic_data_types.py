@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/basic_data_types.py
 
 """
 Basic Data Types in Python
@@ -32,6 +31,10 @@ MAX_CONNECTIONS = 5000
 # Numeric underscore separator for readability
 universe_age = 14_000_000_000
 print(universe_age)  # 14000000000
+
+x = True  # Boolean
+y = False
+print(type(x))  # <class 'bool'>
 
 # ==========================================
 # SECTION 2: STRINGS AND STRING OPERATIONS
@@ -149,8 +152,3 @@ print("baz")  # foobarbaz
 # num1 = 13
 # print(num1 + str2)  # This will throw an error
 # print(str1 - str2)  # This will throw an error
-
-# If you run this script directly
-if __name__ == "__main__":
-    print("\nThis script demonstrates basic data types in Python.")
-    print("It consolidates examples from the original variables.py and strings.py files.")

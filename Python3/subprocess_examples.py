@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/subprocess_examples.py
 
 """
 This module demonstrates various uses of the Python subprocess module.
@@ -31,7 +30,8 @@ print("\n2. Handling Command Errors")
 print("-------------------------")
 try:
     # Try to run a command that doesn't exist
-    result = subprocess.run(["thiscommanddoesnotexist"], capture_output=True, text=True)
+    result = subprocess.run(["thiscommanddoesnotexist"],
+                            capture_output=True, text=True)
     print(f"Return code: {result.returncode}")
 except FileNotFoundError as e:
     print(f"Error occurred: {e}")
@@ -39,27 +39,32 @@ except FileNotFoundError as e:
 # Example 3: Shell=True for shell features (use with caution - security implications)
 print("\n3. Using shell=True (with caution)")
 print("--------------------------------")
-result = subprocess.run("echo $HOME | wc -c", shell=True, capture_output=True, text=True)
+result = subprocess.run("echo $HOME | wc -c", shell=True,
+                        capture_output=True, text=True)
 print(f"Command: echo $HOME | wc -c")
-print(f"Output: {result.stdout.strip()} (characters in home path including newline)")
+print(
+    f"Output: {result.stdout.strip()} (characters in home path including newline)")
 
 # Example 4: Passing environment variables
 print("\n4. Using Environment Variables")
 print("-----------------------------")
 my_env = os.environ.copy()
 my_env["CUSTOM_VAR"] = "Hello from subprocess"
-result = subprocess.run(["echo", "$CUSTOM_VAR"], env=my_env, capture_output=True, text=True)
+result = subprocess.run(["echo", "$CUSTOM_VAR"],
+                        env=my_env, capture_output=True, text=True)
 print(f"Using env dict directly: {result.stdout}")
 
 # This will work because shell=True enables shell expansion
-result = subprocess.run("echo $CUSTOM_VAR", shell=True, env=my_env, capture_output=True, text=True)
+result = subprocess.run("echo $CUSTOM_VAR", shell=True,
+                        env=my_env, capture_output=True, text=True)
 print(f"With shell=True: {result.stdout}")
 
 # Example 5: Input and output redirection
 print("\n5. Input/Output Redirection")
 print("--------------------------")
 # Provide input to a command
-result = subprocess.run(["wc", "-w"], input="Count these words", text=True, capture_output=True)
+result = subprocess.run(
+    ["wc", "-w"], input="Count these words", text=True, capture_output=True)
 print(f"Word count: {result.stdout.strip()}")
 
 # Example 6: Running background processes
@@ -78,7 +83,8 @@ print(f"Process completed with return code: {return_code}")
 print("\n7. Capturing Real-time Output")
 print("---------------------------")
 process = subprocess.Popen(
-    ["for", "i", "in", "1", "2", "3", "4", "5", ";", "do", "echo", "Line $i", ";", "sleep", "0.2", ";", "done"],
+    ["for", "i", "in", "1", "2", "3", "4", "5", ";", "do",
+        "echo", "Line $i", ";", "sleep", "0.2", ";", "done"],
     stdout=subprocess.PIPE,
     text=True,
     shell=True
@@ -117,6 +123,8 @@ for cmd in commands:
 # Example 10: Combining with other Python features
 print("\n10. Advanced Usage - Timing Commands")
 print("---------------------------------")
+
+
 def time_command(cmd):
     """Run a command and time its execution."""
     start = datetime.now()
@@ -127,6 +135,7 @@ def time_command(cmd):
         'output': result.stdout.strip(),
         'time': (end - start).total_seconds()
     }
+
 
 results = [
     time_command(["sleep", "0.1"]),

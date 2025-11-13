@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/working_with_files.py
 
 """
 Demonstrates file handling operations in Python.
@@ -9,6 +8,7 @@ Demonstrates file handling operations in Python.
 # SECTION 1: WRITING TO FILES
 # ==========================================
 
+import os
 print("=" * 50)
 print("WRITING TO FILES")
 print("=" * 50)
@@ -19,7 +19,8 @@ with open("test_output.txt", "w") as file:
     file.write("This is a test file.\n")
     file.write("This is the second line.\n")
     file.write("This is the third line.\n")
-    file.writelines(["This is the fourth line.\n", "This is the fifth line.\n"])
+    file.writelines(["This is the fourth line.\n",
+                    "This is the fifth line.\n"])
 
 print("File written successfully.")
 
@@ -71,19 +72,19 @@ with open("test_output.txt", "r") as file:
     # Read first line
     first_line = file.readline()
     print(f"\nFirst line: {first_line.strip()}")
-    
+
     # Get current position
     position = file.tell()
     print(f"Current position: {position}")
-    
+
     # Read next line
     second_line = file.readline()
     print(f"Second line: {second_line.strip()}")
-    
+
     # Move back to the beginning
     file.seek(0)
     print(f"After seek(0), position: {file.tell()}")
-    
+
     # Read first 10 characters
     start_chars = file.read(10)
     print(f"First 10 characters: '{start_chars}'")
@@ -128,7 +129,6 @@ with open("binary_test.bin", "rb") as binary_file:
     print(f"Bytes as integers: {[b for b in binary_data]}")
 
 # Clean up binary test file
-import os
 os.remove("binary_test.bin")
 print("Binary test file removed")
 

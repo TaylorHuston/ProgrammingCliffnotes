@@ -87,6 +87,7 @@ print(f"math.floor(3.14) = {math.floor(3.14)}")  # 3
 print(f"math.ceil(3.14) = {math.ceil(3.14)}")  # 4
 print(f"math.trunc(3.14) = {math.trunc(3.14)}")  # 3 (truncates toward zero)
 print(f"round(3.14159, 2) = {round(3.14159, 2)}")  # 3.14
+print(f"round(314.159, -2) = {round(314.159, -2)}")  # 300.0
 
 # Logarithmic functions
 print(f"math.log(100, 10) = {math.log(100, 10)}")  # 2.0 (log base 10)

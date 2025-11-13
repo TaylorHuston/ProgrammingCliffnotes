@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/regex.py
 
 """
 Demonstrates regular expression patterns and usage in Python.
@@ -7,9 +6,10 @@ Demonstrates regular expression patterns and usage in Python.
 
 import re
 
-zip_code = r"\d{5}" #regex for five digits in a row
+zip_code = r"\d{5}"  # regex for five digits in a row
 
-print(re.search(zip_code, "This is a zip code 12345")) #<re.Match object; span=(19, 24), match='12345'>
+# <re.Match object; span=(19, 24), match='12345'>
+print(re.search(zip_code, "This is a zip code 12345"))
 
 if re.search(zip_code, "This is a zip code 12345"):
     print("Found it")
@@ -17,9 +17,9 @@ else:
     print("Not found")
 
 s = "This is a zip code 12345, another zip code is 99687"
-print(re.findall(zip_code, s)) #['12345', '99687']
+print(re.findall(zip_code, s))  # ['12345', '99687']
 
-print(re.split(r"\s+", "ant bat cat duck")) #['ant', 'bat', 'cat', 'duck']
+print(re.split(r"\s+", "ant bat cat duck"))  # ['ant', 'bat', 'cat', 'duck']
 
 sonnet = """Let me not to the marriage of true minds
 Admit impediments. Love is not love
@@ -37,4 +37,4 @@ But bears it out even to the edge of doom.
    If this be error and upon me proved,
    I never writ, nor no man ever loved."""
 
-print(re.split("\n", sonnet)) #Split on new line
+print(re.split("\n", sonnet))  # Split on new line

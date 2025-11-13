@@ -1,38 +1,35 @@
 #!/usr/bin/python3
-# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/flow_control.py
 
 """
 Demonstrates flow control structures in Python including conditionals and loops.
 """
 
-#Note the whitespace, different from curly bracket languages
-
 i = 0
 
-while(i < 10):
+while (i < 10):
     print(i)
     i += 1
 
 for x in range(0, 10):
-    print(x)    #Prints 0-9
+    print(x)  # Prints 0-9
 
-for x in range(10):  #Starts at 0 by default
-    print(x)    #Prints 0-9
+for x in range(10):  # Starts at 0 by default
+    print(x)  # Prints 0-9
 
 for x in range(10, 15):
     if x == 12:
-        break  #Stops the loop
+        break  # Stops the loop
     print(x)
 
 for x in range(20, 25):
     if x == 22:
-        continue  #Stops this iteration of the loop
+        continue  # Stops this iteration of the loop
     print(x)
 
-for x in range(100, 200, 10): #Increment by 10
+for x in range(100, 200, 10):  # Increment by 10
     print(x)
 
-for x in range(200, 100, -10): #Decrement by 10
+for x in range(200, 100, -10):  # Decrement by 10
     print(x)
 
 sum = 0
@@ -40,20 +37,17 @@ for x in range(0, 100):
     sum += x
 print(sum)
 
-#String iteration, also works for lists
-myStr = "test" 
+# String iteration, also works for lists
+myStr = "test"
 for c in myStr:
     print(c)
 
-#This also works, just not considered "good python"
+# This also works, just not considered "good python"
 for i in range(len(myStr)):
     print(myStr[i])
 
-
-
 for x in range(0, 10):
-    pass  #Loops and If Statements require a block, pass can be used as a placeholder
-
+    pass  # Loops and If Statements require a block, pass can be used as a placeholder
 
 
 test = 11
@@ -73,21 +67,22 @@ x = 7
 if x == 1 or x == 2 or x == 3:
     print("true")
 else:
-    print("false") #false
+    print("false")  # false
 
-flag = True
+some_bool = True  # Boolean
 
-while flag:
+while some_bool:
     inputs = input("Enter STOP to exit loop: ")
     if inputs == "STOP":
-        flag = False
+        some_bool = False
 
 
-#Custom interator
+# Custom interator
 def characters(string):
     for c in string:
         yield c
     return
+
 
 for c in characters("foobar"):
     print(c)

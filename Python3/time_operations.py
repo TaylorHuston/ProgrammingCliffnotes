@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/time_operations.py
 
 """
 Demonstrates date and time handling in Python.
@@ -132,7 +131,8 @@ print(f"Yesterday: {(now - timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')}")
 
 # Add hours, minutes, seconds
 future_time = now + timedelta(hours=3, minutes=15, seconds=30)
-print(f"3 hours, 15 minutes, 30 seconds from now: {future_time.strftime('%Y-%m-%d %H:%M:%S')}")
+print(
+    f"3 hours, 15 minutes, 30 seconds from now: {future_time.strftime('%Y-%m-%d %H:%M:%S')}")
 
 # Sleep function demonstration (commented out to avoid waiting)
 print("\nSleep function example:")

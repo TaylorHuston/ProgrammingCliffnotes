@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/data_structures.py
 
 """
 Demonstrates Python's built-in data structures and their operations.
@@ -19,12 +18,14 @@ myList2 = [17, "34"]
 print(f"List 1: {myList1}")  # [1, 2.3, 3, 4, 'bob']
 print(f"List 2: {myList2}")  # [17, '34']
 print(f"Element at index 4: {myList1[4]}")  # bob
-print(f"Concatenated lists: {myList1 + myList2}")  # [1, 2.3, 3, 4, 'bob', 17, '34']
+# [1, 2.3, 3, 4, 'bob', 17, '34']
+print(f"Concatenated lists: {myList1 + myList2}")
 
 # List modification
 myList2.append(65)  # Add element to the end
 print(f"After append: {myList2}")  # [17, '34', 65]
-print(f"Last element: {myList2[-1]}")  # 65 (negative indices count from the end)
+# 65 (negative indices count from the end)
+print(f"Last element: {myList2[-1]}")
 
 myList2.insert(0, 23)  # Insert at specific position
 print(f"After insert: {myList2}")  # [23, 17, '34', 65]
@@ -54,7 +55,8 @@ print(f"After sort: {cars}")  # ['audi', 'bmw', 'subaru', 'toyota']
 cars.sort(reverse=True)  # Reverse sort
 print(f"After reverse sort: {cars}")  # ['toyota', 'subaru', 'bmw', 'audi']
 
-print(f"Sorted (non-mutating): {sorted(cars)}")  # ['audi', 'bmw', 'subaru', 'toyota']
+# ['audi', 'bmw', 'subaru', 'toyota']
+print(f"Sorted (non-mutating): {sorted(cars)}")
 print(f"Original list remains: {cars}")  # ['toyota', 'subaru', 'bmw', 'audi']
 
 # Reset cars list for further examples
@@ -64,7 +66,8 @@ print(f"Reset cars: {cars}")
 # List reversal
 cars.reverse()  # In-place reverse (mutates)
 print(f"After reverse(): {cars}")  # ['subaru', 'toyota', 'audi', 'bmw']
-print(f"reversed() (non-mutating): {list(reversed(cars))}")  # ['bmw', 'audi', 'toyota', 'subaru']
+# ['bmw', 'audi', 'toyota', 'subaru']
+print(f"reversed() (non-mutating): {list(reversed(cars))}")
 print(f"List length: {len(cars)}")  # 4
 
 # Range to list
@@ -83,7 +86,8 @@ print(f"Slice [:3]: {digits[:3]}")  # [1, 2, 3]
 print(f"Slice [3:]: {digits[3:]}")  # [4, 5, 6, 7, 8, 9, 0]
 print(f"Slice [-3:]: {digits[-3:]}")  # [8, 9, 0]
 print(f"Slice with step [0:10:2]: {digits[0:10:2]}")  # [1, 3, 5, 7, 9]
-print(f"Reverse slice [::-1]: {digits[::-1]}")  # [0, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+# [0, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+print(f"Reverse slice [::-1]: {digits[::-1]}")
 
 # List copying
 digits2 = digits  # Reference copy (both variables point to the same list)
@@ -149,7 +153,8 @@ print(f"After modification - Name: {myDict['Name']}")  # Jerry
 
 # Safer dictionary access
 print(f"Using get() - Name: {myDict.get('Name')}")  # Jerry
-print(f"Using get() with default - Age: {myDict.get('Age', 'Not specified')}")  # Not specified
+# Not specified
+print(f"Using get() with default - Age: {myDict.get('Age', 'Not specified')}")
 
 # Dictionary operations
 myDict.clear()  # Empty the dictionary
