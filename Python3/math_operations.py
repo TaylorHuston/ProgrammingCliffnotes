@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# filepath: /home/taylor/src/ProgrammingCliffnotes/Python3/math_operations.py
 
 """
 Demonstrates mathematical operations and functions in Python.
@@ -16,6 +15,7 @@ print("=" * 50)
 
 x = 10
 y = 3
+z = 1
 
 print(f"{x} + {y} = {x + y}")  # 13
 print(f"{x} - {y} = {x - y}")  # 7
@@ -24,7 +24,7 @@ print(f"{x} % {y} = {x % y}")  # 1 (modulus/remainder)
 print(f"{x} ** {y} = {x ** y}")  # 1000 (exponentiation)
 print(f"{x} / {y} = {x / y}")  # 3.3333... (floating-point division)
 print(f"{x} // {y} = {x // y}")  # 3 (integer division)
-print(f"{x} ** 3 = {x ** 3}")  # 1000
+print(f"abs(-{x}) = {abs(-x)}")  # 10 (absolute value)
 
 # ==========================================
 # SECTION 2: COMPARISON OPERATIONS
@@ -40,6 +40,8 @@ print(f"{x} < {y}: {x < y}")  # False
 print(f"{x} > {y}: {x > y}")  # True
 print(f"{x} <= {y}: {x <= y}")  # False
 print(f"{x} >= {y}: {x >= y}")  # True
+print(f"min({x},{y},{z}) = {min(x, y, z)}")  # 1
+print(f"max({x},{y},{z}) = {max(x, y, z)}")  # 10
 
 # ==========================================
 # SECTION 3: BITWISE OPERATIONS
@@ -77,7 +79,8 @@ print(f"math.inf = {math.inf}")  # Positive infinity
 # Basic functions
 print(f"math.sqrt(9) = {math.sqrt(9)}")  # 3.0
 print(f"math.pow(2, 3) = {math.pow(2, 3)}")  # 8.0 (2³)
-print(f"math.fabs(-5.5) = {math.fabs(-5.5)}")  # 5.5 (absolute value)
+# 5.0 (absolute value, always returns a float)
+print(f"math.fabs(-5) = {math.fabs(-5)}")
 
 # Rounding
 print(f"math.floor(3.14) = {math.floor(3.14)}")  # 3
@@ -106,14 +109,11 @@ print("\n" + "=" * 50)
 print("TYPE CONVERSION")
 print("=" * 50)
 
-print(f"int('6') = {int('6')}")  # 6
+print(f"int('6') = {int('6')}")  # 6 converts string to integer
+print(f"float('6.145') = {float('6.145')}")  # 6.145 converts string to float
 print(f"int(6.145) = {int(6.145)}")  # 6 (truncates decimal part)
 # print(int('6.145'))  # This would raise an error
-print(f"int(float('6.145')) = {int(float('6.145'))}")  # 6
-print(f"float('6.145') = {float('6.145')}")  # 6.145
-print(f"str(6.145) = '{str(6.145)}'")  # '6.145'
-
-# If you run this script directly
-if __name__ == "__main__":
-    print("\nThis script demonstrates mathematical operations in Python.")
-    print("It is part of the separation of the original math_and_time.py file.")
+# 6 converts string to float, then to int
+print(f"int(float('6.145')) = {int(float('6.145'))}")
+print(f"str(6.145) = '{str(6.145)}'")  # '6.145' converts number to string
+print(f"complex(2, 3) = {complex(2, 3)}")  # 2+3j creates a complex number
