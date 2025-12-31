@@ -32,6 +32,16 @@ for x in range(100, 200, 10):  # Increment by 10
 for x in range(200, 100, -10):  # Decrement by 10
     print(x)
 
+for _ in range(5):  # Ignore the loop variable, essentially a built in placeholder
+    print("Hello")
+
+suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
+numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+faces = ["Jack", "Queen", "King", "Ace"]
+for suit in suits:
+    for card in numbers + faces:  # Concatenate lists
+        print(f"{card} of {suit}")
+
 sum = 0
 for x in range(0, 100):
     sum += x
