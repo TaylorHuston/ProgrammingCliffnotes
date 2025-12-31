@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+import random
+
 """
 Demonstrates Python's built-in data structures and their operations.
 """
@@ -20,6 +22,8 @@ print(f"List 2: {myList2}")  # [17, '34']
 print(f"Element at index 4: {myList1[4]}")  # bob
 # [1, 2.3, 3, 4, 'bob', 17, '34']
 print(f"Concatenated lists: {myList1 + myList2}")
+print(1 in myList1)  # True
+print("alice" in myList1)  # False
 
 # List modification
 myList2.append(65)  # Add element to the end
@@ -124,6 +128,8 @@ myTuple = (123131, 12321321, 1231)  # Tuples are immutable lists
 print(f"Tuple: {myTuple}")  # (123131, 12321321, 1231)
 print(f"Element at index 1: {myTuple[1]}")  # 12321321
 print(f"Type: {type(myTuple)}")  # <class 'tuple'>
+print(12 in myTuple)  # False
+print(1231 in myTuple)  # True
 
 # Single element tuple needs trailing comma
 single_element = (42,)  # Comma is necessary!
@@ -146,6 +152,8 @@ print("=" * 50)
 myDict = {'Name': 'Tom', 'Height': 6.2}
 print(f"Dictionary: {myDict}")  # {'Name': 'Tom', 'Height': 6.2}
 print(f"Accessing by key - Name: {myDict['Name']}")  # Tom
+print("Tom" in myDict)  # False (checks keys)
+print("Name" in myDict)  # True
 
 # Dictionary modification
 myDict['Name'] = "Jerry"  # Modify existing value
@@ -208,6 +216,8 @@ print(f"Set1: {set1}")  # {1, 2, 3, 5, 6}
 
 set2 = set([27, 5, 55, 41, 2])  # Create set from list
 print(f"Set2: {set2}")  # {2, 5, 27, 41, 55}
+print(27 in set2)  # True
+print(100 in set2)  # False
 
 # Set operations
 print(f"Intersection: {set1.intersection(set2)}")  # {2, 5}
@@ -220,7 +230,7 @@ print(f"Intersection of keys and set: {moonwalks.keys() & apollo_11}")
 # {'Buzz Aldrin', 'Neil Armstrong'}
 
 # ==========================================
-# TYPE IDENTIFICATION
+# MISCELLANEOUS
 # ==========================================
 
 print("\n" + "=" * 50)
@@ -232,7 +242,9 @@ print(f"Type of {{}}: {type({})}")  # <class 'dict'>
 print(f"Type of set(): {type(set())}")  # <class 'set'>
 print(f"Type of []: {type([])}")  # <class 'list'>
 
+# print(random.choice(set1)) won't work as random does not accept sets so we convert to list
+print(f"Random element from set1: {random.choice(list(set1))}")
+
 # If you run this script directly
 if __name__ == "__main__":
     print("\nThis script demonstrates Python's built-in data structures.")
-    print("It consolidates and expands the examples from the original lists.py file.")
