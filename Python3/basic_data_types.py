@@ -25,7 +25,7 @@ print(num2)  # 10
 num1 = 13
 print(num1)  # 13
 
-# Constants (by convention, use uppercase)
+# Constants (by convention, use uppercase). Python does not stricytly enforce constants.
 MAX_CONNECTIONS = 5000
 
 # Numeric underscore separator for readability
@@ -35,6 +35,7 @@ print(universe_age)  # 14000000000
 x = True  # Boolean
 y = False
 print(type(x))  # <class 'bool'>
+
 
 # ==========================================
 # SECTION 2: STRINGS AND STRING OPERATIONS
