@@ -35,6 +35,12 @@ for x in range(200, 100, -10):  # Decrement by 10
 for _ in range(5):  # Ignore the loop variable, essentially a built in placeholder
     print("Hello")
 
+for i, n in enumerate(["a", "b", "c"]):  # Get index and value
+    print(i, n)
+
+for i, n in enumerate(["a", "b", "c"], 10):  # Start index at 10
+    print(i, n)
+
 suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
 numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10]
 faces = ["Jack", "Queen", "King", "Ace"]
